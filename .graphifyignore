@@ -1,0 +1,24 @@
+# Project Brain defaults
+.git/
+.projectbrain/cache/
+node_modules/
+vendor/
+venv/
+.venv/
+__pycache__/
+dist/
+build/
+coverage/
+.cache/
+.tmp/
+*.log
+*.zip
+*.tar
+*.gz
+*.sql
+*.dump
+*.bak
+.env
+.env.*
+*.pem
+*.key

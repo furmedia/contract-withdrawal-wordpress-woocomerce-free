@@ -1,0 +1,142 @@
+/**
+ * Public component styles
+ *
+ * Table of contents
+ * 1. Foundation and layout
+ * 2. Form controls
+ * 3. Order and product selectors
+ * 4. Notices and declaration evidence
+ * 5. Evidence, legal content and permanent access
+ * 6. Responsive rules
+ */
+
+/* 1. Foundation and layout
+-------------------------------------------------------------- */
+.cwfw-wrap {
+	--cwfw-accent: #173faf;
+	--cwfw-text: #172033;
+	--cwfw-muted: #59636e;
+	--cwfw-border: #dce1e7;
+	--cwfw-surface: #f8fafc;
+	width: 100%;
+	max-width: 960px;
+	margin: 24px auto 40px;
+	color: var(--cwfw-text);
+}
+.cwfw-wrap *, .cwfw-legal-notice * { box-sizing: border-box; }
+.cwfw-intro { max-width: 900px; margin-bottom: 24px; }
+.cwfw-muted, .cwfw-privacy { color: var(--cwfw-muted); }
+.cwfw-form {
+	max-width: 900px;
+	padding: 28px;
+	border: 1px solid var(--cwfw-border);
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(27,45,76,.06);
+}
+.cwfw-fieldset, .cwfw-choice-group { min-width: 0; margin: 0; padding: 0; border: 0; }
+.cwfw-fieldset > legend {
+	width: 100%;
+	margin: 0 0 22px;
+	padding: 0 0 12px;
+	border-bottom: 1px solid #e6ebf1;
+	font-size: 20px;
+	font-weight: 700;
+}
+.cwfw-grid { display: grid; gap: 20px; }
+.cwfw-grid-2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+/* End foundation and layout */
+
+/* 2. Form controls
+-------------------------------------------------------------- */
+.cwfw-field { margin: 0 0 20px; }
+.cwfw-field > label, .cwfw-manual-item label, .cwfw-account-product > div label {
+	display: block;
+	margin: 0 0 7px;
+	font-size: 14px;
+	font-weight: 700;
+}
+.cwfw-form input[type="text"], .cwfw-form input[type="email"], .cwfw-form input[type="number"], .cwfw-form select, .cwfw-form textarea {
+	width: 100%;
+	max-width: 100%;
+	min-height: 44px;
+	padding: 9px 11px;
+	border: 1px solid #cbd5e1;
+	border-radius: 5px;
+	background: #fff;
+	color: var(--cwfw-text);
+	box-shadow: none;
+}
+.cwfw-form textarea { min-height: 120px; resize: vertical; }
+.cwfw-form .has-error input, .cwfw-form .has-error textarea { border-color: #b42318; }
+.cwfw-error { display: block; margin-top: 7px; color: #b42318; font-size: 13px; font-weight: 600; }
+.cwfw-choice-group { margin: 0 0 20px; }
+.cwfw-choice-group legend { margin-bottom: 8px; font-size: 14px; font-weight: 700; }
+.cwfw-choice-group label { display: block; margin: 8px 0; }
+/* End form controls */
+
+/* 3. Order and product selectors
+-------------------------------------------------------------- */
+.cwfw-account-order, .cwfw-account-items, .cwfw-manual-items {
+	margin: 16px 0 24px;
+	padding: 18px;
+	border: 1px solid #dce4ee;
+	border-radius: 6px;
+	background: var(--cwfw-surface);
+}
+.cwfw-order-picker { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px; }
+.cwfw-selected-order { margin-top: 14px; padding: 12px 14px; border-left: 4px solid var(--cwfw-accent); background: #fff; }
+.cwfw-account-items h3, .cwfw-manual-items h3 { margin: 0 0 16px; font-size: 18px; }
+.cwfw-account-product {
+	display: grid;
+	grid-template-columns: 24px minmax(0,1fr) 125px;
+	gap: 12px;
+	align-items: center;
+	margin: 0 0 12px;
+	padding: 14px;
+	border: 1px solid #dce4ee;
+	border-radius: 5px;
+	background: #fff;
+}
+.cwfw-account-product > label strong, .cwfw-account-product > label span { display: block; overflow-wrap: anywhere; }
+.cwfw-account-product > label span { margin-top: 3px; color: var(--cwfw-muted); font-size: 13px; }
+.cwfw-manual-item { display: grid; grid-template-columns: minmax(0,1fr) 130px auto; gap: 12px; align-items: end; margin-bottom: 14px; }
+/* End order and product selectors */
+
+/* 4. Notices and declaration evidence
+-------------------------------------------------------------- */
+.cwfw-honeypot { display: none !important; }
+.cwfw-declaration { margin: 24px 0 16px; padding: 18px; border-left: 4px solid var(--cwfw-accent); background: #f4f7ff; }
+.cwfw-declaration p { margin: 8px 0 0; }
+.cwfw-submit { width: 100%; min-height: 48px; font-weight: 700; }
+.cwfw-notice { margin: 16px 0; padding: 14px 16px; border-left: 4px solid #59636e; background: #f4f7ff; }
+.cwfw-notice-error { border-color: #b42318; background: #fef3f2; color: #7a271a; }
+.cwfw-notice-warning { border-color: #dc6803; background: #fffaeb; color: #7a2e0e; }
+.cwfw-notice-success { border-color: #067647; background: #ecfdf3; color: #05603a; }
+/* End notices and declaration evidence */
+
+/* 5. Evidence, legal content and permanent access
+-------------------------------------------------------------- */
+.cwfw-success dl { display: grid; grid-template-columns: minmax(180px,auto) 1fr; gap: 8px 18px; padding: 18px; border: 1px solid var(--cwfw-border); background: var(--cwfw-surface); }
+.cwfw-success dt, .cwfw-success dd { margin: 0; }
+.cwfw-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0; }
+.cwfw-legal, .cwfw-legal-notice { padding: 24px; border: 1px solid #d8dee6; background: #f8fafc; line-height: 1.65; }
+.cwfw-legal address { padding: 14px; border-left: 4px solid var(--cwfw-accent); background: #fff; }
+.cwfw-legal-notice { max-width: 960px; margin: 24px auto; }
+.cwfw-footer-access { padding: 12px 20px; text-align: center; }
+.cwfw-footer-access a { font-weight: 700; text-decoration: underline; }
+/* End evidence, legal content and permanent access */
+
+/* 6. Responsive rules
+-------------------------------------------------------------- */
+@media (max-width: 767px) {
+	.cwfw-wrap { padding-right: 15px; padding-left: 15px; }
+	.cwfw-form { padding: 18px; overflow: hidden; }
+	.cwfw-grid-2, .cwfw-order-picker { grid-template-columns: 1fr; }
+	.cwfw-account-product { grid-template-columns: 24px minmax(0,1fr); align-items: start; }
+	.cwfw-account-product > div { grid-column: 2; max-width: 150px; }
+	.cwfw-manual-item { grid-template-columns: 1fr 95px; }
+	.cwfw-remove { grid-column: 1 / -1; justify-self: start; }
+	.cwfw-success dl { grid-template-columns: 1fr; }
+}
+/* End responsive rules */

@@ -1,0 +1,662 @@
+# Copyright (C) 2026 Foxly Software
+# This file is distributed under the same license as the plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: support@foxly.ro\n"
+"POT-Creation-Date: 2026-07-13 00:00+0300\n"
+"PO-Revision-Date: 2026-07-13 00:00+0300\n"
+"Last-Translator: Foxly Software\n"
+"Language-Team: Foxly Software\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: contract-withdrawal-free-for-woocommerce\n"
+
+#: templates/success.php:11
+msgid "A complete copy of the declaration, including its date and time, was sent to the email address provided."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:95
+msgid "A new declaration was recorded under reference %s."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:51
+msgid "Acknowledgement of contract withdrawal"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:38
+msgid "Acknowledgement of contract withdrawal — %s"
+msgstr ""
+
+#: templates/form.php:138
+msgid "Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:350
+msgid "Add at least one product for a partial withdrawal."
+msgstr ""
+
+#: templates/form.php:125
+msgid "Add product"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:141
+msgid "Additional return information"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:108
+msgid "Administrator email"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:126
+msgid "Availability"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:106
+msgid "Back to declarations"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:132
+msgid "Business address"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:131
+msgid "Business name"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:354
+msgid "Choose how the contract is identified."
+msgstr ""
+
+#: templates/form.php:141
+msgid "Confirm withdrawal"
+msgstr ""
+
+#: templates/legal.php:19
+msgid "Consequences of withdrawal"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:140
+msgid "Consumer"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:136
+msgid "Contact phone"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+msgid "Contract"
+msgstr ""
+
+#: includes/class-cwfw-plugin.php:62
+msgid "Contract Withdrawal Free for WooCommerce requires WooCommerce to be installed and active."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:120
+msgid "Contract Withdrawal Free settings"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:67
+msgid "Contract withdrawals"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:27 includes/class-cwfw-admin.php:28
+msgid "Contract withdrawals (Free)"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+msgid "Customer"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:96
+msgid "Customer confirmation status"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:108
+msgid "Customer email"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:46 includes/class-cwfw-mailer.php:65
+msgid "Declaration submitted"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:68
+msgid "Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:272
+msgid "Delivery failed — contact the merchant"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:140
+msgid "Direct return cost"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:142
+msgid "Display timezone"
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:80
+msgid "Displays a short notice and a link to the withdrawal function."
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:54
+msgid "Displays a visible link to the online withdrawal function."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:49 includes/class-cwfw-widgets.php:41
+msgid "Displays the complete online contract-withdrawal form."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:51
+msgid "Displays the configured withdrawal information."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:53
+msgid "Displays the permanent withdrawal link."
+msgstr ""
+
+#: templates/form.php:20
+msgid "Do not fill this field"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:110
+msgid "Download evidence"
+msgstr ""
+
+#: templates/success.php:16
+msgid "Download submission evidence"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:344
+msgid "Each product must have a name and a quantity between 1 and 9,999."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:70 includes/class-cwfw-mailer.php:44 includes/class-cwfw-mailer.php:59
+msgid "Email"
+msgstr ""
+
+#: templates/success.php:8
+msgid "Email acknowledgement"
+msgstr ""
+
+#: templates/form.php:40
+msgid "Email address for the acknowledgement *"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:127
+msgid "Enable the public withdrawal function"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:297
+msgid "Enter a valid email address."
+msgstr ""
+
+#: templates/form.php:49
+msgid "Enter an order number / contract identifier manually"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:338
+msgid "Enter an order number or contract identifier of at most 128 characters."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:500
+msgid "Evidence not found."
+msgstr ""
+
+#: templates/form.php:6
+msgid "Fields marked with * are required."
+msgstr ""
+
+#: templates/form.php:28
+msgid "First name *"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:291
+msgid "First name must contain between 1 and 64 characters."
+msgstr ""
+
+#: templates/legal.php:11
+msgid "For services, the period runs from the date the contract is concluded. For sales contracts, it runs from the day on which you or a third party indicated by you, other than the carrier, acquires physical possession of the goods. For multiple goods delivered separately, the period runs from receipt of the last good; for a good delivered in lots or pieces, from receipt of the last lot or piece; and for regular delivery, from receipt of the first good."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:78
+msgid "Full"
+msgstr ""
+
+#: templates/form.php:47
+msgid "How do you identify the contract? *"
+msgstr ""
+
+#: templates/form.php:137
+msgid "I hereby give notice that I withdraw from the distance contract identified above."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:20
+msgid "I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s."
+msgstr ""
+
+#: templates/legal.php:26
+msgid "If you requested that a service begin during the withdrawal period, you owe an amount proportionate to the services supplied until you communicate the withdrawal, compared with the full coverage of the contract."
+msgstr ""
+
+#: templates/legal.php:20
+msgid "If you withdraw, we will reimburse the amounts received, including the cost of standard delivery, without undue delay and no later than 14 days after being informed. Reimbursement is made using the same payment method unless you expressly agree otherwise, without fees for the consumer."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:110
+msgid "Immutable declaration"
+msgstr ""
+
+#: templates/legal.php:6
+msgid "Information on the right of withdrawal"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:496
+msgid "Invalid evidence link."
+msgstr ""
+
+#: templates/success.php:4
+msgid "Keep the withdrawal reference and the acknowledgement sent by email."
+msgstr ""
+
+#: templates/form.php:33
+msgid "Last name *"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:294
+msgid "Last name must contain between 1 and 64 characters."
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:68
+msgid "Link label"
+msgstr ""
+
+#: templates/form.php:63
+msgid "Load order products"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:130
+msgid "Merchant details"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:43 includes/class-cwfw-mailer.php:58
+msgid "Name"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:93
+msgid "New contract-withdrawal declaration — %s"
+msgstr ""
+
+#: templates/form.php:78
+msgid "No orders were found in this account. Identify the contract manually below."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:72
+msgid "No withdrawal declarations have been recorded."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:34
+msgid "Notes"
+msgstr ""
+
+#: templates/form.php:130
+msgid "Notes (optional)"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:303
+msgid "Notes may contain at most 2,000 characters."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:135
+msgid "Notification email"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:17 templates/form.php:93
+msgid "Only selected products and quantities"
+msgstr ""
+
+#: templates/form.php:53
+msgid "Order data and products are loaded securely on the server from your account."
+msgstr ""
+
+#: templates/form.php:84
+msgid "Order number or contract identifier *"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:42 includes/class-cwfw-mailer.php:57
+msgid "Order or contract reference"
+msgstr ""
+
+#: templates/form.php:104
+msgid "Ordered: %d"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:144
+msgid "Pages and privacy"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:78
+msgid "Partial"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:270
+msgid "Pending"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:149
+msgid "Placement tools"
+msgstr ""
+
+#: templates/form.php:140
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:147
+msgid "Privacy policy page"
+msgstr ""
+
+#: templates/form.php:119
+msgid "Product"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:28 templates/form.php:114
+msgid "Products and quantities"
+msgstr ""
+
+#: templates/form.php:98
+msgid "Products included in the selected order"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:134
+msgid "Public contact email"
+msgstr ""
+
+#: templates/form.php:106 templates/form.php:120
+msgid "Quantity"
+msgstr ""
+
+#: templates/form.php:55
+msgid "Recent order"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:70
+msgid "Reference"
+msgstr ""
+
+#: templates/form.php:121
+msgid "Remove"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:133
+msgid "Return address"
+msgstr ""
+
+#: templates/form.php:11
+msgid "Review the highlighted fields and try again."
+msgstr ""
+
+#: includes/class-cwfw-installer.php:28
+msgid "Right of withdrawal"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:332
+msgid "Select at least one product for a partial withdrawal."
+msgstr ""
+
+#: templates/form.php:48
+msgid "Select one of my orders"
+msgstr ""
+
+#: templates/form.php:98
+msgid "Select products and quantities"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:300
+msgid "Select the scope of the withdrawal."
+msgstr ""
+
+#: templates/form.php:69
+msgid "Selected order: #%s"
+msgstr ""
+
+#: templates/legal.php:22
+msgid "Send or hand over the goods to the return address below without undue delay and no later than 14 days after communicating the withdrawal. The deadline is met if the goods are sent before the period expires."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:271
+msgid "Sent"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:122
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:109 includes/class-cwfw-frontend.php:126
+msgid "Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:128
+msgid "Show a permanent footer link"
+msgstr ""
+
+#: templates/form.php:76
+msgid "Sign in to select an order and its products."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:107
+msgid "Submission details"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+msgid "Submitted"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:41 includes/class-cwfw-mailer.php:56 templates/success.php:7
+msgid "Submitted at"
+msgstr ""
+
+#: templates/form.php:141
+msgid "Submitting the declaration…"
+msgstr ""
+
+#: templates/legal.php:24
+msgid "The consumer bears the direct cost of returning the goods."
+msgstr ""
+
+#: templates/form.php:140
+msgid "The data is processed to record, acknowledge and handle this withdrawal declaration."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:159
+msgid "The declaration could not be stored safely. Please try again or contact the merchant."
+msgstr ""
+
+#: templates/success.php:13
+msgid "The declaration was saved, but the email could not be delivered immediately. Download the complete evidence now and contact the merchant if necessary."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:17 templates/form.php:92
+msgid "The entire order / contract"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:88 includes/class-cwfw-frontend.php:101
+msgid "The form session expired. Review the details and try again."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:183
+msgid "The merchant contact details required for this function are not configured."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:81
+msgid "The online withdrawal function is not available yet. Please contact the merchant using the published contact details."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:105
+msgid "The request could not be processed. Please try again."
+msgstr ""
+
+#: templates/legal.php:27
+msgid "The right of withdrawal does not apply in the cases provided by Article 16 of Romanian Emergency Ordinance no. 34/2014. Depending on the case, these include fully performed services begun with prior express agreement and acknowledgement of loss of the right; personalized goods; goods liable to deteriorate or expire rapidly; sealed health or hygiene goods that were unsealed; inseparably mixed goods; unsealed recordings or software; and digital content whose supply began with prior express agreement and acknowledgement of loss of the right."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:149
+msgid "The same form, legal notice and link are available as Gutenberg blocks and classic widgets."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:94
+msgid "The selected order is no longer available in this account. Select it again or use manual identification."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:311
+msgid "The selected order is not available in this account."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:324
+msgid "The selected products or quantities no longer match the order."
+msgstr ""
+
+#: templates/legal.php:24
+msgid "The trader bears the direct cost of returning the goods."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:180
+msgid "The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:47 includes/class-cwfw-mailer.php:67
+msgid "This message acknowledges receipt. It does not automatically approve a return or refund."
+msgstr ""
+
+#: templates/legal.php:29
+msgid "This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review."
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:29
+msgid "Title"
+msgstr ""
+
+#: templates/legal.php:12
+msgid "To exercise the right, it is sufficient to communicate an unambiguous statement before the period expires, by post or email. You may use the model form below, but using it is not mandatory."
+msgstr ""
+
+#: templates/legal.php:16
+msgid "To meet the %d-day deadline, it is sufficient to send the communication concerning exercise of the right of withdrawal before the period expires."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:140
+msgid "Trader"
+msgstr ""
+
+#: templates/form.php:5
+msgid "Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:39 includes/class-cwfw-mailer.php:52
+msgid "We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below."
+msgstr ""
+
+#: templates/legal.php:21
+msgid "We may withhold reimbursement until we receive the goods or until you supply evidence of having sent them back, whichever is earliest."
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:247 includes/class-cwfw-frontend.php:254 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
+msgid "Withdraw from the contract here"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:48
+msgid "Withdrawal form"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:145
+msgid "Withdrawal form page"
+msgstr ""
+
+#: includes/class-cwfw-installer.php:27 templates/form.php:3
+msgid "Withdrawal from contract"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:138 includes/class-cwfw-frontend.php:50 templates/form.php:140
+msgid "Withdrawal information"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:146
+msgid "Withdrawal information page"
+msgstr ""
+
+#: includes/class-cwfw-frontend.php:52
+msgid "Withdrawal link"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:139
+msgid "Withdrawal period (days)"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:97 includes/class-cwfw-admin.php:183
+msgid "Withdrawal record not found."
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:40 includes/class-cwfw-mailer.php:55 templates/success.php:6
+msgid "Withdrawal reference"
+msgstr ""
+
+#: includes/class-cwfw-mailer.php:45 includes/class-cwfw-mailer.php:60
+msgid "Withdrawal scope"
+msgstr ""
+
+#: templates/form.php:91
+msgid "Withdrawal scope *"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:35 includes/class-cwfw-admin.php:36
+msgid "Withdrawal settings (Free)"
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:80
+msgid "Withdrawal: Legal notice"
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:41
+msgid "Withdrawal: Online form"
+msgstr ""
+
+#: includes/class-cwfw-widgets.php:54
+msgid "Withdrawal: Permanent link"
+msgstr ""
+
+#: templates/legal.php:25
+msgid "You are liable only for diminished value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the goods."
+msgstr ""
+
+#: includes/class-cwfw-admin.php:227
+msgid "You are not allowed to manage withdrawal records."
+msgstr ""
+
+#: templates/form.php:76
+msgid "You can continue without an account."
+msgstr ""
+
+#: templates/legal.php:9
+msgid "You have the right to withdraw from the contract, without giving reasons, within %d days."
+msgstr ""
+
+#: templates/legal.php:3
+msgid "You may also exercise your right of withdrawal through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay."
+msgstr ""
+
+#: templates/legal.php:13
+msgid "You may also submit the declaration through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay."
+msgstr ""
+
+#: templates/form.php:25
+msgid "Your declaration"
+msgstr ""
+
+#: templates/success.php:3
+msgid "Your withdrawal declaration was recorded"
+msgstr ""
+
+#: includes/class-cwfw-admin.php:201
+msgid "— Select —"
+msgstr ""
