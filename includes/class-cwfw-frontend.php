@@ -164,11 +164,29 @@ class Frontend {
 			$this->security->remember_success( $record );
 			$this->redirect_success();
 		}
+		try {
+			do_action( 'cwfw_withdrawal_recorded', $record );
+		} catch ( \Throwable $integration_exception ) {
+			try {
+				do_action( 'cwfw_integration_error', 'cwfw_withdrawal_recorded', sanitize_text_field( $integration_exception->getMessage() ) );
+			} catch ( \Throwable $ignored_exception ) {
+				unset( $ignored_exception );
+			}
+		}
 
 		$email_status = $this->mailer->deliver_initial( $record );
 		$record       = $this->repository->get( $record['withdrawal_id'] );
 		$this->mailer->notify_admin( $record, $email_status );
 		$record = $this->repository->get( $record['withdrawal_id'] );
+		try {
+			do_action( 'cwfw_withdrawal_processed', $record, $email_status );
+		} catch ( \Throwable $integration_exception ) {
+			try {
+				do_action( 'cwfw_integration_error', 'cwfw_withdrawal_processed', sanitize_text_field( $integration_exception->getMessage() ) );
+			} catch ( \Throwable $ignored_exception ) {
+				unset( $ignored_exception );
+			}
+		}
 		$this->security->remember_submission();
 		$this->security->rotate_idempotency_token();
 		$this->security->remember_success( $record );

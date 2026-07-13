@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 — 2026-07-13
+
+- Added stable post-recording and post-delivery integration actions for commercial or custom add-ons.
+- Added continuous-integration coverage for PHP 8.4 and PHP 8.5.
+
 ## 1.0.0 — 2026-07-13
 
 - Initial WordPress.org-oriented free release.

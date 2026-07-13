@@ -62,7 +62,7 @@ function cwfw_po_quote( $value ) {
 
 function cwfw_catalog_header( $language = '' ) {
 	$lines = array(
-		'Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.0.0',
+		'Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.1.0',
 		'Report-Msgid-Bugs-To: support@foxly.ro',
 		'POT-Creation-Date: 2026-07-13 00:00+0300',
 		'PO-Revision-Date: 2026-07-13 00:00+0300',

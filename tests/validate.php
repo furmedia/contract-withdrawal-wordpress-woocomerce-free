@@ -52,7 +52,7 @@ foreach ( array( 'templates/history.php', 'templates/model.php', 'assets/js/prin
 }
 
 $main = cwfw_read( $root, 'contract-withdrawal-free-for-woocommerce.php' );
-cwfw_test( false !== strpos( $main, 'Version: 1.0.0' ), 'Plugin version header mismatch.' );
+cwfw_test( false !== strpos( $main, 'Version: 1.1.0' ), 'Plugin version header mismatch.' );
 cwfw_test( false !== strpos( $main, 'Requires Plugins: woocommerce' ), 'WooCommerce dependency header missing.' );
 cwfw_test( false !== strpos( $main, 'custom_order_tables' ), 'HPOS compatibility declaration missing.' );
 cwfw_test( false !== strpos( $main, 'Text Domain: contract-withdrawal-free-for-woocommerce' ), 'Text domain header mismatch.' );
@@ -85,6 +85,8 @@ cwfw_test( false !== strpos( $security, "wp_unslash( (string) \$_SERVER['REMOTE_
 cwfw_test( false === strpos( $installer, 'remote_address' ) && false === strpos( $installer, 'ip_address' ), 'Raw source address must not be stored.' );
 
 $frontend = cwfw_read( $root, 'includes/class-cwfw-frontend.php' );
+cwfw_test( false !== strpos( $frontend, "do_action( 'cwfw_withdrawal_recorded'" ), 'Recorded integration action is missing.' );
+cwfw_test( false !== strpos( $frontend, "do_action( 'cwfw_withdrawal_processed'" ), 'Processed integration action is missing.' );
 foreach ( array( 'cwfw_form', 'contract_withdrawal_form', 'retragere_din_contract', 'cwfw_legal_notice', 'contract_withdrawal_legal_notice', 'cwfw_link', 'contract_withdrawal_link' ) as $shortcode ) {
 	cwfw_test( false !== strpos( $frontend, "'{$shortcode}'" ), "Shortcode missing: {$shortcode}" );
 }

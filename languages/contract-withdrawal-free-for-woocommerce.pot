@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.0.0\n"
+"Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.1.0\n"
 "Report-Msgid-Bugs-To: support@foxly.ro\n"
 "POT-Creation-Date: 2026-07-13 00:00+0300\n"
 "PO-Revision-Date: 2026-07-13 00:00+0300\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:350
+#: includes/class-cwfw-frontend.php:368
 msgid "Add at least one product for a partial withdrawal."
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Business name"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:354
+#: includes/class-cwfw-frontend.php:372
 msgid "Choose how the contract is identified."
 msgstr ""
 
@@ -125,7 +125,7 @@ msgstr ""
 msgid "Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:272
+#: includes/class-cwfw-frontend.php:290
 msgid "Delivery failed — contact the merchant"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Download submission evidence"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:344
+#: includes/class-cwfw-frontend.php:362
 msgid "Each product must have a name and a quantity between 1 and 9,999."
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Enable the public withdrawal function"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:297
+#: includes/class-cwfw-frontend.php:315
 msgid "Enter a valid email address."
 msgstr ""
 
@@ -197,11 +197,11 @@ msgstr ""
 msgid "Enter an order number / contract identifier manually"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:338
+#: includes/class-cwfw-frontend.php:356
 msgid "Enter an order number or contract identifier of at most 128 characters."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:500
+#: includes/class-cwfw-frontend.php:518
 msgid "Evidence not found."
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "First name *"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:291
+#: includes/class-cwfw-frontend.php:309
 msgid "First name must contain between 1 and 64 characters."
 msgstr ""
 
@@ -253,7 +253,7 @@ msgstr ""
 msgid "Information on the right of withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:496
+#: includes/class-cwfw-frontend.php:514
 msgid "Invalid evidence link."
 msgstr ""
 
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Last name *"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:294
+#: includes/class-cwfw-frontend.php:312
 msgid "Last name must contain between 1 and 64 characters."
 msgstr ""
 
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Notes (optional)"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:303
+#: includes/class-cwfw-frontend.php:321
 msgid "Notes may contain at most 2,000 characters."
 msgstr ""
 
@@ -341,7 +341,7 @@ msgstr ""
 msgid "Partial"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:270
+#: includes/class-cwfw-frontend.php:288
 msgid "Pending"
 msgstr ""
 
@@ -401,7 +401,7 @@ msgstr ""
 msgid "Right of withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:332
+#: includes/class-cwfw-frontend.php:350
 msgid "Select at least one product for a partial withdrawal."
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Select products and quantities"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:300
+#: includes/class-cwfw-frontend.php:318
 msgid "Select the scope of the withdrawal."
 msgstr ""
 
@@ -425,7 +425,7 @@ msgstr ""
 msgid "Send or hand over the goods to the return address below without undue delay and no later than 14 days after communicating the withdrawal. The deadline is met if the goods are sent before the period expires."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:271
+#: includes/class-cwfw-frontend.php:289
 msgid "Sent"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "The form session expired. Review the details and try again."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:183
+#: includes/class-cwfw-frontend.php:201
 msgid "The merchant contact details required for this function are not configured."
 msgstr ""
 
@@ -509,11 +509,11 @@ msgstr ""
 msgid "The selected order is no longer available in this account. Select it again or use manual identification."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:311
+#: includes/class-cwfw-frontend.php:329
 msgid "The selected order is not available in this account."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:324
+#: includes/class-cwfw-frontend.php:342
 msgid "The selected products or quantities no longer match the order."
 msgstr ""
 
@@ -521,7 +521,7 @@ msgstr ""
 msgid "The trader bears the direct cost of returning the goods."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:180
+#: includes/class-cwfw-frontend.php:198
 msgid "The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings."
 msgstr ""
 
@@ -561,7 +561,7 @@ msgstr ""
 msgid "We may withhold reimbursement until we receive the goods or until you supply evidence of having sent them back, whichever is earliest."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:247 includes/class-cwfw-frontend.php:254 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
+#: includes/class-cwfw-frontend.php:265 includes/class-cwfw-frontend.php:272 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
 msgid "Withdraw from the contract here"
 msgstr ""
 

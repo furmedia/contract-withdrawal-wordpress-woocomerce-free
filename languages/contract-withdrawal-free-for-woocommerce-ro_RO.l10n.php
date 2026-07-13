@@ -1,6 +1,6 @@
 <?php
 return array(
-	'project-id-version' => 'Contract Withdrawal Free for WooCommerce 1.0.0',
+	'project-id-version' => 'Contract Withdrawal Free for WooCommerce 1.1.0',
 	'language'           => 'ro_RO',
 	'plural-forms'       => 'nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);',
 	'messages'           => array(
