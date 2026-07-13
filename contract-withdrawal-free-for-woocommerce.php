@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Contract Withdrawal Free for WooCommerce
- * Plugin URI: https://foxly.ro/
+ * Plugin URI: https://github.com/furmedia/contract-withdrawal-wordpress-woocomerce-free
  * Description: A free online contract-withdrawal form for Romanian WooCommerce stores, with evidence records, email acknowledgements, widgets, blocks and shortcodes.
  * Version: 1.1.0
  * Author: Foxly Software
