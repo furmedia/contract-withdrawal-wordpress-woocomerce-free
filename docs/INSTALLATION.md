@@ -1,7 +1,7 @@
 # Installation and configuration
 
 1. Install and activate WooCommerce.
-2. Install and activate Contract Withdrawal Free for WooCommerce.
+2. Install and activate Furmedia Romanian Withdrawal Law for WooCommerce.
 3. Open **WooCommerce → Withdrawal settings**.
 4. Complete the merchant identity, business address, public contact email and return information.
 5. Choose the generated or existing form, withdrawal-information and privacy pages.

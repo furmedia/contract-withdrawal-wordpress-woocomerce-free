@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -14,10 +14,10 @@ class Mailer {
 
 	public function build_evidence( array $form, array $items, $submitted_utc, $submitted_local ) {
 		$placeholder = Repository::REFERENCE_PLACEHOLDER;
-		$scope_label = 'partial' === $form['scope'] ? __( 'Only selected products and quantities', 'contract-withdrawal-free-for-woocommerce' ) : __( 'The entire order / contract', 'contract-withdrawal-free-for-woocommerce' );
+		$scope_label = 'partial' === $form['scope'] ? __( 'Only selected products and quantities', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) : __( 'The entire order / contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		$declaration = sprintf(
 			/* translators: 1: customer name, 2: contract reference, 3: scope, 4: local timestamp, 5: withdrawal reference. */
-			__( 'I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s.', 'contract-withdrawal-free-for-woocommerce' ),
+			__( 'I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
 			trim( $form['firstname'] . ' ' . $form['lastname'] ),
 			$form['contract_reference'],
 			$scope_label,
@@ -25,46 +25,46 @@ class Mailer {
 			$placeholder
 		);
 		if ( $items ) {
-			$declaration .= "\n" . __( 'Products and quantities', 'contract-withdrawal-free-for-woocommerce' ) . ':';
+			$declaration .= "\n" . __( 'Products and quantities', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ':';
 			foreach ( $items as $item ) {
 				$declaration .= "\n- " . $item['name'] . ' × ' . (int) $item['quantity'];
 			}
 		}
 		if ( '' !== $form['note'] ) {
-			$declaration .= "\n" . __( 'Notes', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $form['note'];
+			$declaration .= "\n" . __( 'Notes', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $form['note'];
 		}
 
 		/* translators: %s: withdrawal reference. */
-		$subject = sprintf( __( 'Acknowledgement of contract withdrawal — %s', 'contract-withdrawal-free-for-woocommerce' ), $placeholder );
-		$text    = __( 'We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below.', 'contract-withdrawal-free-for-woocommerce' ) . "\n\n";
-		$text   .= __( 'Withdrawal reference', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $placeholder . "\n";
-		$text   .= __( 'Submitted at', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $submitted_local . "\n";
-		$text   .= __( 'Order or contract reference', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $form['contract_reference'] . "\n";
-		$text   .= __( 'Name', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . trim( $form['firstname'] . ' ' . $form['lastname'] ) . "\n";
-		$text   .= __( 'Email', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $form['email'] . "\n";
-		$text   .= __( 'Withdrawal scope', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $scope_label . "\n\n";
-		$text   .= __( 'Declaration submitted', 'contract-withdrawal-free-for-woocommerce' ) . ":\n" . $declaration . "\n\n";
-		$text   .= __( 'This message acknowledges receipt. It does not automatically approve a return or refund.', 'contract-withdrawal-free-for-woocommerce' ) . "\n\n";
+		$subject = sprintf( __( 'Acknowledgement of contract withdrawal — %s', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), $placeholder );
+		$text    = __( 'We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . "\n\n";
+		$text   .= __( 'Withdrawal reference', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $placeholder . "\n";
+		$text   .= __( 'Submitted at', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $submitted_local . "\n";
+		$text   .= __( 'Order or contract reference', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $form['contract_reference'] . "\n";
+		$text   .= __( 'Name', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . trim( $form['firstname'] . ' ' . $form['lastname'] ) . "\n";
+		$text   .= __( 'Email', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $form['email'] . "\n";
+		$text   .= __( 'Withdrawal scope', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $scope_label . "\n\n";
+		$text   .= __( 'Declaration submitted', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ":\n" . $declaration . "\n\n";
+		$text   .= __( 'This message acknowledges receipt. It does not automatically approve a return or refund.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . "\n\n";
 		$text   .= (string) $this->settings->get( 'business_name' ) . "\n" . home_url( '/' ) . "\n" . (string) $this->settings->get( 'contact_email' );
 
 		$html  = '<div style="font-family:Arial,sans-serif;line-height:1.6;color:#172033;max-width:720px">';
-		$html .= '<h1 style="font-size:24px">' . esc_html__( 'Acknowledgement of contract withdrawal', 'contract-withdrawal-free-for-woocommerce' ) . '</h1>';
-		$html .= '<p>' . esc_html__( 'We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below.', 'contract-withdrawal-free-for-woocommerce' ) . '</p>';
+		$html .= '<h1 style="font-size:24px">' . esc_html__( 'Acknowledgement of contract withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</h1>';
+		$html .= '<p>' . esc_html__( 'We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</p>';
 		$html .= '<table role="presentation" style="border-collapse:collapse;width:100%">';
 		$fields = array(
-			__( 'Withdrawal reference', 'contract-withdrawal-free-for-woocommerce' ) => $placeholder,
-			__( 'Submitted at', 'contract-withdrawal-free-for-woocommerce' ) => $submitted_local,
-			__( 'Order or contract reference', 'contract-withdrawal-free-for-woocommerce' ) => $form['contract_reference'],
-			__( 'Name', 'contract-withdrawal-free-for-woocommerce' ) => trim( $form['firstname'] . ' ' . $form['lastname'] ),
-			__( 'Email', 'contract-withdrawal-free-for-woocommerce' ) => $form['email'],
-			__( 'Withdrawal scope', 'contract-withdrawal-free-for-woocommerce' ) => $scope_label,
+			__( 'Withdrawal reference', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => $placeholder,
+			__( 'Submitted at', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => $submitted_local,
+			__( 'Order or contract reference', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => $form['contract_reference'],
+			__( 'Name', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => trim( $form['firstname'] . ' ' . $form['lastname'] ),
+			__( 'Email', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => $form['email'],
+			__( 'Withdrawal scope', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) => $scope_label,
 		);
 		foreach ( $fields as $label => $value ) {
 			$html .= '<tr><th style="text-align:left;padding:8px;border:1px solid #dce1e7;background:#f8fafc">' . esc_html( $label ) . '</th><td style="padding:8px;border:1px solid #dce1e7">' . esc_html( $value ) . '</td></tr>';
 		}
-		$html .= '</table><h2 style="font-size:18px">' . esc_html__( 'Declaration submitted', 'contract-withdrawal-free-for-woocommerce' ) . '</h2>';
+		$html .= '</table><h2 style="font-size:18px">' . esc_html__( 'Declaration submitted', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</h2>';
 		$html .= '<div style="white-space:pre-wrap;padding:16px;border-left:4px solid #173faf;background:#f4f7ff">' . esc_html( $declaration ) . '</div>';
-		$html .= '<p><small>' . esc_html__( 'This message acknowledges receipt. It does not automatically approve a return or refund.', 'contract-withdrawal-free-for-woocommerce' ) . '</small></p></div>';
+		$html .= '<p><small>' . esc_html__( 'This message acknowledges receipt. It does not automatically approve a return or refund.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</small></p></div>';
 
 		return array(
 			'declaration'          => $declaration,
@@ -90,10 +90,10 @@ class Mailer {
 			return 'not_configured';
 		}
 		/* translators: %s: withdrawal reference. */
-		$subject = sprintf( __( 'New contract-withdrawal declaration — %s', 'contract-withdrawal-free-for-woocommerce' ), $record['reference'] );
+		$subject = sprintf( __( 'New contract-withdrawal declaration — %s', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), $record['reference'] );
 		/* translators: %s: withdrawal reference. */
-		$text  = sprintf( __( 'A new declaration was recorded under reference %s.', 'contract-withdrawal-free-for-woocommerce' ), $record['reference'] ) . "\n\n";
-		$text .= __( 'Customer confirmation status', 'contract-withdrawal-free-for-woocommerce' ) . ': ' . $customer_email_status . "\n\n" . $record['declaration'];
+		$text  = sprintf( __( 'A new declaration was recorded under reference %s.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), $record['reference'] ) . "\n\n";
+		$text .= __( 'Customer confirmation status', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . ': ' . $customer_email_status . "\n\n" . $record['declaration'];
 		$html  = '<div style="font-family:Arial,sans-serif;line-height:1.6;white-space:pre-wrap">' . nl2br( esc_html( $text ) ) . '</div>';
 		$status = $this->send( $recipient, $subject, $html, $record['email'] ) ? 'sent' : 'failed';
 		$this->repository->set_admin_email_status( $record['withdrawal_id'], $status );

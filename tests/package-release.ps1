@@ -1,8 +1,8 @@
-param([string]$Version = '1.1.0')
+param([string]$Version = '1.1.1')
 
 $ErrorActionPreference = 'Stop'
 $Root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))
-$Slug = 'contract-withdrawal-free-for-woocommerce'
+$Slug = 'furmedia-romanian-withdrawal-law-for-woocommerce'
 $Dist = [IO.Path]::GetFullPath((Join-Path $Root 'dist'))
 $Stage = [IO.Path]::GetFullPath((Join-Path $Dist ('.staging-' + $Version)))
 
@@ -23,7 +23,7 @@ New-Item -ItemType Directory -Path $PluginStage -Force | Out-Null
 $ReleasePaths = @(
 	'assets', 'docs', 'includes', 'languages', 'templates',
 	'CHANGELOG.md', 'LICENSE.txt', 'README.md', 'index.php', 'readme.txt',
-	'contract-withdrawal-free-for-woocommerce.php', 'uninstall.php'
+	'furmedia-romanian-withdrawal-law-for-woocommerce.php', 'uninstall.php'
 )
 foreach ($Relative in $ReleasePaths) {
 	$Source = Join-Path $Root $Relative
@@ -55,7 +55,7 @@ try {
 	if ($Archive.Entries | Where-Object { $_.FullName.Contains('\') }) {
 		throw 'Installable ZIP contains non-portable path separators.'
 	}
-	if ($Names -notcontains "$Slug/contract-withdrawal-free-for-woocommerce.php") {
+	if ($Names -notcontains "$Slug/furmedia-romanian-withdrawal-law-for-woocommerce.php") {
 		throw 'Installable ZIP does not contain the plugin bootstrap.'
 	}
 	if ($Names | Where-Object { $_ -match '(^|/)(tests|dist|\.github|\.git|\.projectbrain|graphify-out)(/|$)' }) {

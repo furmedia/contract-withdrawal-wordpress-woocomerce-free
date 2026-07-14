@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -26,7 +26,7 @@ abstract class Base_Widget extends \WP_Widget {
 	public function form( $instance ) {
 		$title = $this->title( $instance );
 		?>
-		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"></p>
 		<?php
 	}
@@ -38,7 +38,7 @@ abstract class Base_Widget extends \WP_Widget {
 
 class Form_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_form_widget', __( 'Withdrawal: Online form', 'contract-withdrawal-free-for-woocommerce' ), array( 'description' => __( 'Displays the complete online contract-withdrawal form.', 'contract-withdrawal-free-for-woocommerce' ) ) );
+		parent::__construct( 'cwfw_form_widget', __( 'Withdrawal: Online form', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {
@@ -51,11 +51,11 @@ class Form_Widget extends Base_Widget {
 
 class Link_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_link_widget', __( 'Withdrawal: Permanent link', 'contract-withdrawal-free-for-woocommerce' ), array( 'description' => __( 'Displays a visible link to the online withdrawal function.', 'contract-withdrawal-free-for-woocommerce' ) ) );
+		parent::__construct( 'cwfw_link_widget', __( 'Withdrawal: Permanent link', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a visible link to the online withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {
-		$label = isset( $instance['label'] ) && $instance['label'] ? $instance['label'] : __( 'Withdraw from the contract here', 'contract-withdrawal-free-for-woocommerce' );
+		$label = isset( $instance['label'] ) && $instance['label'] ? $instance['label'] : __( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->render_title( $args, $instance );
 		echo cwfw()->frontend()->shortcode_link( array( 'label' => $label ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -65,7 +65,7 @@ class Link_Widget extends Base_Widget {
 	public function form( $instance ) {
 		parent::form( $instance );
 		$label = isset( $instance['label'] ) ? sanitize_text_field( $instance['label'] ) : '';
-		?><p><label for="<?php echo esc_attr( $this->get_field_id( 'label' ) ); ?>"><?php esc_html_e( 'Link label', 'contract-withdrawal-free-for-woocommerce' ); ?></label><input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'label' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'label' ) ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>"></p><?php
+		?><p><label for="<?php echo esc_attr( $this->get_field_id( 'label' ) ); ?>"><?php esc_html_e( 'Link label', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label><input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'label' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'label' ) ); ?>" type="text" value="<?php echo esc_attr( $label ); ?>"></p><?php
 	}
 
 	public function update( $new_instance, $old_instance ) {
@@ -77,7 +77,7 @@ class Link_Widget extends Base_Widget {
 
 class Legal_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_legal_widget', __( 'Withdrawal: Legal notice', 'contract-withdrawal-free-for-woocommerce' ), array( 'description' => __( 'Displays a short notice and a link to the withdrawal function.', 'contract-withdrawal-free-for-woocommerce' ) ) );
+		parent::__construct( 'cwfw_legal_widget', __( 'Withdrawal: Legal notice', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a short notice and a link to the withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {

@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,8 +24,8 @@ class Installer {
 
 		$settings   = new Settings();
 		$current    = $settings->all();
-		$form_page  = self::ensure_page( 'retragere-din-contract', __( 'Withdrawal from contract', 'contract-withdrawal-free-for-woocommerce' ), '[cwfw_form]' );
-		$legal_page = self::ensure_page( 'dreptul-de-retragere', __( 'Right of withdrawal', 'contract-withdrawal-free-for-woocommerce' ), '[cwfw_legal_notice full="yes"]' );
+		$form_page  = self::ensure_page( 'retragere-din-contract', __( 'Withdrawal from contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[cwfw_form]' );
+		$legal_page = self::ensure_page( 'dreptul-de-retragere', __( 'Right of withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[cwfw_legal_notice full="yes"]' );
 		$settings->update(
 			array(
 				'form_page_id'  => $current['form_page_id'] ? $current['form_page_id'] : $form_page,

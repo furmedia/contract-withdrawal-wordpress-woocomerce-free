@@ -4,9 +4,9 @@
 	var __ = i18n.__;
 	var t = window.cwfwBlocksI18n || {};
 	var definitions = [
-		['foxly/contract-withdrawal-free-form', t.formTitle || __('Withdrawal form', 'contract-withdrawal-free-for-woocommerce'), t.formDescription || __('Displays the complete online contract-withdrawal form.', 'contract-withdrawal-free-for-woocommerce'), 'feedback'],
-		['foxly/contract-withdrawal-free-legal', t.legalTitle || __('Withdrawal information', 'contract-withdrawal-free-for-woocommerce'), t.legalDescription || __('Displays the configured withdrawal information.', 'contract-withdrawal-free-for-woocommerce'), 'privacy'],
-		['foxly/contract-withdrawal-free-link', t.linkTitle || __('Withdrawal link', 'contract-withdrawal-free-for-woocommerce'), t.linkDescription || __('Displays the permanent withdrawal link.', 'contract-withdrawal-free-for-woocommerce'), 'admin-links']
+		['furmedia/romanian-withdrawal-law-form', t.formTitle || __('Withdrawal form', 'furmedia-romanian-withdrawal-law-for-woocommerce'), t.formDescription || __('Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce'), 'feedback'],
+		['furmedia/romanian-withdrawal-law-legal', t.legalTitle || __('Withdrawal information', 'furmedia-romanian-withdrawal-law-for-woocommerce'), t.legalDescription || __('Displays the configured withdrawal information.', 'furmedia-romanian-withdrawal-law-for-woocommerce'), 'privacy'],
+		['furmedia/romanian-withdrawal-law-link', t.linkTitle || __('Withdrawal link', 'furmedia-romanian-withdrawal-law-for-woocommerce'), t.linkDescription || __('Displays the permanent withdrawal link.', 'furmedia-romanian-withdrawal-law-for-woocommerce'), 'admin-links']
 	];
 
 	definitions.forEach(function (definition) {

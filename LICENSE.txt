@@ -1,5 +1,5 @@
-Contract Withdrawal Free for WooCommerce
-Copyright (C) 2026 Foxly Software
+Furmedia Romanian Withdrawal Law for WooCommerce
+Copyright (C) 2026 Furmedia
 
 The WordPress plugin PHP, JavaScript and CSS code is licensed under the GNU
 General Public License, version 2 or any later version.

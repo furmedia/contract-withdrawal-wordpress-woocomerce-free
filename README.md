@@ -1,4 +1,4 @@
-# Contract Withdrawal Free for WooCommerce
+# Furmedia Romanian Withdrawal Law for WooCommerce
 
 Free, GPL-licensed WordPress plugin that gives Romanian WooCommerce stores a dedicated online contract-withdrawal function. It records guest and signed-in declarations, creates an evidence reference, sends an acknowledgement and notifies the merchant.
 
@@ -34,9 +34,9 @@ Shortcodes:
 
 Gutenberg blocks:
 
-- Contract Withdrawal Free: Form
-- Contract Withdrawal Free: Information
-- Contract Withdrawal Free: Link
+- Furmedia Romanian Withdrawal Law: Form
+- Furmedia Romanian Withdrawal Law: Information
+- Furmedia Romanian Withdrawal Law: Link
 
 ## Free and Pro boundary
 

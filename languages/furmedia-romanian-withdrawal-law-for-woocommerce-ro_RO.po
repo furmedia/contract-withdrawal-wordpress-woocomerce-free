@@ -1,662 +1,664 @@
-# Copyright (C) 2026 Foxly Software
+# Copyright (C) 2026 Furmedia
 # This file is distributed under the same license as the plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.1.0\n"
-"Report-Msgid-Bugs-To: support@foxly.ro\n"
+"Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.1\n"
+"Report-Msgid-Bugs-To: contact@furmedia.ro\n"
 "POT-Creation-Date: 2026-07-13 00:00+0300\n"
 "PO-Revision-Date: 2026-07-13 00:00+0300\n"
-"Last-Translator: Foxly Software\n"
-"Language-Team: Foxly Software\n"
+"Last-Translator: Furmedia\n"
+"Language-Team: Furmedia\n"
+"Language: ro_RO\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Domain: contract-withdrawal-free-for-woocommerce\n"
+"X-Domain: furmedia-romanian-withdrawal-law-for-woocommerce\n"
 
 #: templates/success.php:11
 msgid "A complete copy of the declaration, including its date and time, was sent to the email address provided."
-msgstr ""
+msgstr "O copie integrală a declarației, inclusiv data și ora transmiterii, a fost trimisă la adresa de email indicată."
 
 #: includes/class-cwfw-mailer.php:95
 msgid "A new declaration was recorded under reference %s."
-msgstr ""
+msgstr "A fost înregistrată o nouă declarație cu numărul %s."
 
 #: includes/class-cwfw-mailer.php:51
 msgid "Acknowledgement of contract withdrawal"
-msgstr ""
+msgstr "Confirmarea primirii declarației de retragere"
 
 #: includes/class-cwfw-mailer.php:38
 msgid "Acknowledgement of contract withdrawal — %s"
-msgstr ""
+msgstr "Confirmarea primirii declarației de retragere — %s"
 
 #: templates/form.php:138
 msgid "Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund."
-msgstr ""
+msgstr "Activarea funcției „Confirmați retragerea” transmite această declarație neechivocă. Confirmarea atestă primirea; nu aprobă automat returul sau rambursarea."
 
 #: includes/class-cwfw-frontend.php:368
 msgid "Add at least one product for a partial withdrawal."
-msgstr ""
+msgstr "Adăugați cel puțin un produs pentru retragerea parțială."
 
 #: templates/form.php:125
 msgid "Add product"
-msgstr ""
+msgstr "Adaugă produs"
 
 #: includes/class-cwfw-admin.php:141
 msgid "Additional return information"
-msgstr ""
+msgstr "Informații suplimentare despre retur"
 
 #: includes/class-cwfw-admin.php:108
 msgid "Administrator email"
-msgstr ""
+msgstr "Email administrator"
 
 #: includes/class-cwfw-admin.php:126
 msgid "Availability"
-msgstr ""
+msgstr "Disponibilitate"
 
 #: includes/class-cwfw-admin.php:106
 msgid "Back to declarations"
-msgstr ""
+msgstr "Înapoi la declarații"
 
 #: includes/class-cwfw-admin.php:132
 msgid "Business address"
-msgstr ""
+msgstr "Adresa comerciantului"
 
 #: includes/class-cwfw-admin.php:131
 msgid "Business name"
-msgstr ""
+msgstr "Denumirea comerciantului"
 
 #: includes/class-cwfw-frontend.php:372
 msgid "Choose how the contract is identified."
-msgstr ""
+msgstr "Alegeți cum identificați contractul."
 
 #: templates/form.php:141
 msgid "Confirm withdrawal"
-msgstr ""
+msgstr "Confirmați retragerea"
 
 #: templates/legal.php:19
 msgid "Consequences of withdrawal"
-msgstr ""
+msgstr "Consecințele retragerii"
 
 #: includes/class-cwfw-admin.php:140
 msgid "Consumer"
-msgstr ""
+msgstr "Consumator"
 
 #: includes/class-cwfw-admin.php:136
 msgid "Contact phone"
-msgstr ""
+msgstr "Telefon de contact"
 
 #: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
 msgid "Contract"
-msgstr ""
-
-#: includes/class-cwfw-plugin.php:62
-msgid "Contract Withdrawal Free for WooCommerce requires WooCommerce to be installed and active."
-msgstr ""
-
-#: includes/class-cwfw-admin.php:120
-msgid "Contract Withdrawal Free settings"
-msgstr ""
+msgstr "Contract"
 
 #: includes/class-cwfw-admin.php:67
 msgid "Contract withdrawals"
-msgstr ""
+msgstr "Retrageri din contract"
 
 #: includes/class-cwfw-admin.php:27 includes/class-cwfw-admin.php:28
 msgid "Contract withdrawals (Free)"
-msgstr ""
+msgstr "Retrageri din contract (Gratuit)"
 
 #: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
 msgid "Customer"
-msgstr ""
+msgstr "Client"
 
 #: includes/class-cwfw-mailer.php:96
 msgid "Customer confirmation status"
-msgstr ""
+msgstr "Starea confirmării către client"
 
 #: includes/class-cwfw-admin.php:108
 msgid "Customer email"
-msgstr ""
+msgstr "Email client"
 
 #: includes/class-cwfw-mailer.php:46 includes/class-cwfw-mailer.php:65
 msgid "Declaration submitted"
-msgstr ""
+msgstr "Declarația transmisă"
 
 #: includes/class-cwfw-admin.php:68
 msgid "Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds."
-msgstr ""
+msgstr "Declarațiile sunt înregistrări probatorii. Această ediție gratuită nu aprobă eligibilitatea, nu anulează comenzi, nu reintroduce produse în stoc și nu efectuează rambursări."
 
 #: includes/class-cwfw-frontend.php:290
 msgid "Delivery failed — contact the merchant"
-msgstr ""
+msgstr "Livrarea a eșuat — contactați comerciantul"
 
 #: includes/class-cwfw-admin.php:140
 msgid "Direct return cost"
-msgstr ""
+msgstr "Costul direct al returului"
 
 #: includes/class-cwfw-admin.php:142
 msgid "Display timezone"
-msgstr ""
+msgstr "Fus orar pentru afișare"
 
 #: includes/class-cwfw-widgets.php:80
 msgid "Displays a short notice and a link to the withdrawal function."
-msgstr ""
+msgstr "Afișează o informare scurtă și un link către funcția de retragere."
 
 #: includes/class-cwfw-widgets.php:54
 msgid "Displays a visible link to the online withdrawal function."
-msgstr ""
+msgstr "Afișează un link vizibil către funcția online de retragere."
 
 #: includes/class-cwfw-frontend.php:49 includes/class-cwfw-widgets.php:41
 msgid "Displays the complete online contract-withdrawal form."
-msgstr ""
+msgstr "Afișează formularul online complet de retragere din contract."
 
 #: includes/class-cwfw-frontend.php:51
 msgid "Displays the configured withdrawal information."
-msgstr ""
+msgstr "Afișează informațiile configurate privind retragerea."
 
 #: includes/class-cwfw-frontend.php:53
 msgid "Displays the permanent withdrawal link."
-msgstr ""
+msgstr "Afișează linkul permanent către funcția de retragere."
 
 #: templates/form.php:20
 msgid "Do not fill this field"
-msgstr ""
+msgstr "Nu completați acest câmp"
 
 #: includes/class-cwfw-admin.php:110
 msgid "Download evidence"
-msgstr ""
+msgstr "Descarcă dovada"
 
 #: templates/success.php:16
 msgid "Download submission evidence"
-msgstr ""
+msgstr "Descarcă dovada transmiterii"
 
 #: includes/class-cwfw-frontend.php:362
 msgid "Each product must have a name and a quantity between 1 and 9,999."
-msgstr ""
+msgstr "Fiecare produs trebuie să aibă o denumire și o cantitate între 1 și 9.999."
 
 #: includes/class-cwfw-admin.php:70 includes/class-cwfw-mailer.php:44 includes/class-cwfw-mailer.php:59
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: templates/success.php:8
 msgid "Email acknowledgement"
-msgstr ""
+msgstr "Confirmare prin email"
 
 #: templates/form.php:40
 msgid "Email address for the acknowledgement *"
-msgstr ""
+msgstr "Adresa de email pentru confirmare *"
 
 #: includes/class-cwfw-admin.php:127
 msgid "Enable the public withdrawal function"
-msgstr ""
+msgstr "Activează funcția publică de retragere"
 
 #: includes/class-cwfw-frontend.php:315
 msgid "Enter a valid email address."
-msgstr ""
+msgstr "Introduceți o adresă de email validă."
 
 #: templates/form.php:49
 msgid "Enter an order number / contract identifier manually"
-msgstr ""
+msgstr "Introduc manual numărul comenzii / identificarea contractului"
 
 #: includes/class-cwfw-frontend.php:356
 msgid "Enter an order number or contract identifier of at most 128 characters."
-msgstr ""
+msgstr "Introduceți numărul comenzii sau identificarea contractului, de maximum 128 de caractere."
 
 #: includes/class-cwfw-frontend.php:518
 msgid "Evidence not found."
-msgstr ""
+msgstr "Dovada nu a fost găsită."
 
 #: templates/form.php:6
 msgid "Fields marked with * are required."
-msgstr ""
+msgstr "Câmpurile marcate cu * sunt obligatorii."
 
 #: templates/form.php:28
 msgid "First name *"
-msgstr ""
+msgstr "Prenume *"
 
 #: includes/class-cwfw-frontend.php:309
 msgid "First name must contain between 1 and 64 characters."
-msgstr ""
+msgstr "Prenumele trebuie să conțină între 1 și 64 de caractere."
 
 #: templates/legal.php:11
 msgid "For services, the period runs from the date the contract is concluded. For sales contracts, it runs from the day on which you or a third party indicated by you, other than the carrier, acquires physical possession of the goods. For multiple goods delivered separately, the period runs from receipt of the last good; for a good delivered in lots or pieces, from receipt of the last lot or piece; and for regular delivery, from receipt of the first good."
-msgstr ""
+msgstr "Pentru servicii, perioada curge de la data încheierii contractului. Pentru contractele de vânzare, perioada curge din ziua în care dumneavoastră sau o persoană terță indicată de dumneavoastră, alta decât transportatorul, intră în posesia fizică a bunurilor. Pentru bunuri multiple livrate separat, termenul curge de la primirea ultimului bun; pentru un bun livrat în loturi sau piese, de la primirea ultimului lot ori a ultimei piese; iar pentru livrări periodice, de la primirea primului bun."
 
 #: includes/class-cwfw-admin.php:78
 msgid "Full"
-msgstr ""
+msgstr "Integrală"
+
+#: includes/class-cwfw-plugin.php:62
+msgid "Furmedia Romanian Withdrawal Law for WooCommerce requires WooCommerce to be installed and active."
+msgstr "Furmedia Romanian Withdrawal Law for WooCommerce necesită instalarea și activarea WooCommerce."
+
+#: includes/class-cwfw-admin.php:120
+msgid "Furmedia Romanian Withdrawal Law settings"
+msgstr "Setări Furmedia Romanian Withdrawal Law"
 
 #: templates/form.php:47
 msgid "How do you identify the contract? *"
-msgstr ""
+msgstr "Cum identificați contractul? *"
 
 #: templates/form.php:137
 msgid "I hereby give notice that I withdraw from the distance contract identified above."
-msgstr ""
+msgstr "Prin prezenta notific retragerea mea din contractul la distanță identificat mai sus."
 
 #: includes/class-cwfw-mailer.php:20
 msgid "I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s."
-msgstr ""
+msgstr "Prin prezenta, eu, %1$s, notific retragerea mea din contractul la distanță identificat prin „%2$s”, pentru: %3$s. Declarația a fost transmisă la %4$s și înregistrată cu numărul %5$s."
 
 #: templates/legal.php:26
 msgid "If you requested that a service begin during the withdrawal period, you owe an amount proportionate to the services supplied until you communicate the withdrawal, compared with the full coverage of the contract."
-msgstr ""
+msgstr "Dacă ați solicitat începerea prestării unui serviciu în perioada de retragere, datorați o sumă proporțională cu serviciile furnizate până la momentul comunicării retragerii, raportată la acoperirea totală a contractului."
 
 #: templates/legal.php:20
 msgid "If you withdraw, we will reimburse the amounts received, including the cost of standard delivery, without undue delay and no later than 14 days after being informed. Reimbursement is made using the same payment method unless you expressly agree otherwise, without fees for the consumer."
-msgstr ""
+msgstr "Dacă vă retrageți, vom rambursa sumele primite, inclusiv costul livrării standard, fără întârzieri nejustificate și cel târziu în 14 zile de la data informării. Rambursarea se face prin aceeași modalitate de plată, dacă nu ați acceptat expres o altă modalitate, fără comisioane pentru consumator."
 
 #: includes/class-cwfw-admin.php:110
 msgid "Immutable declaration"
-msgstr ""
+msgstr "Declarație nemodificabilă"
 
 #: templates/legal.php:6
 msgid "Information on the right of withdrawal"
-msgstr ""
+msgstr "Informații privind dreptul de retragere"
 
 #: includes/class-cwfw-frontend.php:514
 msgid "Invalid evidence link."
-msgstr ""
+msgstr "Linkul dovezii nu este valid."
 
 #: templates/success.php:4
 msgid "Keep the withdrawal reference and the acknowledgement sent by email."
-msgstr ""
+msgstr "Păstrați numărul solicitării și confirmarea trimisă prin email."
 
 #: templates/form.php:33
 msgid "Last name *"
-msgstr ""
+msgstr "Nume *"
 
 #: includes/class-cwfw-frontend.php:312
 msgid "Last name must contain between 1 and 64 characters."
-msgstr ""
+msgstr "Numele trebuie să conțină între 1 și 64 de caractere."
 
 #: includes/class-cwfw-widgets.php:68
 msgid "Link label"
-msgstr ""
+msgstr "Eticheta linkului"
 
 #: templates/form.php:63
 msgid "Load order products"
-msgstr ""
+msgstr "Afișează produsele comenzii"
 
 #: includes/class-cwfw-admin.php:130
 msgid "Merchant details"
-msgstr ""
+msgstr "Datele comerciantului"
 
 #: includes/class-cwfw-mailer.php:43 includes/class-cwfw-mailer.php:58
 msgid "Name"
-msgstr ""
+msgstr "Nume și prenume"
 
 #: includes/class-cwfw-mailer.php:93
 msgid "New contract-withdrawal declaration — %s"
-msgstr ""
+msgstr "Declarație nouă de retragere — %s"
 
 #: templates/form.php:78
 msgid "No orders were found in this account. Identify the contract manually below."
-msgstr ""
+msgstr "Nu am găsit comenzi în acest cont. Identificați contractul manual mai jos."
 
 #: includes/class-cwfw-admin.php:72
 msgid "No withdrawal declarations have been recorded."
-msgstr ""
+msgstr "Nu a fost înregistrată nicio declarație de retragere."
 
 #: includes/class-cwfw-mailer.php:34
 msgid "Notes"
-msgstr ""
+msgstr "Observații"
 
 #: templates/form.php:130
 msgid "Notes (optional)"
-msgstr ""
+msgstr "Observații (opțional)"
 
 #: includes/class-cwfw-frontend.php:321
 msgid "Notes may contain at most 2,000 characters."
-msgstr ""
+msgstr "Observațiile pot avea maximum 2.000 de caractere."
 
 #: includes/class-cwfw-admin.php:135
 msgid "Notification email"
-msgstr ""
+msgstr "Email pentru notificări"
 
 #: includes/class-cwfw-mailer.php:17 templates/form.php:93
 msgid "Only selected products and quantities"
-msgstr ""
+msgstr "Numai anumite produse și cantități"
 
 #: templates/form.php:53
 msgid "Order data and products are loaded securely on the server from your account."
-msgstr ""
+msgstr "Datele comenzii și produsele sunt preluate în siguranță, pe server, din contul dumneavoastră."
 
 #: templates/form.php:84
 msgid "Order number or contract identifier *"
-msgstr ""
+msgstr "Numărul comenzii sau identificarea contractului *"
 
 #: includes/class-cwfw-mailer.php:42 includes/class-cwfw-mailer.php:57
 msgid "Order or contract reference"
-msgstr ""
+msgstr "Numărul comenzii sau identificarea contractului"
 
 #: templates/form.php:104
 msgid "Ordered: %d"
-msgstr ""
+msgstr "Comandat: %d"
 
 #: includes/class-cwfw-admin.php:144
 msgid "Pages and privacy"
-msgstr ""
+msgstr "Pagini și confidențialitate"
 
 #: includes/class-cwfw-admin.php:78
 msgid "Partial"
-msgstr ""
+msgstr "Parțială"
 
 #: includes/class-cwfw-frontend.php:288
 msgid "Pending"
-msgstr ""
+msgstr "În așteptare"
 
 #: includes/class-cwfw-admin.php:149
 msgid "Placement tools"
-msgstr ""
+msgstr "Instrumente de amplasare"
 
 #: templates/form.php:140
 msgid "Privacy policy"
-msgstr ""
+msgstr "Politica de confidențialitate"
 
 #: includes/class-cwfw-admin.php:147
 msgid "Privacy policy page"
-msgstr ""
+msgstr "Pagina politicii de confidențialitate"
 
 #: templates/form.php:119
 msgid "Product"
-msgstr ""
+msgstr "Produs"
 
 #: includes/class-cwfw-mailer.php:28 templates/form.php:114
 msgid "Products and quantities"
-msgstr ""
+msgstr "Produse și cantități"
 
 #: templates/form.php:98
 msgid "Products included in the selected order"
-msgstr ""
+msgstr "Produsele incluse în comanda selectată"
 
 #: includes/class-cwfw-admin.php:134
 msgid "Public contact email"
-msgstr ""
+msgstr "Email public de contact"
 
 #: templates/form.php:106 templates/form.php:120
 msgid "Quantity"
-msgstr ""
+msgstr "Cantitate"
 
 #: templates/form.php:55
 msgid "Recent order"
-msgstr ""
+msgstr "Comandă recentă"
 
 #: includes/class-cwfw-admin.php:70
 msgid "Reference"
-msgstr ""
+msgstr "Numărul solicitării"
 
 #: templates/form.php:121
 msgid "Remove"
-msgstr ""
+msgstr "Elimină"
 
 #: includes/class-cwfw-admin.php:133
 msgid "Return address"
-msgstr ""
+msgstr "Adresa de retur"
 
 #: templates/form.php:11
 msgid "Review the highlighted fields and try again."
-msgstr ""
+msgstr "Verificați câmpurile evidențiate și încercați din nou."
 
 #: includes/class-cwfw-installer.php:28
 msgid "Right of withdrawal"
-msgstr ""
+msgstr "Dreptul de retragere"
 
 #: includes/class-cwfw-frontend.php:350
 msgid "Select at least one product for a partial withdrawal."
-msgstr ""
+msgstr "Selectați cel puțin un produs pentru retragerea parțială."
 
 #: templates/form.php:48
 msgid "Select one of my orders"
-msgstr ""
+msgstr "Aleg o comandă din cont"
 
 #: templates/form.php:98
 msgid "Select products and quantities"
-msgstr ""
+msgstr "Selectați produsele și cantitățile"
 
 #: includes/class-cwfw-frontend.php:318
 msgid "Select the scope of the withdrawal."
-msgstr ""
+msgstr "Selectați obiectul retragerii."
 
 #: templates/form.php:69
 msgid "Selected order: #%s"
-msgstr ""
+msgstr "Comanda selectată: #%s"
 
 #: templates/legal.php:22
 msgid "Send or hand over the goods to the return address below without undue delay and no later than 14 days after communicating the withdrawal. The deadline is met if the goods are sent before the period expires."
-msgstr ""
+msgstr "Expediați sau predați bunurile la adresa de retur de mai jos, fără întârzieri nejustificate și în cel mult 14 zile de la comunicarea retragerii. Termenul este respectat dacă bunurile sunt expediate înainte de expirarea lui."
 
 #: includes/class-cwfw-frontend.php:289
 msgid "Sent"
-msgstr ""
+msgstr "Trimis"
 
 #: includes/class-cwfw-admin.php:122
 msgid "Settings saved."
-msgstr ""
+msgstr "Setările au fost salvate."
 
 #: includes/class-cwfw-frontend.php:109 includes/class-cwfw-frontend.php:126
 msgid "Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information."
-msgstr ""
+msgstr "Au fost transmise mai multe declarații într-un interval scurt. Așteptați și încercați din nou sau folosiți emailul afișat în informațiile privind retragerea."
 
 #: includes/class-cwfw-admin.php:128
 msgid "Show a permanent footer link"
-msgstr ""
+msgstr "Afișează un link permanent în subsol"
 
 #: templates/form.php:76
 msgid "Sign in to select an order and its products."
-msgstr ""
+msgstr "Autentificați-vă pentru a selecta o comandă și produsele ei."
 
 #: includes/class-cwfw-admin.php:107
 msgid "Submission details"
-msgstr ""
+msgstr "Detaliile transmiterii"
 
 #: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
 msgid "Submitted"
-msgstr ""
+msgstr "Data transmiterii"
 
 #: includes/class-cwfw-mailer.php:41 includes/class-cwfw-mailer.php:56 templates/success.php:7
 msgid "Submitted at"
-msgstr ""
+msgstr "Data și ora transmiterii"
 
 #: templates/form.php:141
 msgid "Submitting the declaration…"
-msgstr ""
+msgstr "Se transmite declarația…"
 
 #: templates/legal.php:24
 msgid "The consumer bears the direct cost of returning the goods."
-msgstr ""
+msgstr "Consumatorul suportă costul direct al returnării bunurilor."
 
 #: templates/form.php:140
 msgid "The data is processed to record, acknowledge and handle this withdrawal declaration."
-msgstr ""
+msgstr "Datele sunt prelucrate pentru înregistrarea, confirmarea și soluționarea declarației de retragere."
 
 #: includes/class-cwfw-frontend.php:159
 msgid "The declaration could not be stored safely. Please try again or contact the merchant."
-msgstr ""
+msgstr "Declarația nu a putut fi salvată în siguranță. Încercați din nou sau contactați comerciantul."
 
 #: templates/success.php:13
 msgid "The declaration was saved, but the email could not be delivered immediately. Download the complete evidence now and contact the merchant if necessary."
-msgstr ""
+msgstr "Declarația a fost salvată, dar emailul nu a putut fi livrat imediat. Descărcați acum dovada completă și contactați comerciantul dacă este necesar."
 
 #: includes/class-cwfw-mailer.php:17 templates/form.php:92
 msgid "The entire order / contract"
-msgstr ""
+msgstr "Întreaga comandă / întregul contract"
 
 #: includes/class-cwfw-frontend.php:88 includes/class-cwfw-frontend.php:101
 msgid "The form session expired. Review the details and try again."
-msgstr ""
+msgstr "Sesiunea formularului a expirat. Verificați datele și încercați din nou."
 
 #: includes/class-cwfw-frontend.php:201
 msgid "The merchant contact details required for this function are not configured."
-msgstr ""
+msgstr "Datele de contact ale comerciantului necesare acestei funcții nu sunt configurate."
 
 #: includes/class-cwfw-frontend.php:81
 msgid "The online withdrawal function is not available yet. Please contact the merchant using the published contact details."
-msgstr ""
+msgstr "Funcția online de retragere nu este încă disponibilă. Contactați comerciantul folosind datele publicate."
 
 #: includes/class-cwfw-frontend.php:105
 msgid "The request could not be processed. Please try again."
-msgstr ""
+msgstr "Solicitarea nu a putut fi procesată. Încercați din nou."
 
 #: templates/legal.php:27
 msgid "The right of withdrawal does not apply in the cases provided by Article 16 of Romanian Emergency Ordinance no. 34/2014. Depending on the case, these include fully performed services begun with prior express agreement and acknowledgement of loss of the right; personalized goods; goods liable to deteriorate or expire rapidly; sealed health or hygiene goods that were unsealed; inseparably mixed goods; unsealed recordings or software; and digital content whose supply began with prior express agreement and acknowledgement of loss of the right."
-msgstr ""
+msgstr "Dreptul de retragere nu se aplică în cazurile prevăzute de art. 16 din OUG nr. 34/2014. După caz, acestea includ servicii executate integral, dacă executarea a început cu acordul prealabil expres și consumatorul a confirmat pierderea dreptului; bunuri personalizate; bunuri susceptibile să se deterioreze ori să expire rapid; bunuri sigilate din motive de protecție a sănătății sau igienă care au fost desigilate; bunuri inseparabil amestecate; înregistrări ori programe desigilate; și conținut digital a cărui furnizare a început cu acordul prealabil expres și confirmarea pierderii dreptului."
 
 #: includes/class-cwfw-admin.php:149
 msgid "The same form, legal notice and link are available as Gutenberg blocks and classic widgets."
-msgstr ""
+msgstr "Același formular, informarea juridică și linkul sunt disponibile ca blocuri Gutenberg și widgeturi clasice."
 
 #: includes/class-cwfw-frontend.php:94
 msgid "The selected order is no longer available in this account. Select it again or use manual identification."
-msgstr ""
+msgstr "Comanda selectată nu mai este disponibilă în acest cont. Selectați din nou sau folosiți identificarea manuală."
 
 #: includes/class-cwfw-frontend.php:329
 msgid "The selected order is not available in this account."
-msgstr ""
+msgstr "Comanda selectată nu este disponibilă în acest cont."
 
 #: includes/class-cwfw-frontend.php:342
 msgid "The selected products or quantities no longer match the order."
-msgstr ""
+msgstr "Produsele sau cantitățile selectate nu mai corespund comenzii."
 
 #: templates/legal.php:24
 msgid "The trader bears the direct cost of returning the goods."
-msgstr ""
+msgstr "Comerciantul suportă costul direct al returnării bunurilor."
 
 #: includes/class-cwfw-frontend.php:198
 msgid "The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings."
-msgstr ""
+msgstr "Funcția de retragere este dezactivată. Configurați-o și activați-o din WooCommerce → Setări retragere."
 
 #: includes/class-cwfw-mailer.php:47 includes/class-cwfw-mailer.php:67
 msgid "This message acknowledges receipt. It does not automatically approve a return or refund."
-msgstr ""
+msgstr "Acest mesaj confirmă primirea declarației. Nu reprezintă aprobarea automată a returului sau rambursării."
 
 #: templates/legal.php:29
 msgid "This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review."
-msgstr ""
+msgstr "Acest software afișează informațiile configurate de comerciant și susține fluxul declarațiilor. Nu stabilește eligibilitatea juridică și nu înlocuiește verificarea juridică profesională."
 
 #: includes/class-cwfw-widgets.php:29
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: templates/legal.php:12
 msgid "To exercise the right, it is sufficient to communicate an unambiguous statement before the period expires, by post or email. You may use the model form below, but using it is not mandatory."
-msgstr ""
+msgstr "Pentru exercitarea dreptului este suficient să comunicați, înainte de expirarea termenului, o declarație neechivocă prin poștă sau email. Puteți folosi formularul tipizat de mai jos, fără ca utilizarea lui să fie obligatorie."
 
 #: templates/legal.php:16
 msgid "To meet the %d-day deadline, it is sufficient to send the communication concerning exercise of the right of withdrawal before the period expires."
-msgstr ""
+msgstr "Pentru respectarea termenului de %d zile este suficient să transmiteți comunicarea privind retragerea înainte de expirarea perioadei."
 
 #: includes/class-cwfw-admin.php:140
 msgid "Trader"
-msgstr ""
+msgstr "Comerciant"
 
 #: templates/form.php:5
 msgid "Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay."
-msgstr ""
+msgstr "Prin această funcție vă puteți exercita online dreptul de retragere din contractul încheiat la distanță, fără să indicați un motiv, în termenul legal aplicabil. După transmitere veți primi, fără întârzieri nejustificate, la adresa de email indicată, confirmarea de primire care conține declarația, data și ora transmiterii."
 
 #: includes/class-cwfw-mailer.php:39 includes/class-cwfw-mailer.php:52
 msgid "We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below."
-msgstr ""
+msgstr "Confirmăm primirea declarației dumneavoastră de retragere. Mai jos se află copia integrală a declarației și a datelor transmiterii."
 
 #: templates/legal.php:21
 msgid "We may withhold reimbursement until we receive the goods or until you supply evidence of having sent them back, whichever is earliest."
-msgstr ""
+msgstr "Putem amâna rambursarea până la primirea bunurilor sau până la prezentarea dovezii expedierii lor, luându-se în considerare data cea mai apropiată."
 
 #: includes/class-cwfw-frontend.php:265 includes/class-cwfw-frontend.php:272 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
 msgid "Withdraw from the contract here"
-msgstr ""
+msgstr "Retrageți-vă din contract aici"
 
 #: includes/class-cwfw-frontend.php:48
 msgid "Withdrawal form"
-msgstr ""
+msgstr "Formular de retragere"
 
 #: includes/class-cwfw-admin.php:145
 msgid "Withdrawal form page"
-msgstr ""
+msgstr "Pagina formularului de retragere"
 
 #: includes/class-cwfw-installer.php:27 templates/form.php:3
 msgid "Withdrawal from contract"
-msgstr ""
+msgstr "Retragere din contract"
 
 #: includes/class-cwfw-admin.php:138 includes/class-cwfw-frontend.php:50 templates/form.php:140
 msgid "Withdrawal information"
-msgstr ""
+msgstr "Informații privind retragerea"
 
 #: includes/class-cwfw-admin.php:146
 msgid "Withdrawal information page"
-msgstr ""
+msgstr "Pagina informațiilor privind retragerea"
 
 #: includes/class-cwfw-frontend.php:52
 msgid "Withdrawal link"
-msgstr ""
+msgstr "Link retragere"
 
 #: includes/class-cwfw-admin.php:139
 msgid "Withdrawal period (days)"
-msgstr ""
+msgstr "Perioada de retragere (zile)"
 
 #: includes/class-cwfw-admin.php:97 includes/class-cwfw-admin.php:183
 msgid "Withdrawal record not found."
-msgstr ""
+msgstr "Înregistrarea retragerii nu a fost găsită."
 
 #: includes/class-cwfw-mailer.php:40 includes/class-cwfw-mailer.php:55 templates/success.php:6
 msgid "Withdrawal reference"
-msgstr ""
+msgstr "Numărul solicitării"
 
 #: includes/class-cwfw-mailer.php:45 includes/class-cwfw-mailer.php:60
 msgid "Withdrawal scope"
-msgstr ""
+msgstr "Obiectul retragerii"
 
 #: templates/form.php:91
 msgid "Withdrawal scope *"
-msgstr ""
+msgstr "Obiectul retragerii *"
 
 #: includes/class-cwfw-admin.php:35 includes/class-cwfw-admin.php:36
 msgid "Withdrawal settings (Free)"
-msgstr ""
+msgstr "Setări retragere (Gratuit)"
 
 #: includes/class-cwfw-widgets.php:80
 msgid "Withdrawal: Legal notice"
-msgstr ""
+msgstr "Retragere: Informare juridică"
 
 #: includes/class-cwfw-widgets.php:41
 msgid "Withdrawal: Online form"
-msgstr ""
+msgstr "Retragere: Formular online"
 
 #: includes/class-cwfw-widgets.php:54
 msgid "Withdrawal: Permanent link"
-msgstr ""
+msgstr "Retragere: Link permanent"
 
 #: templates/legal.php:25
 msgid "You are liable only for diminished value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the goods."
-msgstr ""
+msgstr "Sunteți responsabil numai pentru diminuarea valorii bunurilor rezultată din manipulări diferite de cele necesare pentru stabilirea naturii, caracteristicilor și funcționării lor."
 
 #: includes/class-cwfw-admin.php:227
 msgid "You are not allowed to manage withdrawal records."
-msgstr ""
+msgstr "Nu aveți permisiunea de a administra înregistrările de retragere."
 
 #: templates/form.php:76
 msgid "You can continue without an account."
-msgstr ""
+msgstr "Puteți continua fără cont."
 
 #: templates/legal.php:9
 msgid "You have the right to withdraw from the contract, without giving reasons, within %d days."
-msgstr ""
+msgstr "Aveți dreptul de a vă retrage din contract, fără a preciza motivele, în termen de %d zile."
 
 #: templates/legal.php:3
 msgid "You may also exercise your right of withdrawal through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay."
-msgstr ""
+msgstr "Vă puteți exercita dreptul de retragere și prin funcția online dedicată. După activarea funcției „Confirmați retragerea”, confirmarea de primire care conține declarația, data și ora transmiterii va fi trimisă prin email fără întârzieri nejustificate."
 
 #: templates/legal.php:13
 msgid "You may also submit the declaration through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay."
-msgstr ""
+msgstr "De asemenea, puteți transmite declarația prin funcția online dedicată. După activarea funcției „Confirmați retragerea”, veți primi fără întârzieri nejustificate, prin email, confirmarea de primire care conține declarația, data și ora transmiterii."
 
 #: templates/form.php:25
 msgid "Your declaration"
-msgstr ""
+msgstr "Declarația dumneavoastră"
 
 #: templates/success.php:3
 msgid "Your withdrawal declaration was recorded"
-msgstr ""
+msgstr "Declarația de retragere a fost înregistrată"
 
 #: includes/class-cwfw-admin.php:201
 msgid "— Select —"
-msgstr ""
+msgstr "— Selectați —"

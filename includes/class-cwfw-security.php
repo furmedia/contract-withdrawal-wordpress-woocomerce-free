@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 

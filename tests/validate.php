@@ -22,7 +22,7 @@ function cwfw_read( $root, $path ) {
 }
 
 $required = array(
-	'contract-withdrawal-free-for-woocommerce.php',
+	'furmedia-romanian-withdrawal-law-for-woocommerce.php',
 	'includes/class-cwfw-plugin.php',
 	'includes/class-cwfw-installer.php',
 	'includes/class-cwfw-settings.php',
@@ -35,10 +35,10 @@ $required = array(
 	'templates/form.php',
 	'templates/success.php',
 	'templates/legal.php',
-	'languages/contract-withdrawal-free-for-woocommerce-ro_RO.l10n.php',
-	'languages/contract-withdrawal-free-for-woocommerce.pot',
-	'languages/contract-withdrawal-free-for-woocommerce-ro_RO.po',
-	'languages/contract-withdrawal-free-for-woocommerce-ro_RO.mo',
+	'languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.l10n.php',
+	'languages/furmedia-romanian-withdrawal-law-for-woocommerce.pot',
+	'languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.po',
+	'languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.mo',
 	'docs/FREE_VS_PRO.md',
 	'docs/WORDPRESS_ORG_SUBMISSION.md',
 	'uninstall.php',
@@ -51,11 +51,11 @@ foreach ( array( 'templates/history.php', 'templates/model.php', 'assets/js/prin
 	cwfw_test( ! is_file( $root . '/' . $forbidden_file ), "Premium-only file present: {$forbidden_file}" );
 }
 
-$main = cwfw_read( $root, 'contract-withdrawal-free-for-woocommerce.php' );
-cwfw_test( false !== strpos( $main, 'Version: 1.1.0' ), 'Plugin version header mismatch.' );
+$main = cwfw_read( $root, 'furmedia-romanian-withdrawal-law-for-woocommerce.php' );
+cwfw_test( false !== strpos( $main, 'Version: 1.1.1' ), 'Plugin version header mismatch.' );
 cwfw_test( false !== strpos( $main, 'Requires Plugins: woocommerce' ), 'WooCommerce dependency header missing.' );
 cwfw_test( false !== strpos( $main, 'custom_order_tables' ), 'HPOS compatibility declaration missing.' );
-cwfw_test( false !== strpos( $main, 'Text Domain: contract-withdrawal-free-for-woocommerce' ), 'Text domain header mismatch.' );
+cwfw_test( false !== strpos( $main, 'Text Domain: furmedia-romanian-withdrawal-law-for-woocommerce' ), 'Text domain header mismatch.' );
 cwfw_test( false === strpos( $main, 'load_plugin_textdomain' ), 'WordPress.org translations must use just-in-time loading.' );
 
 $installer = cwfw_read( $root, 'includes/class-cwfw-installer.php' );
@@ -90,7 +90,7 @@ cwfw_test( false !== strpos( $frontend, "do_action( 'cwfw_withdrawal_processed'"
 foreach ( array( 'cwfw_form', 'contract_withdrawal_form', 'retragere_din_contract', 'cwfw_legal_notice', 'contract_withdrawal_legal_notice', 'cwfw_link', 'contract_withdrawal_link' ) as $shortcode ) {
 	cwfw_test( false !== strpos( $frontend, "'{$shortcode}'" ), "Shortcode missing: {$shortcode}" );
 }
-foreach ( array( 'foxly/contract-withdrawal-free-form', 'foxly/contract-withdrawal-free-legal', 'foxly/contract-withdrawal-free-link' ) as $block ) {
+foreach ( array( 'furmedia/romanian-withdrawal-law-form', 'furmedia/romanian-withdrawal-law-legal', 'furmedia/romanian-withdrawal-law-link' ) as $block ) {
 	cwfw_test( false !== strpos( $frontend, "'{$block}'" ), "Block missing: {$block}" );
 }
 foreach ( array( 'shortcode_history', 'shortcode_model', 'account_endpoint', 'output_model_document' ) as $premium_frontend ) {
@@ -157,10 +157,10 @@ foreach ( $iterator as $file ) {
 	cwfw_test( 0 === $status, 'PHP lint failed: ' . $path );
 }
 cwfw_test( count( $php_files ) >= 16, 'Unexpectedly small PHP release surface.' );
-cwfw_test( false === strpos( $all_php, 'romanian-withdrawal-law-for-woocommerce' ), 'Old text domain remains in PHP.' );
+cwfw_test( false === strpos( $all_php, "'romanian-withdrawal-law-for-woocommerce'" ), 'Old text domain remains in PHP.' );
 cwfw_test( false === strpos( $all_php, 'wp_remote_' ), 'Free edition must not phone home.' );
 
-$translation_file = $root . '/languages/contract-withdrawal-free-for-woocommerce-ro_RO.l10n.php';
+$translation_file = $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.l10n.php';
 $translation      = include $translation_file;
 cwfw_test( isset( $translation['messages'] ) && is_array( $translation['messages'] ), 'Romanian translation data is invalid.' );
 $functions   = array( '__', '_e', '_x', '_ex', '_n', '_nx', 'esc_html__', 'esc_html_e', 'esc_attr__', 'esc_attr_e' );
@@ -196,9 +196,9 @@ foreach ( $php_files as $php_file ) {
 }
 $missing = array_diff_key( $message_ids, $translation['messages'] );
 cwfw_test( ! $missing, 'Romanian translations missing: ' . implode( ', ', array_keys( $missing ) ) );
-$pot = file_get_contents( $root . '/languages/contract-withdrawal-free-for-woocommerce.pot' );
-cwfw_test( false !== strpos( $pot, 'X-Domain: contract-withdrawal-free-for-woocommerce' ), 'POT catalog header is invalid.' );
-$mo = file_get_contents( $root . '/languages/contract-withdrawal-free-for-woocommerce-ro_RO.mo' );
+$pot = file_get_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce.pot' );
+cwfw_test( false !== strpos( $pot, 'X-Domain: furmedia-romanian-withdrawal-law-for-woocommerce' ), 'POT catalog header is invalid.' );
+$mo = file_get_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.mo' );
 cwfw_test( substr( $mo, 0, 4 ) === pack( 'V', 0x950412de ), 'Romanian MO catalog is invalid.' );
 
 foreach ( array( 'assets/js/frontend.js', 'assets/js/blocks.js' ) as $javascript ) {

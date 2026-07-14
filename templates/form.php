@@ -1,14 +1,14 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <section class="cwfw-wrap" aria-labelledby="cwfw-heading">
-	<h2 id="cwfw-heading"><?php esc_html_e( 'Withdrawal from contract', 'contract-withdrawal-free-for-woocommerce' ); ?></h2>
+	<h2 id="cwfw-heading"><?php esc_html_e( 'Withdrawal from contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></h2>
 	<div class="cwfw-intro">
-		<p><?php esc_html_e( 'Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay.', 'contract-withdrawal-free-for-woocommerce' ); ?></p>
-		<p class="cwfw-muted"><?php esc_html_e( 'Fields marked with * are required.', 'contract-withdrawal-free-for-woocommerce' ); ?></p>
+		<p><?php esc_html_e( 'Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
+		<p class="cwfw-muted"><?php esc_html_e( 'Fields marked with * are required.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 	</div>
 
 	<?php if ( ! empty( $errors ) ) : ?>
 		<div class="cwfw-notice cwfw-notice-error" id="cwfw-error-summary" role="alert" tabindex="-1">
-			<?php echo esc_html( ! empty( $errors['warning'] ) ? $errors['warning'] : __( 'Review the highlighted fields and try again.', 'contract-withdrawal-free-for-woocommerce' ) ); ?>
+			<?php echo esc_html( ! empty( $errors['warning'] ) ? $errors['warning'] : __( 'Review the highlighted fields and try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ); ?>
 		</div>
 	<?php endif; ?>
 
@@ -17,42 +17,42 @@
 		<input type="hidden" name="cwfw_idempotency" value="<?php echo esc_attr( $idempotency ); ?>">
 		<input type="hidden" name="cwfw_return_url" value="<?php echo esc_url( $return_url ); ?>">
 		<div class="cwfw-honeypot" aria-hidden="true">
-			<label for="cwfw-check"><?php esc_html_e( 'Do not fill this field', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+			<label for="cwfw-check"><?php esc_html_e( 'Do not fill this field', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 			<input type="text" id="cwfw-check" name="cwfw_check_7f31" value="" tabindex="-1" autocomplete="off" readonly data-cwfw-honeypot>
 		</div>
 
 		<fieldset class="cwfw-fieldset">
-			<legend><?php esc_html_e( 'Your declaration', 'contract-withdrawal-free-for-woocommerce' ); ?></legend>
+			<legend><?php esc_html_e( 'Your declaration', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></legend>
 			<div class="cwfw-grid cwfw-grid-2">
 				<div class="cwfw-field <?php echo isset( $errors['firstname'] ) ? 'has-error' : ''; ?>">
-					<label for="cwfw-firstname"><?php esc_html_e( 'First name *', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+					<label for="cwfw-firstname"><?php esc_html_e( 'First name *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 					<input type="text" id="cwfw-firstname" name="firstname" value="<?php echo esc_attr( $form['firstname'] ); ?>" maxlength="64" autocomplete="given-name" required <?php echo isset( $errors['firstname'] ) ? 'aria-invalid="true" aria-describedby="cwfw-error-firstname"' : ''; ?>>
 					<?php if ( isset( $errors['firstname'] ) ) : ?><span class="cwfw-error" id="cwfw-error-firstname"><?php echo esc_html( $errors['firstname'] ); ?></span><?php endif; ?>
 				</div>
 				<div class="cwfw-field <?php echo isset( $errors['lastname'] ) ? 'has-error' : ''; ?>">
-					<label for="cwfw-lastname"><?php esc_html_e( 'Last name *', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+					<label for="cwfw-lastname"><?php esc_html_e( 'Last name *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 					<input type="text" id="cwfw-lastname" name="lastname" value="<?php echo esc_attr( $form['lastname'] ); ?>" maxlength="64" autocomplete="family-name" required <?php echo isset( $errors['lastname'] ) ? 'aria-invalid="true" aria-describedby="cwfw-error-lastname"' : ''; ?>>
 					<?php if ( isset( $errors['lastname'] ) ) : ?><span class="cwfw-error" id="cwfw-error-lastname"><?php echo esc_html( $errors['lastname'] ); ?></span><?php endif; ?>
 				</div>
 			</div>
 
 			<div class="cwfw-field <?php echo isset( $errors['email'] ) ? 'has-error' : ''; ?>">
-				<label for="cwfw-email"><?php esc_html_e( 'Email address for the acknowledgement *', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+				<label for="cwfw-email"><?php esc_html_e( 'Email address for the acknowledgement *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 				<input type="email" id="cwfw-email" name="email" value="<?php echo esc_attr( $form['email'] ); ?>" maxlength="254" autocomplete="email" required <?php echo isset( $errors['email'] ) ? 'aria-invalid="true" aria-describedby="cwfw-error-email"' : ''; ?>>
 				<?php if ( isset( $errors['email'] ) ) : ?><span class="cwfw-error" id="cwfw-error-email"><?php echo esc_html( $errors['email'] ); ?></span><?php endif; ?>
 			</div>
 
 			<?php if ( is_user_logged_in() && $orders ) : ?>
 				<fieldset class="cwfw-choice-group <?php echo isset( $errors['order_mode'] ) ? 'has-error' : ''; ?>">
-					<legend><?php esc_html_e( 'How do you identify the contract? *', 'contract-withdrawal-free-for-woocommerce' ); ?></legend>
-					<label><input type="radio" name="order_mode" value="account" <?php checked( $form['order_mode'], 'account' ); ?>> <?php esc_html_e( 'Select one of my orders', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
-					<label><input type="radio" name="order_mode" value="manual" <?php checked( $form['order_mode'], 'manual' ); ?>> <?php esc_html_e( 'Enter an order number / contract identifier manually', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+					<legend><?php esc_html_e( 'How do you identify the contract? *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></legend>
+					<label><input type="radio" name="order_mode" value="account" <?php checked( $form['order_mode'], 'account' ); ?>> <?php esc_html_e( 'Select one of my orders', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
+					<label><input type="radio" name="order_mode" value="manual" <?php checked( $form['order_mode'], 'manual' ); ?>> <?php esc_html_e( 'Enter an order number / contract identifier manually', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 				</fieldset>
 
 				<div class="cwfw-account-order" id="cwfw-account-order">
-					<p class="cwfw-muted"><?php esc_html_e( 'Order data and products are loaded securely on the server from your account.', 'contract-withdrawal-free-for-woocommerce' ); ?></p>
+					<p class="cwfw-muted"><?php esc_html_e( 'Order data and products are loaded securely on the server from your account.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 					<div class="cwfw-order-picker">
-						<label class="screen-reader-text" for="cwfw-order-id"><?php esc_html_e( 'Recent order', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+						<label class="screen-reader-text" for="cwfw-order-id"><?php esc_html_e( 'Recent order', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 						<select name="order_id" id="cwfw-order-id" data-cwfw-order-select>
 							<?php foreach ( $orders as $order ) : ?>
 								<option value="<?php echo esc_attr( $order->get_id() ); ?>" <?php selected( (int) $form['order_id'], $order->get_id() ); ?>>
@@ -60,50 +60,50 @@
 								</option>
 							<?php endforeach; ?>
 						</select>
-						<button type="submit" name="cwfw_action" value="load_order" class="button cwfw-secondary" data-cwfw-load-order><?php esc_html_e( 'Load order products', 'contract-withdrawal-free-for-woocommerce' ); ?></button>
+						<button type="submit" name="cwfw_action" value="load_order" class="button cwfw-secondary" data-cwfw-load-order><?php esc_html_e( 'Load order products', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></button>
 					</div>
 					<?php if ( isset( $errors['order_id'] ) ) : ?><span class="cwfw-error"><?php echo esc_html( $errors['order_id'] ); ?></span><?php endif; ?>
 					<?php if ( $selected_order ) : ?>
 						<div class="cwfw-selected-order"><strong><?php
 						/* translators: %s: WooCommerce order number. */
-						printf( esc_html__( 'Selected order: #%s', 'contract-withdrawal-free-for-woocommerce' ), esc_html( $selected_order->get_order_number() ) );
+						printf( esc_html__( 'Selected order: #%s', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), esc_html( $selected_order->get_order_number() ) );
 						?></strong></div>
 					<?php endif; ?>
 				</div>
 			<?php else : ?>
 				<input type="hidden" name="order_mode" value="manual">
 				<?php if ( ! is_user_logged_in() ) : ?>
-					<p class="cwfw-login-note"><?php esc_html_e( 'You can continue without an account.', 'contract-withdrawal-free-for-woocommerce' ); ?> <a href="<?php echo esc_url( add_query_arg( 'redirect_to', rawurlencode( $return_url ), $login_url ) ); ?>"><?php esc_html_e( 'Sign in to select an order and its products.', 'contract-withdrawal-free-for-woocommerce' ); ?></a></p>
+					<p class="cwfw-login-note"><?php esc_html_e( 'You can continue without an account.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?> <a href="<?php echo esc_url( add_query_arg( 'redirect_to', rawurlencode( $return_url ), $login_url ) ); ?>"><?php esc_html_e( 'Sign in to select an order and its products.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a></p>
 				<?php else : ?>
-					<p class="cwfw-muted"><?php esc_html_e( 'No orders were found in this account. Identify the contract manually below.', 'contract-withdrawal-free-for-woocommerce' ); ?></p>
+					<p class="cwfw-muted"><?php esc_html_e( 'No orders were found in this account. Identify the contract manually below.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 				<?php endif; ?>
 			<?php endif; ?>
 
 			<div class="cwfw-manual-order" id="cwfw-manual-order">
 				<div class="cwfw-field <?php echo isset( $errors['contract_reference'] ) ? 'has-error' : ''; ?>">
-					<label for="cwfw-contract-reference"><?php esc_html_e( 'Order number or contract identifier *', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+					<label for="cwfw-contract-reference"><?php esc_html_e( 'Order number or contract identifier *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 					<input type="text" id="cwfw-contract-reference" name="contract_reference" value="<?php echo esc_attr( $form['contract_reference'] ); ?>" maxlength="128">
 					<?php if ( isset( $errors['contract_reference'] ) ) : ?><span class="cwfw-error"><?php echo esc_html( $errors['contract_reference'] ); ?></span><?php endif; ?>
 				</div>
 			</div>
 
 			<fieldset class="cwfw-choice-group <?php echo isset( $errors['scope'] ) ? 'has-error' : ''; ?>">
-				<legend><?php esc_html_e( 'Withdrawal scope *', 'contract-withdrawal-free-for-woocommerce' ); ?></legend>
-				<label><input type="radio" name="scope" value="full" <?php checked( $form['scope'], 'full' ); ?>> <?php esc_html_e( 'The entire order / contract', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
-				<label><input type="radio" name="scope" value="partial" <?php checked( $form['scope'], 'partial' ); ?>> <?php esc_html_e( 'Only selected products and quantities', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+				<legend><?php esc_html_e( 'Withdrawal scope *', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></legend>
+				<label><input type="radio" name="scope" value="full" <?php checked( $form['scope'], 'full' ); ?>> <?php esc_html_e( 'The entire order / contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
+				<label><input type="radio" name="scope" value="partial" <?php checked( $form['scope'], 'partial' ); ?>> <?php esc_html_e( 'Only selected products and quantities', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 			</fieldset>
 
 			<?php if ( $selected_order && $products ) : ?>
 				<div class="cwfw-account-items" id="cwfw-account-items">
-					<h3 data-cwfw-account-heading data-full-text="<?php esc_attr_e( 'Products included in the selected order', 'contract-withdrawal-free-for-woocommerce' ); ?>" data-partial-text="<?php esc_attr_e( 'Select products and quantities', 'contract-withdrawal-free-for-woocommerce' ); ?>"><?php esc_html_e( 'Products included in the selected order', 'contract-withdrawal-free-for-woocommerce' ); ?></h3>
+					<h3 data-cwfw-account-heading data-full-text="<?php esc_attr_e( 'Products included in the selected order', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?>" data-partial-text="<?php esc_attr_e( 'Select products and quantities', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?>"><?php esc_html_e( 'Products included in the selected order', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></h3>
 					<?php foreach ( $products as $cwfw_item_id => $cwfw_item ) : ?>
 						<div class="cwfw-account-product" data-cwfw-account-product>
 							<input type="checkbox" id="cwfw-product-<?php echo esc_attr( $cwfw_item_id ); ?>" name="account_items[<?php echo esc_attr( $cwfw_item_id ); ?>][selected]" value="1" <?php checked( $cwfw_item['selected'] ); ?> data-cwfw-product-checkbox>
 							<label for="cwfw-product-<?php echo esc_attr( $cwfw_item_id ); ?>"><strong><?php echo esc_html( $cwfw_item['name'] ); ?></strong><span><?php
 							/* translators: %d: quantity originally ordered. */
-							printf( esc_html__( 'Ordered: %d', 'contract-withdrawal-free-for-woocommerce' ), (int) $cwfw_item['ordered_quantity'] );
+							printf( esc_html__( 'Ordered: %d', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), (int) $cwfw_item['ordered_quantity'] );
 							?></span></label>
-							<div><label for="cwfw-qty-<?php echo esc_attr( $cwfw_item_id ); ?>"><?php esc_html_e( 'Quantity', 'contract-withdrawal-free-for-woocommerce' ); ?></label><input type="number" id="cwfw-qty-<?php echo esc_attr( $cwfw_item_id ); ?>" name="account_items[<?php echo esc_attr( $cwfw_item_id ); ?>][quantity]" value="<?php echo esc_attr( $cwfw_item['withdrawal_quantity'] ); ?>" min="1" max="<?php echo esc_attr( $cwfw_item['ordered_quantity'] ); ?>" data-cwfw-product-quantity></div>
+							<div><label for="cwfw-qty-<?php echo esc_attr( $cwfw_item_id ); ?>"><?php esc_html_e( 'Quantity', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label><input type="number" id="cwfw-qty-<?php echo esc_attr( $cwfw_item_id ); ?>" name="account_items[<?php echo esc_attr( $cwfw_item_id ); ?>][quantity]" value="<?php echo esc_attr( $cwfw_item['withdrawal_quantity'] ); ?>" min="1" max="<?php echo esc_attr( $cwfw_item['ordered_quantity'] ); ?>" data-cwfw-product-quantity></div>
 						</div>
 					<?php endforeach; ?>
 					<?php if ( isset( $errors['account_items'] ) ) : ?><span class="cwfw-error"><?php echo esc_html( $errors['account_items'] ); ?></span><?php endif; ?>
@@ -111,33 +111,33 @@
 			<?php endif; ?>
 
 			<div class="cwfw-manual-items" id="cwfw-manual-items">
-				<h3><?php esc_html_e( 'Products and quantities', 'contract-withdrawal-free-for-woocommerce' ); ?></h3>
+				<h3><?php esc_html_e( 'Products and quantities', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></h3>
 				<div id="cwfw-item-list">
 					<?php $cwfw_manual_items = $form['items'] ? $form['items'] : array( array( 'name' => '', 'quantity' => 1 ) ); ?>
 					<?php foreach ( $cwfw_manual_items as $cwfw_index => $cwfw_manual_item ) : ?>
 						<div class="cwfw-manual-item" data-cwfw-item-row>
-							<div><label for="cwfw-item-name-<?php echo esc_attr( $cwfw_index ); ?>"><?php esc_html_e( 'Product', 'contract-withdrawal-free-for-woocommerce' ); ?></label><input type="text" id="cwfw-item-name-<?php echo esc_attr( $cwfw_index ); ?>" name="items[<?php echo esc_attr( $cwfw_index ); ?>][name]" value="<?php echo esc_attr( $cwfw_manual_item['name'] ); ?>" maxlength="255" data-cwfw-item-name></div>
-							<div><label for="cwfw-item-qty-<?php echo esc_attr( $cwfw_index ); ?>"><?php esc_html_e( 'Quantity', 'contract-withdrawal-free-for-woocommerce' ); ?></label><input type="number" id="cwfw-item-qty-<?php echo esc_attr( $cwfw_index ); ?>" name="items[<?php echo esc_attr( $cwfw_index ); ?>][quantity]" value="<?php echo esc_attr( $cwfw_manual_item['quantity'] ); ?>" min="1" max="9999" data-cwfw-item-quantity></div>
-							<button type="button" class="button cwfw-remove" data-cwfw-remove-item><?php esc_html_e( 'Remove', 'contract-withdrawal-free-for-woocommerce' ); ?></button>
+							<div><label for="cwfw-item-name-<?php echo esc_attr( $cwfw_index ); ?>"><?php esc_html_e( 'Product', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label><input type="text" id="cwfw-item-name-<?php echo esc_attr( $cwfw_index ); ?>" name="items[<?php echo esc_attr( $cwfw_index ); ?>][name]" value="<?php echo esc_attr( $cwfw_manual_item['name'] ); ?>" maxlength="255" data-cwfw-item-name></div>
+							<div><label for="cwfw-item-qty-<?php echo esc_attr( $cwfw_index ); ?>"><?php esc_html_e( 'Quantity', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label><input type="number" id="cwfw-item-qty-<?php echo esc_attr( $cwfw_index ); ?>" name="items[<?php echo esc_attr( $cwfw_index ); ?>][quantity]" value="<?php echo esc_attr( $cwfw_manual_item['quantity'] ); ?>" min="1" max="9999" data-cwfw-item-quantity></div>
+							<button type="button" class="button cwfw-remove" data-cwfw-remove-item><?php esc_html_e( 'Remove', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></button>
 						</div>
 					<?php endforeach; ?>
 				</div>
-				<button type="button" class="button cwfw-secondary" id="cwfw-add-item"><?php esc_html_e( 'Add product', 'contract-withdrawal-free-for-woocommerce' ); ?></button>
+				<button type="button" class="button cwfw-secondary" id="cwfw-add-item"><?php esc_html_e( 'Add product', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></button>
 				<?php if ( isset( $errors['items'] ) ) : ?><span class="cwfw-error"><?php echo esc_html( $errors['items'] ); ?></span><?php endif; ?>
 			</div>
 
 			<div class="cwfw-field <?php echo isset( $errors['note'] ) ? 'has-error' : ''; ?>">
-				<label for="cwfw-note"><?php esc_html_e( 'Notes (optional)', 'contract-withdrawal-free-for-woocommerce' ); ?></label>
+				<label for="cwfw-note"><?php esc_html_e( 'Notes (optional)', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></label>
 				<textarea id="cwfw-note" name="note" rows="4" maxlength="2000"><?php echo esc_textarea( $form['note'] ); ?></textarea>
 				<?php if ( isset( $errors['note'] ) ) : ?><span class="cwfw-error"><?php echo esc_html( $errors['note'] ); ?></span><?php endif; ?>
 			</div>
 		</fieldset>
 
 		<div class="cwfw-declaration" role="note">
-			<strong><?php esc_html_e( 'I hereby give notice that I withdraw from the distance contract identified above.', 'contract-withdrawal-free-for-woocommerce' ); ?></strong>
-			<p><?php esc_html_e( 'Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund.', 'contract-withdrawal-free-for-woocommerce' ); ?></p>
+			<strong><?php esc_html_e( 'I hereby give notice that I withdraw from the distance contract identified above.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></strong>
+			<p><?php esc_html_e( 'Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 		</div>
-		<p class="cwfw-privacy"><?php esc_html_e( 'The data is processed to record, acknowledge and handle this withdrawal declaration.', 'contract-withdrawal-free-for-woocommerce' ); ?> <?php if ( $privacy_url ) : ?><a href="<?php echo esc_url( $privacy_url ); ?>"><?php esc_html_e( 'Privacy policy', 'contract-withdrawal-free-for-woocommerce' ); ?></a>.<?php endif; ?> <a href="<?php echo esc_url( $legal_url ); ?>"><?php esc_html_e( 'Withdrawal information', 'contract-withdrawal-free-for-woocommerce' ); ?></a>.</p>
-		<button type="submit" name="cwfw_action" value="submit" class="button alt cwfw-submit" id="cwfw-submit" data-processing-text="<?php esc_attr_e( 'Submitting the declaration…', 'contract-withdrawal-free-for-woocommerce' ); ?>"><?php esc_html_e( 'Confirm withdrawal', 'contract-withdrawal-free-for-woocommerce' ); ?></button>
+		<p class="cwfw-privacy"><?php esc_html_e( 'The data is processed to record, acknowledge and handle this withdrawal declaration.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?> <?php if ( $privacy_url ) : ?><a href="<?php echo esc_url( $privacy_url ); ?>"><?php esc_html_e( 'Privacy policy', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a>.<?php endif; ?> <a href="<?php echo esc_url( $legal_url ); ?>"><?php esc_html_e( 'Withdrawal information', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a>.</p>
+		<button type="submit" name="cwfw_action" value="submit" class="button alt cwfw-submit" id="cwfw-submit" data-processing-text="<?php esc_attr_e( 'Submitting the declaration…', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?>"><?php esc_html_e( 'Confirm withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></button>
 	</form>
 </section>

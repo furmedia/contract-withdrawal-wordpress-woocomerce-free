@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -45,18 +45,18 @@ class Frontend {
 			'cwfw-blocks',
 			'cwfwBlocksI18n',
 			array(
-				'formTitle'          => __( 'Withdrawal form', 'contract-withdrawal-free-for-woocommerce' ),
-				'formDescription'    => __( 'Displays the complete online contract-withdrawal form.', 'contract-withdrawal-free-for-woocommerce' ),
-				'legalTitle'         => __( 'Withdrawal information', 'contract-withdrawal-free-for-woocommerce' ),
-				'legalDescription'   => __( 'Displays the configured withdrawal information.', 'contract-withdrawal-free-for-woocommerce' ),
-				'linkTitle'          => __( 'Withdrawal link', 'contract-withdrawal-free-for-woocommerce' ),
-				'linkDescription'    => __( 'Displays the permanent withdrawal link.', 'contract-withdrawal-free-for-woocommerce' ),
+				'formTitle'          => __( 'Withdrawal form', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+				'formDescription'    => __( 'Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+				'legalTitle'         => __( 'Withdrawal information', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+				'legalDescription'   => __( 'Displays the configured withdrawal information.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+				'linkTitle'          => __( 'Withdrawal link', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+				'linkDescription'    => __( 'Displays the permanent withdrawal link.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
 			)
 		);
 		$blocks = array(
-			'foxly/contract-withdrawal-free-form'  => array( $this, 'shortcode_form' ),
-			'foxly/contract-withdrawal-free-legal' => array( $this, 'shortcode_legal' ),
-			'foxly/contract-withdrawal-free-link'  => array( $this, 'shortcode_link' ),
+			'furmedia/romanian-withdrawal-law-form'  => array( $this, 'shortcode_form' ),
+			'furmedia/romanian-withdrawal-law-legal' => array( $this, 'shortcode_legal' ),
+			'furmedia/romanian-withdrawal-law-link'  => array( $this, 'shortcode_link' ),
 		);
 		foreach ( $blocks as $name => $callback ) {
 			register_block_type(
@@ -78,35 +78,35 @@ class Frontend {
 			return;
 		}
 		if ( ! $this->settings->get( 'enabled' ) || ! $this->settings->is_ready() ) {
-			$this->errors['warning'] = __( 'The online withdrawal function is not available yet. Please contact the merchant using the published contact details.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'The online withdrawal function is not available yet. Please contact the merchant using the published contact details.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 
 		$action = sanitize_key( wp_unslash( $_POST['cwfw_action'] ) );
 		$nonce  = $this->posted_scalar( 'cwfw_nonce' );
 		if ( ! wp_verify_nonce( $nonce, 'cwfw_submit' ) ) {
-			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 		$this->form = $this->read_form();
 		if ( 'load_order' === $action ) {
 			if ( ! is_user_logged_in() || 'account' !== $this->form['order_mode'] || ! $this->owned_order( $this->form['order_id'] ) ) {
-				$this->errors['warning'] = __( 'The selected order is no longer available in this account. Select it again or use manual identification.', 'contract-withdrawal-free-for-woocommerce' );
+				$this->errors['warning'] = __( 'The selected order is no longer available in this account. Select it again or use manual identification.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			}
 			return;
 		}
 
 		$idempotency = $this->posted_scalar( 'cwfw_idempotency' );
 		if ( ! $this->security->validate_submission_tokens( $nonce, $idempotency ) ) {
-			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 		if ( '' !== trim( $this->posted_scalar( 'cwfw_check_7f31' ) ) ) {
-			$this->errors['warning'] = __( 'The request could not be processed. Please try again.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'The request could not be processed. Please try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 		if ( $this->security->is_session_rate_limited() ) {
-			$this->errors['warning'] = __( 'Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 
@@ -123,7 +123,7 @@ class Frontend {
 			return;
 		}
 		if ( ! $this->security->reserve_persistent_slot() ) {
-			$this->errors['warning'] = __( 'Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information.', 'contract-withdrawal-free-for-woocommerce' );
+			$this->errors['warning'] = __( 'Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
 
@@ -156,7 +156,7 @@ class Frontend {
 		} catch ( \Throwable $exception ) {
 			$record = $this->repository->get_by_idempotency( $idempotency_hash );
 			if ( ! $record || (int) $record['customer_id'] !== get_current_user_id() ) {
-				$this->errors['warning'] = __( 'The declaration could not be stored safely. Please try again or contact the merchant.', 'contract-withdrawal-free-for-woocommerce' );
+				$this->errors['warning'] = __( 'The declaration could not be stored safely. Please try again or contact the merchant.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 				return;
 			}
 			// A concurrent request finalized the same one-time submission.
@@ -195,10 +195,10 @@ class Frontend {
 
 	public function shortcode_form( $atts = array() ) {
 		if ( ! $this->settings->get( 'enabled' ) ) {
-			return current_user_can( 'manage_woocommerce' ) ? '<div class="cwfw-notice cwfw-notice-warning">' . esc_html__( 'The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings.', 'contract-withdrawal-free-for-woocommerce' ) . '</div>' : '';
+			return current_user_can( 'manage_woocommerce' ) ? '<div class="cwfw-notice cwfw-notice-warning">' . esc_html__( 'The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>' : '';
 		}
 		if ( ! $this->settings->is_ready() ) {
-			return '<div class="cwfw-notice cwfw-notice-error">' . esc_html__( 'The merchant contact details required for this function are not configured.', 'contract-withdrawal-free-for-woocommerce' ) . '</div>';
+			return '<div class="cwfw-notice cwfw-notice-error">' . esc_html__( 'The merchant contact details required for this function are not configured.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>';
 		}
 		$this->enqueue_assets();
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only success routing bound to server-side session evidence.
@@ -262,14 +262,14 @@ class Frontend {
 		if ( ! $this->settings->get( 'enabled' ) ) {
 			return '';
 		}
-		$atts  = shortcode_atts( array( 'label' => __( 'Withdraw from the contract here', 'contract-withdrawal-free-for-woocommerce' ), 'class' => 'cwfw-link' ), (array) $atts, 'cwfw_link' );
+		$atts  = shortcode_atts( array( 'label' => __( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), 'class' => 'cwfw-link' ), (array) $atts, 'cwfw_link' );
 		$class = implode( ' ', array_map( 'sanitize_html_class', preg_split( '/\s+/', (string) $atts['class'], -1, PREG_SPLIT_NO_EMPTY ) ) );
 		return '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html( $atts['label'] ) . '</a>';
 	}
 
 	public function footer_link() {
 		if ( ! is_admin() && $this->settings->get( 'enabled' ) && $this->settings->get( 'footer_link_enabled' ) ) {
-			echo '<div class="cwfw-footer-access"><a href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html__( 'Withdraw from the contract here', 'contract-withdrawal-free-for-woocommerce' ) . '</a></div>';
+			echo '<div class="cwfw-footer-access"><a href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html__( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</a></div>';
 		}
 	}
 
@@ -285,9 +285,9 @@ class Frontend {
 
 	public function email_status_label( $status ) {
 		$labels = array(
-			'pending'   => __( 'Pending', 'contract-withdrawal-free-for-woocommerce' ),
-			'sent'      => __( 'Sent', 'contract-withdrawal-free-for-woocommerce' ),
-			'failed'    => __( 'Delivery failed — contact the merchant', 'contract-withdrawal-free-for-woocommerce' ),
+			'pending'   => __( 'Pending', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+			'sent'      => __( 'Sent', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
+			'failed'    => __( 'Delivery failed — contact the merchant', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
 		);
 		return isset( $labels[ $status ] ) ? $labels[ $status ] : (string) $status;
 	}
@@ -306,19 +306,19 @@ class Frontend {
 	private function validate_form( array &$form ) {
 		$errors = array();
 		if ( $this->length( $form['firstname'] ) < 1 || $this->length( $form['firstname'] ) > 64 ) {
-			$errors['firstname'] = __( 'First name must contain between 1 and 64 characters.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['firstname'] = __( 'First name must contain between 1 and 64 characters.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 		if ( $this->length( $form['lastname'] ) < 1 || $this->length( $form['lastname'] ) > 64 ) {
-			$errors['lastname'] = __( 'Last name must contain between 1 and 64 characters.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['lastname'] = __( 'Last name must contain between 1 and 64 characters.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 		if ( $this->length( $form['email'] ) > 254 || ! is_email( $form['email'] ) ) {
-			$errors['email'] = __( 'Enter a valid email address.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['email'] = __( 'Enter a valid email address.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 		if ( ! in_array( $form['scope'], array( 'full', 'partial' ), true ) ) {
-			$errors['scope'] = __( 'Select the scope of the withdrawal.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['scope'] = __( 'Select the scope of the withdrawal.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 		if ( $this->length( $form['note'] ) > 2000 ) {
-			$errors['note'] = __( 'Notes may contain at most 2,000 characters.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['note'] = __( 'Notes may contain at most 2,000 characters.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 
 		$items    = array();
@@ -326,7 +326,7 @@ class Frontend {
 		if ( 'account' === $form['order_mode'] ) {
 			$order = $this->owned_order( $form['order_id'] );
 			if ( ! $order ) {
-				$errors['order_id'] = __( 'The selected order is not available in this account.', 'contract-withdrawal-free-for-woocommerce' );
+				$errors['order_id'] = __( 'The selected order is not available in this account.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			} else {
 				$order_id                   = $order->get_id();
 				$form['contract_reference'] = (string) $order->get_order_number();
@@ -339,7 +339,7 @@ class Frontend {
 							continue;
 						}
 						if ( ! isset( $canonical[ $item_id ] ) || $selection['quantity'] < 1 || $selection['quantity'] > $canonical[ $item_id ]['ordered_quantity'] ) {
-							$errors['account_items'] = __( 'The selected products or quantities no longer match the order.', 'contract-withdrawal-free-for-woocommerce' );
+							$errors['account_items'] = __( 'The selected products or quantities no longer match the order.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 							break;
 						}
 						$item             = $canonical[ $item_id ];
@@ -347,29 +347,29 @@ class Frontend {
 						$items[]          = $item;
 					}
 					if ( ! $items && empty( $errors['account_items'] ) ) {
-						$errors['account_items'] = __( 'Select at least one product for a partial withdrawal.', 'contract-withdrawal-free-for-woocommerce' );
+						$errors['account_items'] = __( 'Select at least one product for a partial withdrawal.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 					}
 				}
 			}
 		} elseif ( 'manual' === $form['order_mode'] ) {
 			if ( $this->length( $form['contract_reference'] ) < 1 || $this->length( $form['contract_reference'] ) > 128 ) {
-				$errors['contract_reference'] = __( 'Enter an order number or contract identifier of at most 128 characters.', 'contract-withdrawal-free-for-woocommerce' );
+				$errors['contract_reference'] = __( 'Enter an order number or contract identifier of at most 128 characters.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			}
 			$order_id = $this->match_manual_order( $form['contract_reference'], $form['email'] );
 			if ( 'partial' === $form['scope'] ) {
 				foreach ( array_slice( $form['items'], 0, 20 ) as $item ) {
 					if ( $this->length( $item['name'] ) < 1 || $this->length( $item['name'] ) > 255 || $item['quantity'] < 1 || $item['quantity'] > 9999 ) {
-						$errors['items'] = __( 'Each product must have a name and a quantity between 1 and 9,999.', 'contract-withdrawal-free-for-woocommerce' );
+						$errors['items'] = __( 'Each product must have a name and a quantity between 1 and 9,999.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 						break;
 					}
 					$items[] = array( 'name' => $item['name'], 'quantity' => (int) $item['quantity'] );
 				}
 				if ( ! $items && empty( $errors['items'] ) ) {
-					$errors['items'] = __( 'Add at least one product for a partial withdrawal.', 'contract-withdrawal-free-for-woocommerce' );
+					$errors['items'] = __( 'Add at least one product for a partial withdrawal.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 				}
 			}
 		} else {
-			$errors['order_mode'] = __( 'Choose how the contract is identified.', 'contract-withdrawal-free-for-woocommerce' );
+			$errors['order_mode'] = __( 'Choose how the contract is identified.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		}
 		return array( 'errors' => $errors, 'items' => $items, 'order_id' => $order_id );
 	}
@@ -511,11 +511,11 @@ class Frontend {
 	private function download_evidence() {
 		$id = isset( $_GET['cwfw_evidence'] ) ? absint( wp_unslash( $_GET['cwfw_evidence'] ) ) : 0;
 		if ( ! $id || ! wp_verify_nonce( isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '', 'cwfw_evidence_' . $id ) ) {
-			wp_die( esc_html__( 'Invalid evidence link.', 'contract-withdrawal-free-for-woocommerce' ), '', array( 'response' => 403 ) );
+			wp_die( esc_html__( 'Invalid evidence link.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '', array( 'response' => 403 ) );
 		}
 		$record = $this->repository->get( $id );
 		if ( ! $record || ! $this->security->can_access_evidence( $record ) ) {
-			wp_die( esc_html__( 'Evidence not found.', 'contract-withdrawal-free-for-woocommerce' ), '', array( 'response' => 404 ) );
+			wp_die( esc_html__( 'Evidence not found.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '', array( 'response' => 404 ) );
 		}
 		$this->private_headers();
 		$filename = 'withdrawal-evidence-' . preg_replace( '/[^A-Za-z0-9_-]/', '', $record['reference'] ) . '.txt';

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 — 2026-07-14
+
+- Renamed the plugin and slug to a distinctive Furmedia identity for WordPress.org.
+- Aligned author, contributor and translation metadata with the submitting account.
+
 ## 1.1.0 — 2026-07-13
 
 - Added stable post-recording and post-delivery integration actions for commercial or custom add-ons.

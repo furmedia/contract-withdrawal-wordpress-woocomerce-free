@@ -1,5 +1,5 @@
 <?php
-namespace Foxly\CWFW;
+namespace Furmedia\CWFW;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -37,8 +37,8 @@ class Plugin {
 		$this->frontend   = new Frontend( $this->settings, $this->repository, $this->security, $this->mailer );
 		$this->admin      = new Admin( $this->settings, $this->repository, $this->frontend );
 
-		add_action( 'init', array( 'Foxly\\CWFW\\Installer', 'maybe_upgrade' ), 1 );
-		add_action( 'widgets_init', array( 'Foxly\\CWFW\\Widgets', 'register' ) );
+		add_action( 'init', array( 'Furmedia\\CWFW\\Installer', 'maybe_upgrade' ), 1 );
+		add_action( 'widgets_init', array( 'Furmedia\\CWFW\\Widgets', 'register' ) );
 		$this->frontend->register_hooks();
 		if ( is_admin() ) {
 			$this->admin->register_hooks();
@@ -59,7 +59,7 @@ class Plugin {
 
 	public function woocommerce_missing_notice() {
 		if ( current_user_can( 'activate_plugins' ) ) {
-			echo '<div class="notice notice-error"><p>' . esc_html__( 'Contract Withdrawal Free for WooCommerce requires WooCommerce to be installed and active.', 'contract-withdrawal-free-for-woocommerce' ) . '</p></div>';
+			echo '<div class="notice notice-error"><p>' . esc_html__( 'Furmedia Romanian Withdrawal Law for WooCommerce requires WooCommerce to be installed and active.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</p></div>';
 		}
 	}
 }

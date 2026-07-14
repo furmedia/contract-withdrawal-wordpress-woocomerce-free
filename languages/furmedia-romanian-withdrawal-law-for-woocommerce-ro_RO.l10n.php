@@ -1,6 +1,6 @@
 <?php
 return array(
-	'project-id-version' => 'Contract Withdrawal Free for WooCommerce 1.1.0',
+	'project-id-version' => 'Furmedia Romanian Withdrawal Law for WooCommerce 1.1.0',
 	'language'           => 'ro_RO',
 	'plural-forms'       => 'nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n%100<20)) ? 1 : 2);',
 	'messages'           => array(
@@ -160,7 +160,7 @@ return array(
 		'Reset' => 'Resetează',
 		'Review the highlighted fields and try again.' => 'Verificați câmpurile evidențiate și încercați din nou.',
 		'Right of withdrawal' => 'Dreptul de retragere',
-		'Contract Withdrawal Free for WooCommerce requires WooCommerce to be installed and active.' => 'Contract Withdrawal Free for WooCommerce necesită instalarea și activarea WooCommerce.',
+		'Furmedia Romanian Withdrawal Law for WooCommerce requires WooCommerce to be installed and active.' => 'Furmedia Romanian Withdrawal Law for WooCommerce necesită instalarea și activarea WooCommerce.',
 		'Save status' => 'Salvează starea',
 		'Save withdrawal settings' => 'Salvează setările retragerii',
 		'Scope' => 'Obiect',
@@ -268,7 +268,7 @@ return array(
 		'Business address' => 'Adresa comerciantului',
 		'Business name' => 'Denumirea comerciantului',
 		'Contact phone' => 'Telefon de contact',
-		'Contract Withdrawal Free settings' => 'Setări Contract Withdrawal Free',
+		'Furmedia Romanian Withdrawal Law settings' => 'Setări Furmedia Romanian Withdrawal Law',
 		'Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds.' => 'Declarațiile sunt înregistrări probatorii. Această ediție gratuită nu aprobă eligibilitatea, nu anulează comenzi, nu reintroduce produse în stoc și nu efectuează rambursări.',
 		'Delivery failed — contact the merchant' => 'Livrarea a eșuat — contactați comerciantul',
 		'Direct return cost' => 'Costul direct al returului',

@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Contract Withdrawal Free for WooCommerce
+ * Plugin Name: Furmedia Romanian Withdrawal Law for WooCommerce
  * Plugin URI: https://github.com/furmedia/contract-withdrawal-wordpress-woocomerce-free
  * Description: A free online contract-withdrawal form for Romanian WooCommerce stores, with evidence records, email acknowledgements, widgets, blocks and shortcodes.
- * Version: 1.1.0
- * Author: Foxly Software
- * Author URI: https://foxly.ro/
- * Text Domain: contract-withdrawal-free-for-woocommerce
+ * Version: 1.1.1
+ * Author: Furmedia
+ * Author URI: https://furmedia.ro/
+ * Text Domain: furmedia-romanian-withdrawal-law-for-woocommerce
  * Domain Path: /languages
  * Requires at least: 6.5
  * Requires PHP: 7.4
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CWFW_VERSION', '1.1.0' );
+define( 'CWFW_VERSION', '1.1.1' );
 define( 'CWFW_SCHEMA_VERSION', '1.0.0' );
 define( 'CWFW_FILE', __FILE__ );
 define( 'CWFW_PATH', plugin_dir_path( __FILE__ ) );
@@ -36,7 +36,7 @@ require_once CWFW_PATH . 'includes/class-cwfw-admin.php';
 require_once CWFW_PATH . 'includes/class-cwfw-widgets.php';
 require_once CWFW_PATH . 'includes/class-cwfw-plugin.php';
 
-register_activation_hook( __FILE__, array( 'Foxly\\CWFW\\Installer', 'activate' ) );
+register_activation_hook( __FILE__, array( 'Furmedia\\CWFW\\Installer', 'activate' ) );
 
 add_action(
 	'before_woocommerce_init',
@@ -51,7 +51,7 @@ add_action(
 add_action(
 	'plugins_loaded',
 	static function () {
-		\Foxly\CWFW\Plugin::instance()->boot();
+		\Furmedia\CWFW\Plugin::instance()->boot();
 	},
 	20
 );
@@ -59,8 +59,8 @@ add_action(
 /**
  * Public accessor used by integrations and templates.
  *
- * @return \Foxly\CWFW\Plugin
+ * @return \Furmedia\CWFW\Plugin
  */
 function cwfw() {
-	return \Foxly\CWFW\Plugin::instance();
+	return \Furmedia\CWFW\Plugin::instance();
 }

@@ -6,7 +6,7 @@
  */
 
 $root             = dirname( __DIR__ );
-$translation_file = $root . '/languages/contract-withdrawal-free-for-woocommerce-ro_RO.l10n.php';
+$translation_file = $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.l10n.php';
 $translation      = include $translation_file;
 $romanian         = isset( $translation['messages'] ) && is_array( $translation['messages'] ) ? $translation['messages'] : array();
 $functions        = array( '__', '_e', '_n', 'esc_html__', 'esc_html_e', 'esc_attr__', 'esc_attr_e' );
@@ -62,12 +62,12 @@ function cwfw_po_quote( $value ) {
 
 function cwfw_catalog_header( $language = '' ) {
 	$lines = array(
-		'Project-Id-Version: Contract Withdrawal Free for WooCommerce 1.1.0',
-		'Report-Msgid-Bugs-To: support@foxly.ro',
+		'Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.1',
+		'Report-Msgid-Bugs-To: contact@furmedia.ro',
 		'POT-Creation-Date: 2026-07-13 00:00+0300',
 		'PO-Revision-Date: 2026-07-13 00:00+0300',
-		'Last-Translator: Foxly Software',
-		'Language-Team: Foxly Software',
+		'Last-Translator: Furmedia',
+		'Language-Team: Furmedia',
 	);
 	if ( $language ) {
 		$lines[] = 'Language: ' . $language;
@@ -76,12 +76,12 @@ function cwfw_catalog_header( $language = '' ) {
 	$lines[] = 'MIME-Version: 1.0';
 	$lines[] = 'Content-Type: text/plain; charset=UTF-8';
 	$lines[] = 'Content-Transfer-Encoding: 8bit';
-	$lines[] = 'X-Domain: contract-withdrawal-free-for-woocommerce';
+	$lines[] = 'X-Domain: furmedia-romanian-withdrawal-law-for-woocommerce';
 	return implode( "\n", $lines ) . "\n";
 }
 
 function cwfw_catalog_text( array $entries, array $translations = array(), $language = '' ) {
-	$output  = '# Copyright (C) 2026 Foxly Software' . "\n";
+	$output  = '# Copyright (C) 2026 Furmedia' . "\n";
 	$output .= '# This file is distributed under the same license as the plugin.' . "\n";
 	$output .= "msgid \"\"\nmsgstr \"\"\n";
 	foreach ( explode( "\n", cwfw_catalog_header( $language ) ) as $line ) {
@@ -139,8 +139,8 @@ $pot = cwfw_catalog_text( $entries );
 $po  = cwfw_catalog_text( $entries, $romanian, 'ro_RO' );
 $mo  = cwfw_compile_mo( $entries, $romanian );
 
-file_put_contents( $root . '/languages/contract-withdrawal-free-for-woocommerce.pot', $pot );
-file_put_contents( $root . '/languages/contract-withdrawal-free-for-woocommerce-ro_RO.po', $po );
-file_put_contents( $root . '/languages/contract-withdrawal-free-for-woocommerce-ro_RO.mo', $mo );
+file_put_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce.pot', $pot );
+file_put_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.po', $po );
+file_put_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.mo', $mo );
 
 echo 'Generated POT, PO and MO catalogs for ' . count( $entries ) . " messages.\n";

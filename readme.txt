@@ -1,10 +1,10 @@
-=== Contract Withdrawal Free for WooCommerce ===
-Contributors: foxly
+=== Furmedia Romanian Withdrawal Law for WooCommerce ===
+Contributors: furnica10
 Tags: woocommerce, withdrawal, returns, romania, consumer law
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires Plugins: woocommerce
 WC requires at least: 8.0
 WC tested up to: 10.9
@@ -15,7 +15,7 @@ A free online contract-withdrawal form with evidence records and email acknowled
 
 == Description ==
 
-Contract Withdrawal Free provides a dedicated online function through which a consumer can submit an unambiguous contract-withdrawal declaration. Guests can identify a contract manually, while signed-in customers can securely select one of their own WooCommerce orders and its products.
+Furmedia Romanian Withdrawal Law provides a dedicated online function through which a consumer can submit an unambiguous contract-withdrawal declaration. Guests can identify a contract manually, while signed-in customers can securely select one of their own WooCommerce orders and its products.
 
 The plugin records a unique reference, submission time, declaration, items, configured merchant information and the exact acknowledgement content. It attempts to send the complete acknowledgement to the customer and a notification to the merchant immediately.
 
@@ -34,7 +34,7 @@ This free plugin has no trial period and contains no disabled Premium code. A se
 == Installation ==
 
 1. Install and activate WooCommerce.
-2. Install and activate Contract Withdrawal Free for WooCommerce.
+2. Install and activate Furmedia Romanian Withdrawal Law for WooCommerce.
 3. Open WooCommerce > Withdrawal settings.
 4. Complete the merchant identity, business address, contact details and return information.
 5. Select the form, withdrawal-information and privacy pages.
@@ -72,6 +72,11 @@ Withdrawal evidence, settings and generated pages are retained. Only transient r
 The plugin stores the name, email address, contract reference, selected products, note, declaration, submission time and evidence snapshots needed for the merchant’s withdrawal workflow. It does not store raw visitor IP addresses. Merchants remain responsible for their privacy notice, retention policy and lawful processing.
 
 == Changelog ==
+
+= 1.1.1 =
+
+* Renamed the plugin and slug to a distinctive Furmedia identity for WordPress.org.
+* Aligned author, contributor and translation metadata with the submitting account.
 
 = 1.1.0 =
 
