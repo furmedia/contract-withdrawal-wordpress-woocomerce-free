@@ -1,8 +1,8 @@
 <?php defined( 'ABSPATH' ) || exit; ?>
 <?php if ( ! $full ) : ?>
-	<aside class="cwfw-legal-notice"><p><?php esc_html_e( 'You may also exercise your right of withdrawal through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p><a class="button" href="<?php echo esc_url( $settings->form_url() ); ?>"><?php esc_html_e( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a></aside>
+	<aside class="furmrowi-legal-notice"><p><?php esc_html_e( 'You may also exercise your right of withdrawal through the dedicated online function. After activating “Confirm withdrawal”, an acknowledgement containing the declaration and its submission date and time will be sent by email without undue delay.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p><a class="button" href="<?php echo esc_url( $settings->form_url() ); ?>"><?php esc_html_e( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a></aside>
 <?php else : ?>
-	<section class="cwfw-wrap cwfw-legal">
+	<section class="furmrowi-wrap furmrowi-legal">
 		<h2><?php esc_html_e( 'Information on the right of withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></h2>
 		<p><?php
 		/* translators: %d: statutory withdrawal period in days. */
@@ -25,7 +25,7 @@
 		<p><?php esc_html_e( 'You are liable only for diminished value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the goods.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 		<p><?php esc_html_e( 'If you requested that a service begin during the withdrawal period, you owe an amount proportionate to the services supplied until you communicate the withdrawal, compared with the full coverage of the contract.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 		<p><?php esc_html_e( 'The right of withdrawal does not apply in the cases provided by Article 16 of Romanian Emergency Ordinance no. 34/2014. Depending on the case, these include fully performed services begun with prior express agreement and acknowledgement of loss of the right; personalized goods; goods liable to deteriorate or expire rapidly; sealed health or hygiene goods that were unsealed; inseparably mixed goods; unsealed recordings or software; and digital content whose supply began with prior express agreement and acknowledgement of loss of the right.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
-		<div class="cwfw-actions"><a class="button alt" href="<?php echo esc_url( $settings->form_url() ); ?>"><?php esc_html_e( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a></div>
-		<p class="cwfw-muted"><?php esc_html_e( 'This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
+		<div class="furmrowi-actions"><a class="button alt" href="<?php echo esc_url( $settings->form_url() ); ?>"><?php esc_html_e( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></a></div>
+		<p class="furmrowi-muted"><?php esc_html_e( 'This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ); ?></p>
 	</section>
 <?php endif; ?>

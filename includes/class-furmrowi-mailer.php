@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -117,6 +117,6 @@ class Mailer {
 	}
 
 	private function safe_log( $message, $withdrawal_id ) {
-		do_action( 'cwfw_mail_delivery_error', sanitize_text_field( $message ), absint( $withdrawal_id ) );
+		do_action( 'furmrowi_mail_delivery_error', sanitize_text_field( $message ), absint( $withdrawal_id ) );
 	}
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -14,11 +14,11 @@ class Security {
 
 	public function ensure_idempotency_token() {
 		$session = $this->session();
-		$token   = $session ? (string) $session->get( 'cwfw_idempotency', '' ) : '';
+		$token   = $session ? (string) $session->get( 'furmrowi_idempotency', '' ) : '';
 		if ( ! preg_match( '/^[a-f0-9]{64}$/D', $token ) ) {
 			$token = $this->random_token();
 			if ( $session ) {
-				$session->set( 'cwfw_idempotency', $token );
+				$session->set( 'furmrowi_idempotency', $token );
 			}
 		}
 		return $token;
@@ -28,14 +28,14 @@ class Security {
 		$token   = $this->random_token();
 		$session = $this->session();
 		if ( $session ) {
-			$session->set( 'cwfw_idempotency', $token );
+			$session->set( 'furmrowi_idempotency', $token );
 		}
 		return $token;
 	}
 
 	public function validate_submission_tokens( $nonce, $idempotency ) {
 		$known = $this->ensure_idempotency_token();
-		return wp_verify_nonce( (string) $nonce, 'cwfw_submit' )
+		return wp_verify_nonce( (string) $nonce, 'furmrowi_submit' )
 			&& preg_match( '/^[a-f0-9]{64}$/D', (string) $idempotency )
 			&& hash_equals( $known, (string) $idempotency );
 	}
@@ -49,7 +49,7 @@ class Security {
 		if ( ! $session ) {
 			return false;
 		}
-		$all    = $session->get( 'cwfw_recent_submissions', array() );
+		$all    = $session->get( 'furmrowi_recent_submissions', array() );
 		$key    = $this->identity_key();
 		$cutoff = time() - ( (int) $this->settings->get( 'session_rate_limit_window', 30 ) * MINUTE_IN_SECONDS );
 		$recent = isset( $all[ $key ] ) && is_array( $all[ $key ] ) ? $all[ $key ] : array();
@@ -62,7 +62,7 @@ class Security {
 			)
 		);
 		$all[ $key ] = $recent;
-		$session->set( 'cwfw_recent_submissions', $all );
+		$session->set( 'furmrowi_recent_submissions', $all );
 		return count( $recent ) >= (int) $this->settings->get( 'session_rate_limit_count', 3 );
 	}
 
@@ -72,11 +72,11 @@ class Security {
 			return;
 		}
 		$this->is_session_rate_limited();
-		$all           = $session->get( 'cwfw_recent_submissions', array() );
+		$all           = $session->get( 'furmrowi_recent_submissions', array() );
 		$key           = $this->identity_key();
 		$all[ $key ]   = isset( $all[ $key ] ) && is_array( $all[ $key ] ) ? $all[ $key ] : array();
 		$all[ $key ][] = time();
-		$session->set( 'cwfw_recent_submissions', $all );
+		$session->set( 'furmrowi_recent_submissions', $all );
 	}
 
 	public function reserve_persistent_slot() {
@@ -104,7 +104,7 @@ class Security {
 			return;
 		}
 		$session->set(
-			'cwfw_success',
+			'furmrowi_success',
 			array(
 				'withdrawal_id' => (int) $record['withdrawal_id'],
 				'customer_id'   => (int) $record['customer_id'],
@@ -117,13 +117,13 @@ class Security {
 
 	public function success() {
 		$session = $this->session();
-		$value   = $session ? $session->get( 'cwfw_success', array() ) : array();
+		$value   = $session ? $session->get( 'furmrowi_success', array() ) : array();
 		if ( ! is_array( $value ) || empty( $value['withdrawal_id'] ) || ! isset( $value['customer_id'], $value['issued_at'] ) ) {
 			return array();
 		}
 		if ( (int) $value['issued_at'] < time() - ( 30 * MINUTE_IN_SECONDS ) || (int) $value['customer_id'] !== get_current_user_id() ) {
 			if ( $session ) {
-				$session->set( 'cwfw_success', null );
+				$session->set( 'furmrowi_success', null );
 			}
 			return array();
 		}

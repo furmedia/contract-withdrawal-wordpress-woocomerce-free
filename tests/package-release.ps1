@@ -1,4 +1,4 @@
-param([string]$Version = '1.1.1')
+param([string]$Version = '1.1.2')
 
 $ErrorActionPreference = 'Stop'
 $Root = [IO.Path]::GetFullPath((Split-Path -Parent $PSScriptRoot))

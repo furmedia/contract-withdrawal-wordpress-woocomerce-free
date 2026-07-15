@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -14,8 +14,8 @@ class Repository {
 	public function __construct( $database = null ) {
 		global $wpdb;
 		$this->db     = $database ? $database : $wpdb;
-		$this->main   = $this->db->prefix . 'cwfw_withdrawals';
-		$this->limits = $this->db->prefix . 'cwfw_rate_limits';
+		$this->main   = $this->db->prefix . 'furmrowi_withdrawals';
+		$this->limits = $this->db->prefix . 'furmrowi_rate_limits';
 	}
 
 	public function create( array $data ) {

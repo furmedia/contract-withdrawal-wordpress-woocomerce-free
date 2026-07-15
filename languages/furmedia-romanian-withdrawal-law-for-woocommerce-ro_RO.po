@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.1\n"
+"Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.2\n"
 "Report-Msgid-Bugs-To: contact@furmedia.ro\n"
 "POT-Creation-Date: 2026-07-13 00:00+0300\n"
 "PO-Revision-Date: 2026-07-13 00:00+0300\n"
@@ -19,15 +19,15 @@ msgstr ""
 msgid "A complete copy of the declaration, including its date and time, was sent to the email address provided."
 msgstr "O copie integrală a declarației, inclusiv data și ora transmiterii, a fost trimisă la adresa de email indicată."
 
-#: includes/class-cwfw-mailer.php:95
+#: includes/class-furmrowi-mailer.php:95
 msgid "A new declaration was recorded under reference %s."
 msgstr "A fost înregistrată o nouă declarație cu numărul %s."
 
-#: includes/class-cwfw-mailer.php:51
+#: includes/class-furmrowi-mailer.php:51
 msgid "Acknowledgement of contract withdrawal"
 msgstr "Confirmarea primirii declarației de retragere"
 
-#: includes/class-cwfw-mailer.php:38
+#: includes/class-furmrowi-mailer.php:38
 msgid "Acknowledgement of contract withdrawal — %s"
 msgstr "Confirmarea primirii declarației de retragere — %s"
 
@@ -35,7 +35,7 @@ msgstr "Confirmarea primirii declarației de retragere — %s"
 msgid "Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund."
 msgstr "Activarea funcției „Confirmați retragerea” transmite această declarație neechivocă. Confirmarea atestă primirea; nu aprobă automat returul sau rambursarea."
 
-#: includes/class-cwfw-frontend.php:368
+#: includes/class-furmrowi-frontend.php:364
 msgid "Add at least one product for a partial withdrawal."
 msgstr "Adăugați cel puțin un produs pentru retragerea parțială."
 
@@ -43,31 +43,31 @@ msgstr "Adăugați cel puțin un produs pentru retragerea parțială."
 msgid "Add product"
 msgstr "Adaugă produs"
 
-#: includes/class-cwfw-admin.php:141
+#: includes/class-furmrowi-admin.php:141
 msgid "Additional return information"
 msgstr "Informații suplimentare despre retur"
 
-#: includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:108
 msgid "Administrator email"
 msgstr "Email administrator"
 
-#: includes/class-cwfw-admin.php:126
+#: includes/class-furmrowi-admin.php:126
 msgid "Availability"
 msgstr "Disponibilitate"
 
-#: includes/class-cwfw-admin.php:106
+#: includes/class-furmrowi-admin.php:106
 msgid "Back to declarations"
 msgstr "Înapoi la declarații"
 
-#: includes/class-cwfw-admin.php:132
+#: includes/class-furmrowi-admin.php:132
 msgid "Business address"
 msgstr "Adresa comerciantului"
 
-#: includes/class-cwfw-admin.php:131
+#: includes/class-furmrowi-admin.php:131
 msgid "Business name"
 msgstr "Denumirea comerciantului"
 
-#: includes/class-cwfw-frontend.php:372
+#: includes/class-furmrowi-frontend.php:368
 msgid "Choose how the contract is identified."
 msgstr "Alegeți cum identificați contractul."
 
@@ -79,75 +79,75 @@ msgstr "Confirmați retragerea"
 msgid "Consequences of withdrawal"
 msgstr "Consecințele retragerii"
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Consumer"
 msgstr "Consumator"
 
-#: includes/class-cwfw-admin.php:136
+#: includes/class-furmrowi-admin.php:136
 msgid "Contact phone"
 msgstr "Telefon de contact"
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Contract"
 msgstr "Contract"
 
-#: includes/class-cwfw-admin.php:67
+#: includes/class-furmrowi-admin.php:67
 msgid "Contract withdrawals"
 msgstr "Retrageri din contract"
 
-#: includes/class-cwfw-admin.php:27 includes/class-cwfw-admin.php:28
+#: includes/class-furmrowi-admin.php:27 includes/class-furmrowi-admin.php:28
 msgid "Contract withdrawals (Free)"
 msgstr "Retrageri din contract (Gratuit)"
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Customer"
 msgstr "Client"
 
-#: includes/class-cwfw-mailer.php:96
+#: includes/class-furmrowi-mailer.php:96
 msgid "Customer confirmation status"
 msgstr "Starea confirmării către client"
 
-#: includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:108
 msgid "Customer email"
 msgstr "Email client"
 
-#: includes/class-cwfw-mailer.php:46 includes/class-cwfw-mailer.php:65
+#: includes/class-furmrowi-mailer.php:46 includes/class-furmrowi-mailer.php:65
 msgid "Declaration submitted"
 msgstr "Declarația transmisă"
 
-#: includes/class-cwfw-admin.php:68
+#: includes/class-furmrowi-admin.php:68
 msgid "Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds."
 msgstr "Declarațiile sunt înregistrări probatorii. Această ediție gratuită nu aprobă eligibilitatea, nu anulează comenzi, nu reintroduce produse în stoc și nu efectuează rambursări."
 
-#: includes/class-cwfw-frontend.php:290
+#: includes/class-furmrowi-frontend.php:286
 msgid "Delivery failed — contact the merchant"
 msgstr "Livrarea a eșuat — contactați comerciantul"
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Direct return cost"
 msgstr "Costul direct al returului"
 
-#: includes/class-cwfw-admin.php:142
+#: includes/class-furmrowi-admin.php:142
 msgid "Display timezone"
 msgstr "Fus orar pentru afișare"
 
-#: includes/class-cwfw-widgets.php:80
+#: includes/class-furmrowi-widgets.php:80
 msgid "Displays a short notice and a link to the withdrawal function."
 msgstr "Afișează o informare scurtă și un link către funcția de retragere."
 
-#: includes/class-cwfw-widgets.php:54
+#: includes/class-furmrowi-widgets.php:54
 msgid "Displays a visible link to the online withdrawal function."
 msgstr "Afișează un link vizibil către funcția online de retragere."
 
-#: includes/class-cwfw-frontend.php:49 includes/class-cwfw-widgets.php:41
+#: includes/class-furmrowi-frontend.php:45 includes/class-furmrowi-widgets.php:41
 msgid "Displays the complete online contract-withdrawal form."
 msgstr "Afișează formularul online complet de retragere din contract."
 
-#: includes/class-cwfw-frontend.php:51
+#: includes/class-furmrowi-frontend.php:47
 msgid "Displays the configured withdrawal information."
 msgstr "Afișează informațiile configurate privind retragerea."
 
-#: includes/class-cwfw-frontend.php:53
+#: includes/class-furmrowi-frontend.php:49
 msgid "Displays the permanent withdrawal link."
 msgstr "Afișează linkul permanent către funcția de retragere."
 
@@ -155,7 +155,7 @@ msgstr "Afișează linkul permanent către funcția de retragere."
 msgid "Do not fill this field"
 msgstr "Nu completați acest câmp"
 
-#: includes/class-cwfw-admin.php:110
+#: includes/class-furmrowi-admin.php:110
 msgid "Download evidence"
 msgstr "Descarcă dovada"
 
@@ -163,11 +163,11 @@ msgstr "Descarcă dovada"
 msgid "Download submission evidence"
 msgstr "Descarcă dovada transmiterii"
 
-#: includes/class-cwfw-frontend.php:362
+#: includes/class-furmrowi-frontend.php:358
 msgid "Each product must have a name and a quantity between 1 and 9,999."
 msgstr "Fiecare produs trebuie să aibă o denumire și o cantitate între 1 și 9.999."
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-mailer.php:44 includes/class-cwfw-mailer.php:59
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-mailer.php:44 includes/class-furmrowi-mailer.php:59
 msgid "Email"
 msgstr "Email"
 
@@ -179,11 +179,11 @@ msgstr "Confirmare prin email"
 msgid "Email address for the acknowledgement *"
 msgstr "Adresa de email pentru confirmare *"
 
-#: includes/class-cwfw-admin.php:127
+#: includes/class-furmrowi-admin.php:127
 msgid "Enable the public withdrawal function"
 msgstr "Activează funcția publică de retragere"
 
-#: includes/class-cwfw-frontend.php:315
+#: includes/class-furmrowi-frontend.php:311
 msgid "Enter a valid email address."
 msgstr "Introduceți o adresă de email validă."
 
@@ -191,11 +191,11 @@ msgstr "Introduceți o adresă de email validă."
 msgid "Enter an order number / contract identifier manually"
 msgstr "Introduc manual numărul comenzii / identificarea contractului"
 
-#: includes/class-cwfw-frontend.php:356
+#: includes/class-furmrowi-frontend.php:352
 msgid "Enter an order number or contract identifier of at most 128 characters."
 msgstr "Introduceți numărul comenzii sau identificarea contractului, de maximum 128 de caractere."
 
-#: includes/class-cwfw-frontend.php:518
+#: includes/class-furmrowi-frontend.php:514
 msgid "Evidence not found."
 msgstr "Dovada nu a fost găsită."
 
@@ -207,7 +207,7 @@ msgstr "Câmpurile marcate cu * sunt obligatorii."
 msgid "First name *"
 msgstr "Prenume *"
 
-#: includes/class-cwfw-frontend.php:309
+#: includes/class-furmrowi-frontend.php:305
 msgid "First name must contain between 1 and 64 characters."
 msgstr "Prenumele trebuie să conțină între 1 și 64 de caractere."
 
@@ -215,15 +215,15 @@ msgstr "Prenumele trebuie să conțină între 1 și 64 de caractere."
 msgid "For services, the period runs from the date the contract is concluded. For sales contracts, it runs from the day on which you or a third party indicated by you, other than the carrier, acquires physical possession of the goods. For multiple goods delivered separately, the period runs from receipt of the last good; for a good delivered in lots or pieces, from receipt of the last lot or piece; and for regular delivery, from receipt of the first good."
 msgstr "Pentru servicii, perioada curge de la data încheierii contractului. Pentru contractele de vânzare, perioada curge din ziua în care dumneavoastră sau o persoană terță indicată de dumneavoastră, alta decât transportatorul, intră în posesia fizică a bunurilor. Pentru bunuri multiple livrate separat, termenul curge de la primirea ultimului bun; pentru un bun livrat în loturi sau piese, de la primirea ultimului lot ori a ultimei piese; iar pentru livrări periodice, de la primirea primului bun."
 
-#: includes/class-cwfw-admin.php:78
+#: includes/class-furmrowi-admin.php:78
 msgid "Full"
 msgstr "Integrală"
 
-#: includes/class-cwfw-plugin.php:62
+#: includes/class-furmrowi-plugin.php:62
 msgid "Furmedia Romanian Withdrawal Law for WooCommerce requires WooCommerce to be installed and active."
 msgstr "Furmedia Romanian Withdrawal Law for WooCommerce necesită instalarea și activarea WooCommerce."
 
-#: includes/class-cwfw-admin.php:120
+#: includes/class-furmrowi-admin.php:120
 msgid "Furmedia Romanian Withdrawal Law settings"
 msgstr "Setări Furmedia Romanian Withdrawal Law"
 
@@ -235,7 +235,7 @@ msgstr "Cum identificați contractul? *"
 msgid "I hereby give notice that I withdraw from the distance contract identified above."
 msgstr "Prin prezenta notific retragerea mea din contractul la distanță identificat mai sus."
 
-#: includes/class-cwfw-mailer.php:20
+#: includes/class-furmrowi-mailer.php:20
 msgid "I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s."
 msgstr "Prin prezenta, eu, %1$s, notific retragerea mea din contractul la distanță identificat prin „%2$s”, pentru: %3$s. Declarația a fost transmisă la %4$s și înregistrată cu numărul %5$s."
 
@@ -247,7 +247,7 @@ msgstr "Dacă ați solicitat începerea prestării unui serviciu în perioada de
 msgid "If you withdraw, we will reimburse the amounts received, including the cost of standard delivery, without undue delay and no later than 14 days after being informed. Reimbursement is made using the same payment method unless you expressly agree otherwise, without fees for the consumer."
 msgstr "Dacă vă retrageți, vom rambursa sumele primite, inclusiv costul livrării standard, fără întârzieri nejustificate și cel târziu în 14 zile de la data informării. Rambursarea se face prin aceeași modalitate de plată, dacă nu ați acceptat expres o altă modalitate, fără comisioane pentru consumator."
 
-#: includes/class-cwfw-admin.php:110
+#: includes/class-furmrowi-admin.php:110
 msgid "Immutable declaration"
 msgstr "Declarație nemodificabilă"
 
@@ -255,7 +255,7 @@ msgstr "Declarație nemodificabilă"
 msgid "Information on the right of withdrawal"
 msgstr "Informații privind dreptul de retragere"
 
-#: includes/class-cwfw-frontend.php:514
+#: includes/class-furmrowi-frontend.php:510
 msgid "Invalid evidence link."
 msgstr "Linkul dovezii nu este valid."
 
@@ -267,11 +267,11 @@ msgstr "Păstrați numărul solicitării și confirmarea trimisă prin email."
 msgid "Last name *"
 msgstr "Nume *"
 
-#: includes/class-cwfw-frontend.php:312
+#: includes/class-furmrowi-frontend.php:308
 msgid "Last name must contain between 1 and 64 characters."
 msgstr "Numele trebuie să conțină între 1 și 64 de caractere."
 
-#: includes/class-cwfw-widgets.php:68
+#: includes/class-furmrowi-widgets.php:68
 msgid "Link label"
 msgstr "Eticheta linkului"
 
@@ -279,15 +279,15 @@ msgstr "Eticheta linkului"
 msgid "Load order products"
 msgstr "Afișează produsele comenzii"
 
-#: includes/class-cwfw-admin.php:130
+#: includes/class-furmrowi-admin.php:130
 msgid "Merchant details"
 msgstr "Datele comerciantului"
 
-#: includes/class-cwfw-mailer.php:43 includes/class-cwfw-mailer.php:58
+#: includes/class-furmrowi-mailer.php:43 includes/class-furmrowi-mailer.php:58
 msgid "Name"
 msgstr "Nume și prenume"
 
-#: includes/class-cwfw-mailer.php:93
+#: includes/class-furmrowi-mailer.php:93
 msgid "New contract-withdrawal declaration — %s"
 msgstr "Declarație nouă de retragere — %s"
 
@@ -295,11 +295,11 @@ msgstr "Declarație nouă de retragere — %s"
 msgid "No orders were found in this account. Identify the contract manually below."
 msgstr "Nu am găsit comenzi în acest cont. Identificați contractul manual mai jos."
 
-#: includes/class-cwfw-admin.php:72
+#: includes/class-furmrowi-admin.php:72
 msgid "No withdrawal declarations have been recorded."
 msgstr "Nu a fost înregistrată nicio declarație de retragere."
 
-#: includes/class-cwfw-mailer.php:34
+#: includes/class-furmrowi-mailer.php:34
 msgid "Notes"
 msgstr "Observații"
 
@@ -307,15 +307,15 @@ msgstr "Observații"
 msgid "Notes (optional)"
 msgstr "Observații (opțional)"
 
-#: includes/class-cwfw-frontend.php:321
+#: includes/class-furmrowi-frontend.php:317
 msgid "Notes may contain at most 2,000 characters."
 msgstr "Observațiile pot avea maximum 2.000 de caractere."
 
-#: includes/class-cwfw-admin.php:135
+#: includes/class-furmrowi-admin.php:135
 msgid "Notification email"
 msgstr "Email pentru notificări"
 
-#: includes/class-cwfw-mailer.php:17 templates/form.php:93
+#: includes/class-furmrowi-mailer.php:17 templates/form.php:93
 msgid "Only selected products and quantities"
 msgstr "Numai anumite produse și cantități"
 
@@ -327,7 +327,7 @@ msgstr "Datele comenzii și produsele sunt preluate în siguranță, pe server, 
 msgid "Order number or contract identifier *"
 msgstr "Numărul comenzii sau identificarea contractului *"
 
-#: includes/class-cwfw-mailer.php:42 includes/class-cwfw-mailer.php:57
+#: includes/class-furmrowi-mailer.php:42 includes/class-furmrowi-mailer.php:57
 msgid "Order or contract reference"
 msgstr "Numărul comenzii sau identificarea contractului"
 
@@ -335,19 +335,19 @@ msgstr "Numărul comenzii sau identificarea contractului"
 msgid "Ordered: %d"
 msgstr "Comandat: %d"
 
-#: includes/class-cwfw-admin.php:144
+#: includes/class-furmrowi-admin.php:144
 msgid "Pages and privacy"
 msgstr "Pagini și confidențialitate"
 
-#: includes/class-cwfw-admin.php:78
+#: includes/class-furmrowi-admin.php:78
 msgid "Partial"
 msgstr "Parțială"
 
-#: includes/class-cwfw-frontend.php:288
+#: includes/class-furmrowi-frontend.php:284
 msgid "Pending"
 msgstr "În așteptare"
 
-#: includes/class-cwfw-admin.php:149
+#: includes/class-furmrowi-admin.php:149
 msgid "Placement tools"
 msgstr "Instrumente de amplasare"
 
@@ -355,7 +355,7 @@ msgstr "Instrumente de amplasare"
 msgid "Privacy policy"
 msgstr "Politica de confidențialitate"
 
-#: includes/class-cwfw-admin.php:147
+#: includes/class-furmrowi-admin.php:147
 msgid "Privacy policy page"
 msgstr "Pagina politicii de confidențialitate"
 
@@ -363,7 +363,7 @@ msgstr "Pagina politicii de confidențialitate"
 msgid "Product"
 msgstr "Produs"
 
-#: includes/class-cwfw-mailer.php:28 templates/form.php:114
+#: includes/class-furmrowi-mailer.php:28 templates/form.php:114
 msgid "Products and quantities"
 msgstr "Produse și cantități"
 
@@ -371,7 +371,7 @@ msgstr "Produse și cantități"
 msgid "Products included in the selected order"
 msgstr "Produsele incluse în comanda selectată"
 
-#: includes/class-cwfw-admin.php:134
+#: includes/class-furmrowi-admin.php:134
 msgid "Public contact email"
 msgstr "Email public de contact"
 
@@ -383,7 +383,7 @@ msgstr "Cantitate"
 msgid "Recent order"
 msgstr "Comandă recentă"
 
-#: includes/class-cwfw-admin.php:70
+#: includes/class-furmrowi-admin.php:70
 msgid "Reference"
 msgstr "Numărul solicitării"
 
@@ -391,7 +391,7 @@ msgstr "Numărul solicitării"
 msgid "Remove"
 msgstr "Elimină"
 
-#: includes/class-cwfw-admin.php:133
+#: includes/class-furmrowi-admin.php:133
 msgid "Return address"
 msgstr "Adresa de retur"
 
@@ -399,11 +399,11 @@ msgstr "Adresa de retur"
 msgid "Review the highlighted fields and try again."
 msgstr "Verificați câmpurile evidențiate și încercați din nou."
 
-#: includes/class-cwfw-installer.php:28
+#: includes/class-furmrowi-installer.php:28
 msgid "Right of withdrawal"
 msgstr "Dreptul de retragere"
 
-#: includes/class-cwfw-frontend.php:350
+#: includes/class-furmrowi-frontend.php:346
 msgid "Select at least one product for a partial withdrawal."
 msgstr "Selectați cel puțin un produs pentru retragerea parțială."
 
@@ -415,7 +415,7 @@ msgstr "Aleg o comandă din cont"
 msgid "Select products and quantities"
 msgstr "Selectați produsele și cantitățile"
 
-#: includes/class-cwfw-frontend.php:318
+#: includes/class-furmrowi-frontend.php:314
 msgid "Select the scope of the withdrawal."
 msgstr "Selectați obiectul retragerii."
 
@@ -427,19 +427,19 @@ msgstr "Comanda selectată: #%s"
 msgid "Send or hand over the goods to the return address below without undue delay and no later than 14 days after communicating the withdrawal. The deadline is met if the goods are sent before the period expires."
 msgstr "Expediați sau predați bunurile la adresa de retur de mai jos, fără întârzieri nejustificate și în cel mult 14 zile de la comunicarea retragerii. Termenul este respectat dacă bunurile sunt expediate înainte de expirarea lui."
 
-#: includes/class-cwfw-frontend.php:289
+#: includes/class-furmrowi-frontend.php:285
 msgid "Sent"
 msgstr "Trimis"
 
-#: includes/class-cwfw-admin.php:122
+#: includes/class-furmrowi-admin.php:122
 msgid "Settings saved."
 msgstr "Setările au fost salvate."
 
-#: includes/class-cwfw-frontend.php:109 includes/class-cwfw-frontend.php:126
+#: includes/class-furmrowi-frontend.php:105 includes/class-furmrowi-frontend.php:122
 msgid "Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information."
 msgstr "Au fost transmise mai multe declarații într-un interval scurt. Așteptați și încercați din nou sau folosiți emailul afișat în informațiile privind retragerea."
 
-#: includes/class-cwfw-admin.php:128
+#: includes/class-furmrowi-admin.php:128
 msgid "Show a permanent footer link"
 msgstr "Afișează un link permanent în subsol"
 
@@ -447,15 +447,15 @@ msgstr "Afișează un link permanent în subsol"
 msgid "Sign in to select an order and its products."
 msgstr "Autentificați-vă pentru a selecta o comandă și produsele ei."
 
-#: includes/class-cwfw-admin.php:107
+#: includes/class-furmrowi-admin.php:107
 msgid "Submission details"
 msgstr "Detaliile transmiterii"
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Submitted"
 msgstr "Data transmiterii"
 
-#: includes/class-cwfw-mailer.php:41 includes/class-cwfw-mailer.php:56 templates/success.php:7
+#: includes/class-furmrowi-mailer.php:41 includes/class-furmrowi-mailer.php:56 templates/success.php:7
 msgid "Submitted at"
 msgstr "Data și ora transmiterii"
 
@@ -471,7 +471,7 @@ msgstr "Consumatorul suportă costul direct al returnării bunurilor."
 msgid "The data is processed to record, acknowledge and handle this withdrawal declaration."
 msgstr "Datele sunt prelucrate pentru înregistrarea, confirmarea și soluționarea declarației de retragere."
 
-#: includes/class-cwfw-frontend.php:159
+#: includes/class-furmrowi-frontend.php:155
 msgid "The declaration could not be stored safely. Please try again or contact the merchant."
 msgstr "Declarația nu a putut fi salvată în siguranță. Încercați din nou sau contactați comerciantul."
 
@@ -479,23 +479,23 @@ msgstr "Declarația nu a putut fi salvată în siguranță. Încercați din nou 
 msgid "The declaration was saved, but the email could not be delivered immediately. Download the complete evidence now and contact the merchant if necessary."
 msgstr "Declarația a fost salvată, dar emailul nu a putut fi livrat imediat. Descărcați acum dovada completă și contactați comerciantul dacă este necesar."
 
-#: includes/class-cwfw-mailer.php:17 templates/form.php:92
+#: includes/class-furmrowi-mailer.php:17 templates/form.php:92
 msgid "The entire order / contract"
 msgstr "Întreaga comandă / întregul contract"
 
-#: includes/class-cwfw-frontend.php:88 includes/class-cwfw-frontend.php:101
+#: includes/class-furmrowi-frontend.php:84 includes/class-furmrowi-frontend.php:97
 msgid "The form session expired. Review the details and try again."
 msgstr "Sesiunea formularului a expirat. Verificați datele și încercați din nou."
 
-#: includes/class-cwfw-frontend.php:201
+#: includes/class-furmrowi-frontend.php:197
 msgid "The merchant contact details required for this function are not configured."
 msgstr "Datele de contact ale comerciantului necesare acestei funcții nu sunt configurate."
 
-#: includes/class-cwfw-frontend.php:81
+#: includes/class-furmrowi-frontend.php:77
 msgid "The online withdrawal function is not available yet. Please contact the merchant using the published contact details."
 msgstr "Funcția online de retragere nu este încă disponibilă. Contactați comerciantul folosind datele publicate."
 
-#: includes/class-cwfw-frontend.php:105
+#: includes/class-furmrowi-frontend.php:101
 msgid "The request could not be processed. Please try again."
 msgstr "Solicitarea nu a putut fi procesată. Încercați din nou."
 
@@ -503,19 +503,19 @@ msgstr "Solicitarea nu a putut fi procesată. Încercați din nou."
 msgid "The right of withdrawal does not apply in the cases provided by Article 16 of Romanian Emergency Ordinance no. 34/2014. Depending on the case, these include fully performed services begun with prior express agreement and acknowledgement of loss of the right; personalized goods; goods liable to deteriorate or expire rapidly; sealed health or hygiene goods that were unsealed; inseparably mixed goods; unsealed recordings or software; and digital content whose supply began with prior express agreement and acknowledgement of loss of the right."
 msgstr "Dreptul de retragere nu se aplică în cazurile prevăzute de art. 16 din OUG nr. 34/2014. După caz, acestea includ servicii executate integral, dacă executarea a început cu acordul prealabil expres și consumatorul a confirmat pierderea dreptului; bunuri personalizate; bunuri susceptibile să se deterioreze ori să expire rapid; bunuri sigilate din motive de protecție a sănătății sau igienă care au fost desigilate; bunuri inseparabil amestecate; înregistrări ori programe desigilate; și conținut digital a cărui furnizare a început cu acordul prealabil expres și confirmarea pierderii dreptului."
 
-#: includes/class-cwfw-admin.php:149
+#: includes/class-furmrowi-admin.php:149
 msgid "The same form, legal notice and link are available as Gutenberg blocks and classic widgets."
 msgstr "Același formular, informarea juridică și linkul sunt disponibile ca blocuri Gutenberg și widgeturi clasice."
 
-#: includes/class-cwfw-frontend.php:94
+#: includes/class-furmrowi-frontend.php:90
 msgid "The selected order is no longer available in this account. Select it again or use manual identification."
 msgstr "Comanda selectată nu mai este disponibilă în acest cont. Selectați din nou sau folosiți identificarea manuală."
 
-#: includes/class-cwfw-frontend.php:329
+#: includes/class-furmrowi-frontend.php:325
 msgid "The selected order is not available in this account."
 msgstr "Comanda selectată nu este disponibilă în acest cont."
 
-#: includes/class-cwfw-frontend.php:342
+#: includes/class-furmrowi-frontend.php:338
 msgid "The selected products or quantities no longer match the order."
 msgstr "Produsele sau cantitățile selectate nu mai corespund comenzii."
 
@@ -523,11 +523,11 @@ msgstr "Produsele sau cantitățile selectate nu mai corespund comenzii."
 msgid "The trader bears the direct cost of returning the goods."
 msgstr "Comerciantul suportă costul direct al returnării bunurilor."
 
-#: includes/class-cwfw-frontend.php:198
+#: includes/class-furmrowi-frontend.php:194
 msgid "The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings."
 msgstr "Funcția de retragere este dezactivată. Configurați-o și activați-o din WooCommerce → Setări retragere."
 
-#: includes/class-cwfw-mailer.php:47 includes/class-cwfw-mailer.php:67
+#: includes/class-furmrowi-mailer.php:47 includes/class-furmrowi-mailer.php:67
 msgid "This message acknowledges receipt. It does not automatically approve a return or refund."
 msgstr "Acest mesaj confirmă primirea declarației. Nu reprezintă aprobarea automată a returului sau rambursării."
 
@@ -535,7 +535,7 @@ msgstr "Acest mesaj confirmă primirea declarației. Nu reprezintă aprobarea au
 msgid "This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review."
 msgstr "Acest software afișează informațiile configurate de comerciant și susține fluxul declarațiilor. Nu stabilește eligibilitatea juridică și nu înlocuiește verificarea juridică profesională."
 
-#: includes/class-cwfw-widgets.php:29
+#: includes/class-furmrowi-widgets.php:29
 msgid "Title"
 msgstr "Titlu"
 
@@ -547,7 +547,7 @@ msgstr "Pentru exercitarea dreptului este suficient să comunicați, înainte de
 msgid "To meet the %d-day deadline, it is sufficient to send the communication concerning exercise of the right of withdrawal before the period expires."
 msgstr "Pentru respectarea termenului de %d zile este suficient să transmiteți comunicarea privind retragerea înainte de expirarea perioadei."
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Trader"
 msgstr "Comerciant"
 
@@ -555,7 +555,7 @@ msgstr "Comerciant"
 msgid "Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay."
 msgstr "Prin această funcție vă puteți exercita online dreptul de retragere din contractul încheiat la distanță, fără să indicați un motiv, în termenul legal aplicabil. După transmitere veți primi, fără întârzieri nejustificate, la adresa de email indicată, confirmarea de primire care conține declarația, data și ora transmiterii."
 
-#: includes/class-cwfw-mailer.php:39 includes/class-cwfw-mailer.php:52
+#: includes/class-furmrowi-mailer.php:39 includes/class-furmrowi-mailer.php:52
 msgid "We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below."
 msgstr "Confirmăm primirea declarației dumneavoastră de retragere. Mai jos se află copia integrală a declarației și a datelor transmiterii."
 
@@ -563,47 +563,47 @@ msgstr "Confirmăm primirea declarației dumneavoastră de retragere. Mai jos se
 msgid "We may withhold reimbursement until we receive the goods or until you supply evidence of having sent them back, whichever is earliest."
 msgstr "Putem amâna rambursarea până la primirea bunurilor sau până la prezentarea dovezii expedierii lor, luându-se în considerare data cea mai apropiată."
 
-#: includes/class-cwfw-frontend.php:265 includes/class-cwfw-frontend.php:272 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
+#: includes/class-furmrowi-frontend.php:261 includes/class-furmrowi-frontend.php:268 includes/class-furmrowi-widgets.php:58 templates/legal.php:3 templates/legal.php:28
 msgid "Withdraw from the contract here"
 msgstr "Retrageți-vă din contract aici"
 
-#: includes/class-cwfw-frontend.php:48
+#: includes/class-furmrowi-frontend.php:44
 msgid "Withdrawal form"
 msgstr "Formular de retragere"
 
-#: includes/class-cwfw-admin.php:145
+#: includes/class-furmrowi-admin.php:145
 msgid "Withdrawal form page"
 msgstr "Pagina formularului de retragere"
 
-#: includes/class-cwfw-installer.php:27 templates/form.php:3
+#: includes/class-furmrowi-installer.php:27 templates/form.php:3
 msgid "Withdrawal from contract"
 msgstr "Retragere din contract"
 
-#: includes/class-cwfw-admin.php:138 includes/class-cwfw-frontend.php:50 templates/form.php:140
+#: includes/class-furmrowi-admin.php:138 includes/class-furmrowi-frontend.php:46 templates/form.php:140
 msgid "Withdrawal information"
 msgstr "Informații privind retragerea"
 
-#: includes/class-cwfw-admin.php:146
+#: includes/class-furmrowi-admin.php:146
 msgid "Withdrawal information page"
 msgstr "Pagina informațiilor privind retragerea"
 
-#: includes/class-cwfw-frontend.php:52
+#: includes/class-furmrowi-frontend.php:48
 msgid "Withdrawal link"
 msgstr "Link retragere"
 
-#: includes/class-cwfw-admin.php:139
+#: includes/class-furmrowi-admin.php:139
 msgid "Withdrawal period (days)"
 msgstr "Perioada de retragere (zile)"
 
-#: includes/class-cwfw-admin.php:97 includes/class-cwfw-admin.php:183
+#: includes/class-furmrowi-admin.php:97 includes/class-furmrowi-admin.php:183
 msgid "Withdrawal record not found."
 msgstr "Înregistrarea retragerii nu a fost găsită."
 
-#: includes/class-cwfw-mailer.php:40 includes/class-cwfw-mailer.php:55 templates/success.php:6
+#: includes/class-furmrowi-mailer.php:40 includes/class-furmrowi-mailer.php:55 templates/success.php:6
 msgid "Withdrawal reference"
 msgstr "Numărul solicitării"
 
-#: includes/class-cwfw-mailer.php:45 includes/class-cwfw-mailer.php:60
+#: includes/class-furmrowi-mailer.php:45 includes/class-furmrowi-mailer.php:60
 msgid "Withdrawal scope"
 msgstr "Obiectul retragerii"
 
@@ -611,19 +611,19 @@ msgstr "Obiectul retragerii"
 msgid "Withdrawal scope *"
 msgstr "Obiectul retragerii *"
 
-#: includes/class-cwfw-admin.php:35 includes/class-cwfw-admin.php:36
+#: includes/class-furmrowi-admin.php:35 includes/class-furmrowi-admin.php:36
 msgid "Withdrawal settings (Free)"
 msgstr "Setări retragere (Gratuit)"
 
-#: includes/class-cwfw-widgets.php:80
+#: includes/class-furmrowi-widgets.php:80
 msgid "Withdrawal: Legal notice"
 msgstr "Retragere: Informare juridică"
 
-#: includes/class-cwfw-widgets.php:41
+#: includes/class-furmrowi-widgets.php:41
 msgid "Withdrawal: Online form"
 msgstr "Retragere: Formular online"
 
-#: includes/class-cwfw-widgets.php:54
+#: includes/class-furmrowi-widgets.php:54
 msgid "Withdrawal: Permanent link"
 msgstr "Retragere: Link permanent"
 
@@ -631,7 +631,7 @@ msgstr "Retragere: Link permanent"
 msgid "You are liable only for diminished value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the goods."
 msgstr "Sunteți responsabil numai pentru diminuarea valorii bunurilor rezultată din manipulări diferite de cele necesare pentru stabilirea naturii, caracteristicilor și funcționării lor."
 
-#: includes/class-cwfw-admin.php:227
+#: includes/class-furmrowi-admin.php:227
 msgid "You are not allowed to manage withdrawal records."
 msgstr "Nu aveți permisiunea de a administra înregistrările de retragere."
 
@@ -659,6 +659,6 @@ msgstr "Declarația dumneavoastră"
 msgid "Your withdrawal declaration was recorded"
 msgstr "Declarația de retragere a fost înregistrată"
 
-#: includes/class-cwfw-admin.php:201
+#: includes/class-furmrowi-admin.php:201
 msgid "— Select —"
 msgstr "— Selectați —"

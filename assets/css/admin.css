@@ -9,29 +9,29 @@
 
 /* 1. Administration layout
 -------------------------------------------------------------- */
-.cwfw-admin { max-width: 1500px; }
-.cwfw-admin .cwfw-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 18px 0; padding: 14px; border: 1px solid #dcdcde; background: #fff; }
-.cwfw-admin .cwfw-filters label { display: grid; gap: 4px; font-weight: 600; }
-.cwfw-admin-grid, .cwfw-settings-grid { display: grid; grid-template-columns: minmax(0,2fr) minmax(320px,1fr); gap: 20px; align-items: start; }
-.cwfw-settings-grid { grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 1200px; }
+.furmrowi-admin { max-width: 1500px; }
+.furmrowi-admin .furmrowi-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 18px 0; padding: 14px; border: 1px solid #dcdcde; background: #fff; }
+.furmrowi-admin .furmrowi-filters label { display: grid; gap: 4px; font-weight: 600; }
+.furmrowi-admin-grid, .furmrowi-settings-grid { display: grid; grid-template-columns: minmax(0,2fr) minmax(320px,1fr); gap: 20px; align-items: start; }
+.furmrowi-settings-grid { grid-template-columns: repeat(2,minmax(0,1fr)); max-width: 1200px; }
 /* End administration layout */
 
 /* 2. Cards and controls
 -------------------------------------------------------------- */
-.cwfw-card { margin: 0 0 20px; padding: 18px; border: 1px solid #dcdcde; background: #fff; box-shadow: 0 1px 1px rgba(0,0,0,.04); }
-.cwfw-card h2 { margin-top: 0; }
-.cwfw-card pre { max-height: 500px; padding: 14px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; background: #f6f7f7; }
-.cwfw-card dl { display: grid; grid-template-columns: minmax(120px,auto) 1fr; gap: 8px 12px; }
-.cwfw-card dt { font-weight: 700; }
-.cwfw-card dd { margin: 0; overflow-wrap: anywhere; }
-.cwfw-card label { display: block; margin-bottom: 5px; }
-.cwfw-card input[type="text"], .cwfw-card input[type="email"], .cwfw-card input[type="number"], .cwfw-card select, .cwfw-card textarea { width: 100%; max-width: 100%; }
-.cwfw-card input[type="checkbox"] { width: auto; }
+.furmrowi-card { margin: 0 0 20px; padding: 18px; border: 1px solid #dcdcde; background: #fff; box-shadow: 0 1px 1px rgba(0,0,0,.04); }
+.furmrowi-card h2 { margin-top: 0; }
+.furmrowi-card pre { max-height: 500px; padding: 14px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; background: #f6f7f7; }
+.furmrowi-card dl { display: grid; grid-template-columns: minmax(120px,auto) 1fr; gap: 8px 12px; }
+.furmrowi-card dt { font-weight: 700; }
+.furmrowi-card dd { margin: 0; overflow-wrap: anywhere; }
+.furmrowi-card label { display: block; margin-bottom: 5px; }
+.furmrowi-card input[type="text"], .furmrowi-card input[type="email"], .furmrowi-card input[type="number"], .furmrowi-card select, .furmrowi-card textarea { width: 100%; max-width: 100%; }
+.furmrowi-card input[type="checkbox"] { width: auto; }
 /* End cards and controls */
 
 /* 3. Responsive rules
 -------------------------------------------------------------- */
 @media (max-width: 1000px) {
-	.cwfw-admin-grid, .cwfw-settings-grid { grid-template-columns: 1fr; }
+	.furmrowi-admin-grid, .furmrowi-settings-grid { grid-template-columns: 1fr; }
 }
 /* End responsive rules */

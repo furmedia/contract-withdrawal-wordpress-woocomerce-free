@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -37,8 +37,8 @@ class Plugin {
 		$this->frontend   = new Frontend( $this->settings, $this->repository, $this->security, $this->mailer );
 		$this->admin      = new Admin( $this->settings, $this->repository, $this->frontend );
 
-		add_action( 'init', array( 'Furmedia\\CWFW\\Installer', 'maybe_upgrade' ), 1 );
-		add_action( 'widgets_init', array( 'Furmedia\\CWFW\\Widgets', 'register' ) );
+		add_action( 'init', array( 'Furmedia\\Furmrowi\\Installer', 'maybe_upgrade' ), 1 );
+		add_action( 'widgets_init', array( 'Furmedia\\Furmrowi\\Widgets', 'register' ) );
 		$this->frontend->register_hooks();
 		if ( is_admin() ) {
 			$this->admin->register_hooks();

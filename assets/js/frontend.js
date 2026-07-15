@@ -10,23 +10,23 @@
 	}
 
 	ready(function () {
-		var form = document.getElementById('cwfw-form');
+		var form = document.getElementById('furmrowi-form');
 		if (!form) {
 			return;
 		}
 
-		document.documentElement.classList.add('cwfw-js');
-		var accountPanel = document.getElementById('cwfw-account-order');
-		var manualPanel = document.getElementById('cwfw-manual-order');
-		var accountItems = document.getElementById('cwfw-account-items');
-		var manualItems = document.getElementById('cwfw-manual-items');
-		var manualReference = document.getElementById('cwfw-contract-reference');
-		var orderSelect = document.getElementById('cwfw-order-id');
-		var loadOrder = form.querySelector('[data-cwfw-load-order]');
-		var itemList = document.getElementById('cwfw-item-list');
-		var addItem = document.getElementById('cwfw-add-item');
-		var submit = document.getElementById('cwfw-submit');
-		var honeypot = form.querySelector('[data-cwfw-honeypot]');
+		document.documentElement.classList.add('furmrowi-js');
+		var accountPanel = document.getElementById('furmrowi-account-order');
+		var manualPanel = document.getElementById('furmrowi-manual-order');
+		var accountItems = document.getElementById('furmrowi-account-items');
+		var manualItems = document.getElementById('furmrowi-manual-items');
+		var manualReference = document.getElementById('furmrowi-contract-reference');
+		var orderSelect = document.getElementById('furmrowi-order-id');
+		var loadOrder = form.querySelector('[data-furmrowi-load-order]');
+		var itemList = document.getElementById('furmrowi-item-list');
+		var addItem = document.getElementById('furmrowi-add-item');
+		var submit = document.getElementById('furmrowi-submit');
+		var honeypot = form.querySelector('[data-furmrowi-honeypot]');
 		var maximumItems = 20;
 
 		if (honeypot) {
@@ -50,8 +50,8 @@
 		}
 
 		function updateProductRow(row, enabled) {
-			var checkbox = row.querySelector('[data-cwfw-product-checkbox]');
-			var quantity = row.querySelector('[data-cwfw-product-quantity]');
+			var checkbox = row.querySelector('[data-furmrowi-product-checkbox]');
+			var quantity = row.querySelector('[data-furmrowi-product-quantity]');
 			if (checkbox) {
 				checkbox.disabled = !enabled;
 			}
@@ -89,32 +89,32 @@
 				});
 			}
 			if (accountItems) {
-				var heading = accountItems.querySelector('[data-cwfw-account-heading]');
+				var heading = accountItems.querySelector('[data-furmrowi-account-heading]');
 				if (heading) {
 					heading.textContent = partial ? heading.getAttribute('data-partial-text') : heading.getAttribute('data-full-text');
 				}
-				Array.prototype.forEach.call(accountItems.querySelectorAll('[data-cwfw-account-product]'), function (row) {
+				Array.prototype.forEach.call(accountItems.querySelectorAll('[data-furmrowi-account-product]'), function (row) {
 					updateProductRow(row, account && partial);
 				});
 			}
 		}
 
 		function itemRows() {
-			return itemList ? itemList.querySelectorAll('[data-cwfw-item-row]') : [];
+			return itemList ? itemList.querySelectorAll('[data-furmrowi-item-row]') : [];
 		}
 
 		function reindex(row, index) {
-			var name = row.querySelector('[data-cwfw-item-name]');
-			var quantity = row.querySelector('[data-cwfw-item-quantity]');
-			var nameLabel = name ? row.querySelector('label[for^="cwfw-item-name-"]') : null;
-			var quantityLabel = quantity ? row.querySelector('label[for^="cwfw-item-qty-"]') : null;
+			var name = row.querySelector('[data-furmrowi-item-name]');
+			var quantity = row.querySelector('[data-furmrowi-item-quantity]');
+			var nameLabel = name ? row.querySelector('label[for^="furmrowi-item-name-"]') : null;
+			var quantityLabel = quantity ? row.querySelector('label[for^="furmrowi-item-qty-"]') : null;
 			if (name) {
 				name.name = 'items[' + index + '][name]';
-				name.id = 'cwfw-item-name-' + index;
+				name.id = 'furmrowi-item-name-' + index;
 			}
 			if (quantity) {
 				quantity.name = 'items[' + index + '][quantity]';
-				quantity.id = 'cwfw-item-qty-' + index;
+				quantity.id = 'furmrowi-item-qty-' + index;
 			}
 			if (nameLabel) {
 				nameLabel.setAttribute('for', name.id);
@@ -138,8 +138,8 @@
 					return;
 				}
 				var row = rows[0].cloneNode(true);
-				var name = row.querySelector('[data-cwfw-item-name]');
-				var quantity = row.querySelector('[data-cwfw-item-quantity]');
+				var name = row.querySelector('[data-furmrowi-item-name]');
+				var quantity = row.querySelector('[data-furmrowi-item-quantity]');
 				if (name) {
 					name.value = '';
 				}
@@ -155,15 +155,15 @@
 			});
 
 			itemList.addEventListener('click', function (event) {
-				var button = event.target.closest('[data-cwfw-remove-item]');
+				var button = event.target.closest('[data-furmrowi-remove-item]');
 				if (!button) {
 					return;
 				}
-				var row = button.closest('[data-cwfw-item-row]');
+				var row = button.closest('[data-furmrowi-item-row]');
 				var rows = itemRows();
 				if (rows.length === 1) {
-					row.querySelector('[data-cwfw-item-name]').value = '';
-					row.querySelector('[data-cwfw-item-quantity]').value = '1';
+					row.querySelector('[data-furmrowi-item-name]').value = '';
+					row.querySelector('[data-furmrowi-item-quantity]').value = '1';
 				} else {
 					row.parentNode.removeChild(row);
 					reindexAll();
@@ -176,8 +176,8 @@
 		});
 		if (accountItems) {
 			accountItems.addEventListener('change', function (event) {
-				if (event.target.matches('[data-cwfw-product-checkbox]')) {
-					updateProductRow(event.target.closest('[data-cwfw-account-product]'), selected('scope', 'full') === 'partial');
+				if (event.target.matches('[data-furmrowi-product-checkbox]')) {
+					updateProductRow(event.target.closest('[data-furmrowi-account-product]'), selected('scope', 'full') === 'partial');
 				}
 			});
 		}
@@ -200,7 +200,7 @@
 			if (submit) {
 				var actionField = document.createElement('input');
 				actionField.type = 'hidden';
-				actionField.name = 'cwfw_action';
+				actionField.name = 'furmrowi_action';
 				actionField.value = 'submit';
 				form.appendChild(actionField);
 				submit.textContent = submit.getAttribute('data-processing-text') || submit.textContent;
@@ -209,7 +209,7 @@
 			}
 		});
 
-		var firstError = form.querySelector('[aria-invalid="true"]') || document.getElementById('cwfw-error-summary');
+		var firstError = form.querySelector('[aria-invalid="true"]') || document.getElementById('furmrowi-error-summary');
 		if (firstError) {
 			firstError.focus();
 		}

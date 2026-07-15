@@ -9,4 +9,4 @@
 7. Verify both the customer acknowledgement and merchant notification.
 8. Enable the public function only after the content and operating procedure have been reviewed.
 
-The shortcode `[cwfw_form]` can be placed on any page. The activation routine creates dedicated pages when equivalent pages do not already exist.
+The shortcode `[furmrowi_form]` can be placed on any page. The activation routine creates dedicated pages when equivalent pages do not already exist.

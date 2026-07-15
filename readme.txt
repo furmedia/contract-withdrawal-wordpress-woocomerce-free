@@ -4,7 +4,7 @@ Tags: woocommerce, withdrawal, returns, romania, consumer law
 Requires at least: 6.5
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires Plugins: woocommerce
 WC requires at least: 8.0
 WC tested up to: 10.9
@@ -72,6 +72,11 @@ Withdrawal evidence, settings and generated pages are retained. Only transient r
 The plugin stores the name, email address, contract reference, selected products, note, declaration, submission time and evidence snapshots needed for the merchant’s withdrawal workflow. It does not store raw visitor IP addresses. Merchants remain responsible for their privacy notice, retention policy and lawful processing.
 
 == Changelog ==
+
+= 1.1.2 =
+
+* Replaced generic public identifiers with the unique furmrowi prefix throughout the plugin.
+* Removed unprefixed shortcode aliases and retained three uniquely prefixed shortcode tags.
 
 = 1.1.1 =
 

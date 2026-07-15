@@ -1,10 +1,10 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
 class Settings {
-	const OPTION = 'cwfw_settings';
+	const OPTION = 'furmrowi_settings';
 
 	private $cache;
 

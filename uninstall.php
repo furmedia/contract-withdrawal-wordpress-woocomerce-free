@@ -9,6 +9,6 @@
 defined( 'WP_UNINSTALL_PLUGIN' ) || exit;
 
 global $wpdb;
-$cwfw_limits = $wpdb->prefix . 'cwfw_rate_limits';
+$furmrowi_limits = $wpdb->prefix . 'furmrowi_rate_limits';
 // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.DirectDatabaseQuery.SchemaChange -- Uninstall removes only transient rate-limit state.
-$wpdb->query( $wpdb->prepare( 'DROP TABLE IF EXISTS %i', $cwfw_limits ) );
+$wpdb->query( $wpdb->prepare( 'DROP TABLE IF EXISTS %i', $furmrowi_limits ) );

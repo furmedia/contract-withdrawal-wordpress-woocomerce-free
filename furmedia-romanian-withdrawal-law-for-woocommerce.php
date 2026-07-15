@@ -3,7 +3,7 @@
  * Plugin Name: Furmedia Romanian Withdrawal Law for WooCommerce
  * Plugin URI: https://github.com/furmedia/contract-withdrawal-wordpress-woocomerce-free
  * Description: A free online contract-withdrawal form for Romanian WooCommerce stores, with evidence records, email acknowledgements, widgets, blocks and shortcodes.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Furmedia
  * Author URI: https://furmedia.ro/
  * Text Domain: furmedia-romanian-withdrawal-law-for-woocommerce
@@ -19,24 +19,24 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'CWFW_VERSION', '1.1.1' );
-define( 'CWFW_SCHEMA_VERSION', '1.0.0' );
-define( 'CWFW_FILE', __FILE__ );
-define( 'CWFW_PATH', plugin_dir_path( __FILE__ ) );
-define( 'CWFW_URL', plugin_dir_url( __FILE__ ) );
-define( 'CWFW_BASENAME', plugin_basename( __FILE__ ) );
+define( 'FURMROWI_VERSION', '1.1.2' );
+define( 'FURMROWI_SCHEMA_VERSION', '1.0.0' );
+define( 'FURMROWI_FILE', __FILE__ );
+define( 'FURMROWI_PATH', plugin_dir_path( __FILE__ ) );
+define( 'FURMROWI_URL', plugin_dir_url( __FILE__ ) );
+define( 'FURMROWI_BASENAME', plugin_basename( __FILE__ ) );
 
-require_once CWFW_PATH . 'includes/class-cwfw-settings.php';
-require_once CWFW_PATH . 'includes/class-cwfw-installer.php';
-require_once CWFW_PATH . 'includes/class-cwfw-repository.php';
-require_once CWFW_PATH . 'includes/class-cwfw-security.php';
-require_once CWFW_PATH . 'includes/class-cwfw-mailer.php';
-require_once CWFW_PATH . 'includes/class-cwfw-frontend.php';
-require_once CWFW_PATH . 'includes/class-cwfw-admin.php';
-require_once CWFW_PATH . 'includes/class-cwfw-widgets.php';
-require_once CWFW_PATH . 'includes/class-cwfw-plugin.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-settings.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-installer.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-repository.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-security.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-mailer.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-frontend.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-admin.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-widgets.php';
+require_once FURMROWI_PATH . 'includes/class-furmrowi-plugin.php';
 
-register_activation_hook( __FILE__, array( 'Furmedia\\CWFW\\Installer', 'activate' ) );
+register_activation_hook( __FILE__, array( 'Furmedia\\Furmrowi\\Installer', 'activate' ) );
 
 add_action(
 	'before_woocommerce_init',
@@ -51,7 +51,7 @@ add_action(
 add_action(
 	'plugins_loaded',
 	static function () {
-		\Furmedia\CWFW\Plugin::instance()->boot();
+		\Furmedia\Furmrowi\Plugin::instance()->boot();
 	},
 	20
 );
@@ -59,8 +59,8 @@ add_action(
 /**
  * Public accessor used by integrations and templates.
  *
- * @return \Furmedia\CWFW\Plugin
+ * @return \Furmedia\Furmrowi\Plugin
  */
-function cwfw() {
-	return \Furmedia\CWFW\Plugin::instance();
+function furmrowi() {
+	return \Furmedia\Furmrowi\Plugin::instance();
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,26 +24,22 @@ class Frontend {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_style' ) );
 		add_action( 'wp_footer', array( $this, 'footer_link' ) );
 
-		add_shortcode( 'cwfw_form', array( $this, 'shortcode_form' ) );
-		add_shortcode( 'contract_withdrawal_form', array( $this, 'shortcode_form' ) );
-		add_shortcode( 'retragere_din_contract', array( $this, 'shortcode_form' ) );
-		add_shortcode( 'cwfw_legal_notice', array( $this, 'shortcode_legal' ) );
-		add_shortcode( 'contract_withdrawal_legal_notice', array( $this, 'shortcode_legal' ) );
-		add_shortcode( 'cwfw_link', array( $this, 'shortcode_link' ) );
-		add_shortcode( 'contract_withdrawal_link', array( $this, 'shortcode_link' ) );
+		add_shortcode( 'furmrowi_form', array( $this, 'shortcode_form' ) );
+		add_shortcode( 'furmrowi_legal_notice', array( $this, 'shortcode_legal' ) );
+		add_shortcode( 'furmrowi_link', array( $this, 'shortcode_link' ) );
 	}
 
 	public function register_blocks() {
 		wp_register_script(
-			'cwfw-blocks',
-			CWFW_URL . 'assets/js/blocks.js',
+			'furmrowi-blocks',
+			FURMROWI_URL . 'assets/js/blocks.js',
 			array( 'wp-blocks', 'wp-element', 'wp-i18n' ),
-			CWFW_VERSION,
+			FURMROWI_VERSION,
 			true
 		);
 		wp_localize_script(
-			'cwfw-blocks',
-			'cwfwBlocksI18n',
+			'furmrowi-blocks',
+			'furmrowiBlocksI18n',
 			array(
 				'formTitle'          => __( 'Withdrawal form', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
 				'formDescription'    => __( 'Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ),
@@ -63,7 +59,7 @@ class Frontend {
 				$name,
 				array(
 					'api_version'     => 3,
-					'editor_script'   => 'cwfw-blocks',
+					'editor_script'   => 'furmrowi-blocks',
 					'render_callback' => $callback,
 				)
 			);
@@ -71,10 +67,10 @@ class Frontend {
 	}
 
 	public function handle_request() {
-		if ( isset( $_GET['cwfw_evidence'] ) ) {
+		if ( isset( $_GET['furmrowi_evidence'] ) ) {
 			$this->download_evidence();
 		}
-		if ( 'POST' !== strtoupper( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( (string) $_SERVER['REQUEST_METHOD'] ) ) : '' ) || empty( $_POST['cwfw_action'] ) ) {
+		if ( 'POST' !== strtoupper( isset( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( (string) $_SERVER['REQUEST_METHOD'] ) ) : '' ) || empty( $_POST['furmrowi_action'] ) ) {
 			return;
 		}
 		if ( ! $this->settings->get( 'enabled' ) || ! $this->settings->is_ready() ) {
@@ -82,9 +78,9 @@ class Frontend {
 			return;
 		}
 
-		$action = sanitize_key( wp_unslash( $_POST['cwfw_action'] ) );
-		$nonce  = $this->posted_scalar( 'cwfw_nonce' );
-		if ( ! wp_verify_nonce( $nonce, 'cwfw_submit' ) ) {
+		$action = sanitize_key( wp_unslash( $_POST['furmrowi_action'] ) );
+		$nonce  = $this->posted_scalar( 'furmrowi_nonce' );
+		if ( ! wp_verify_nonce( $nonce, 'furmrowi_submit' ) ) {
 			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
@@ -96,12 +92,12 @@ class Frontend {
 			return;
 		}
 
-		$idempotency = $this->posted_scalar( 'cwfw_idempotency' );
+		$idempotency = $this->posted_scalar( 'furmrowi_idempotency' );
 		if ( ! $this->security->validate_submission_tokens( $nonce, $idempotency ) ) {
 			$this->errors['warning'] = __( 'The form session expired. Review the details and try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
-		if ( '' !== trim( $this->posted_scalar( 'cwfw_check_7f31' ) ) ) {
+		if ( '' !== trim( $this->posted_scalar( 'furmrowi_check_7f31' ) ) ) {
 			$this->errors['warning'] = __( 'The request could not be processed. Please try again.', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 			return;
 		}
@@ -145,7 +141,7 @@ class Frontend {
 						'scope'                  => $this->form['scope'],
 						'items'                  => wp_json_encode( $validated['items'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
 						'note'                   => $this->form['note'],
-						'module_version'         => CWFW_VERSION,
+						'module_version'         => FURMROWI_VERSION,
 						'legal_template_version' => (string) $this->settings->get( 'legal_template_version' ),
 						'settings_snapshot'      => wp_json_encode( $this->settings->snapshot(), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ),
 						'idempotency_hash'       => $idempotency_hash,
@@ -165,10 +161,10 @@ class Frontend {
 			$this->redirect_success();
 		}
 		try {
-			do_action( 'cwfw_withdrawal_recorded', $record );
+			do_action( 'furmrowi_withdrawal_recorded', $record );
 		} catch ( \Throwable $integration_exception ) {
 			try {
-				do_action( 'cwfw_integration_error', 'cwfw_withdrawal_recorded', sanitize_text_field( $integration_exception->getMessage() ) );
+				do_action( 'furmrowi_integration_error', 'furmrowi_withdrawal_recorded', sanitize_text_field( $integration_exception->getMessage() ) );
 			} catch ( \Throwable $ignored_exception ) {
 				unset( $ignored_exception );
 			}
@@ -179,10 +175,10 @@ class Frontend {
 		$this->mailer->notify_admin( $record, $email_status );
 		$record = $this->repository->get( $record['withdrawal_id'] );
 		try {
-			do_action( 'cwfw_withdrawal_processed', $record, $email_status );
+			do_action( 'furmrowi_withdrawal_processed', $record, $email_status );
 		} catch ( \Throwable $integration_exception ) {
 			try {
-				do_action( 'cwfw_integration_error', 'cwfw_withdrawal_processed', sanitize_text_field( $integration_exception->getMessage() ) );
+				do_action( 'furmrowi_integration_error', 'furmrowi_withdrawal_processed', sanitize_text_field( $integration_exception->getMessage() ) );
 			} catch ( \Throwable $ignored_exception ) {
 				unset( $ignored_exception );
 			}
@@ -195,14 +191,14 @@ class Frontend {
 
 	public function shortcode_form( $atts = array() ) {
 		if ( ! $this->settings->get( 'enabled' ) ) {
-			return current_user_can( 'manage_woocommerce' ) ? '<div class="cwfw-notice cwfw-notice-warning">' . esc_html__( 'The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>' : '';
+			return current_user_can( 'manage_woocommerce' ) ? '<div class="furmrowi-notice furmrowi-notice-warning">' . esc_html__( 'The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>' : '';
 		}
 		if ( ! $this->settings->is_ready() ) {
-			return '<div class="cwfw-notice cwfw-notice-error">' . esc_html__( 'The merchant contact details required for this function are not configured.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>';
+			return '<div class="furmrowi-notice furmrowi-notice-error">' . esc_html__( 'The merchant contact details required for this function are not configured.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</div>';
 		}
 		$this->enqueue_assets();
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only success routing bound to server-side session evidence.
-		if ( isset( $_GET['cwfw_success'] ) ) {
+		if ( isset( $_GET['furmrowi_success'] ) ) {
 			$success = $this->security->success();
 			if ( $success ) {
 				$record = $this->repository->get( $success['withdrawal_id'] );
@@ -214,9 +210,9 @@ class Frontend {
 
 		$form = $this->form ? $this->form : $this->default_form();
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only order preselection is followed by an ownership check.
-		if ( ! $this->form && isset( $_GET['cwfw_order_id'] ) && is_user_logged_in() ) {
+		if ( ! $this->form && isset( $_GET['furmrowi_order_id'] ) && is_user_logged_in() ) {
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only order preselection is followed by an ownership check.
-			$order_id = absint( $_GET['cwfw_order_id'] );
+			$order_id = absint( $_GET['furmrowi_order_id'] );
 			if ( $this->owned_order( $order_id ) ) {
 				$form['order_mode'] = 'account';
 				$form['order_id']   = $order_id;
@@ -239,7 +235,7 @@ class Frontend {
 				'orders'          => $orders,
 				'selected_order'  => $selected_order,
 				'products'        => $products,
-				'nonce'           => wp_create_nonce( 'cwfw_submit' ),
+				'nonce'           => wp_create_nonce( 'furmrowi_submit' ),
 				'idempotency'     => $this->security->ensure_idempotency_token(),
 				'privacy_url'     => $this->privacy_url(),
 				'legal_url'       => $this->settings->legal_url(),
@@ -254,7 +250,7 @@ class Frontend {
 			return '';
 		}
 		$this->enqueue_assets();
-		$atts = shortcode_atts( array( 'full' => 'yes' ), (array) $atts, 'cwfw_legal_notice' );
+		$atts = shortcode_atts( array( 'full' => 'yes' ), (array) $atts, 'furmrowi_legal_notice' );
 		return $this->template( 'legal.php', array( 'full' => 'yes' === strtolower( (string) $atts['full'] ) ) );
 	}
 
@@ -262,25 +258,25 @@ class Frontend {
 		if ( ! $this->settings->get( 'enabled' ) ) {
 			return '';
 		}
-		$atts  = shortcode_atts( array( 'label' => __( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), 'class' => 'cwfw-link' ), (array) $atts, 'cwfw_link' );
+		$atts  = shortcode_atts( array( 'label' => __( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), 'class' => 'furmrowi-link' ), (array) $atts, 'furmrowi_link' );
 		$class = implode( ' ', array_map( 'sanitize_html_class', preg_split( '/\s+/', (string) $atts['class'], -1, PREG_SPLIT_NO_EMPTY ) ) );
 		return '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html( $atts['label'] ) . '</a>';
 	}
 
 	public function footer_link() {
 		if ( ! is_admin() && $this->settings->get( 'enabled' ) && $this->settings->get( 'footer_link_enabled' ) ) {
-			echo '<div class="cwfw-footer-access"><a href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html__( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</a></div>';
+			echo '<div class="furmrowi-footer-access"><a href="' . esc_url( $this->settings->form_url() ) . '">' . esc_html__( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) . '</a></div>';
 		}
 	}
 
 	public function enqueue_public_style() {
 		if ( ! is_admin() && $this->settings->get( 'enabled' ) ) {
-			wp_enqueue_style( 'cwfw-frontend', CWFW_URL . 'assets/css/frontend.css', array(), CWFW_VERSION );
+			wp_enqueue_style( 'furmrowi-frontend', FURMROWI_URL . 'assets/css/frontend.css', array(), FURMROWI_VERSION );
 		}
 	}
 
 	public function evidence_url( $withdrawal_id ) {
-		return wp_nonce_url( add_query_arg( 'cwfw_evidence', absint( $withdrawal_id ), home_url( '/' ) ), 'cwfw_evidence_' . absint( $withdrawal_id ) );
+		return wp_nonce_url( add_query_arg( 'furmrowi_evidence', absint( $withdrawal_id ), home_url( '/' ) ), 'furmrowi_evidence_' . absint( $withdrawal_id ) );
 	}
 
 	public function email_status_label( $status ) {
@@ -383,7 +379,7 @@ class Frontend {
 			'order_mode'         => sanitize_key( $this->posted_scalar( 'order_mode' ) ),
 			'order_id'           => absint( $this->posted_scalar( 'order_id' ) ),
 			'scope'              => sanitize_key( $this->posted_scalar( 'scope' ) ),
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- handle_request() verifies cwfw_nonce before parsing form values.
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing -- handle_request() verifies furmrowi_nonce before parsing form values.
 			'note'               => isset( $_POST['note'] ) && is_scalar( $_POST['note'] ) ? sanitize_textarea_field( wp_unslash( $_POST['note'] ) ) : '',
 			'items'              => array(),
 			'account_items'      => array(),
@@ -509,8 +505,8 @@ class Frontend {
 	}
 
 	private function download_evidence() {
-		$id = isset( $_GET['cwfw_evidence'] ) ? absint( wp_unslash( $_GET['cwfw_evidence'] ) ) : 0;
-		if ( ! $id || ! wp_verify_nonce( isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '', 'cwfw_evidence_' . $id ) ) {
+		$id = isset( $_GET['furmrowi_evidence'] ) ? absint( wp_unslash( $_GET['furmrowi_evidence'] ) ) : 0;
+		if ( ! $id || ! wp_verify_nonce( isset( $_GET['_wpnonce'] ) ? sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ) : '', 'furmrowi_evidence_' . $id ) ) {
 			wp_die( esc_html__( 'Invalid evidence link.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '', array( 'response' => 403 ) );
 		}
 		$record = $this->repository->get( $id );
@@ -530,23 +526,23 @@ class Frontend {
 		$frontend = $this;
 		$settings = $this->settings;
 		ob_start();
-		include CWFW_PATH . 'templates/' . $file;
+		include FURMROWI_PATH . 'templates/' . $file;
 		return ob_get_clean();
 	}
 
 	private function enqueue_assets() {
 		$this->enqueue_public_style();
-		wp_enqueue_script( 'cwfw-frontend', CWFW_URL . 'assets/js/frontend.js', array(), CWFW_VERSION, true );
+		wp_enqueue_script( 'furmrowi-frontend', FURMROWI_URL . 'assets/js/frontend.js', array(), FURMROWI_VERSION, true );
 	}
 
 	private function redirect_success() {
-		$url = add_query_arg( 'cwfw_success', '1', $this->safe_return_url() );
+		$url = add_query_arg( 'furmrowi_success', '1', $this->safe_return_url() );
 		wp_safe_redirect( $url );
 		exit;
 	}
 
 	private function safe_return_url() {
-		$url = $this->posted_scalar( 'cwfw_return_url' );
+		$url = $this->posted_scalar( 'furmrowi_return_url' );
 		return wp_validate_redirect( $url, $this->settings->form_url() );
 	}
 

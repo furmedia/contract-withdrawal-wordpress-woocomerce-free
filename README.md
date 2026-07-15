@@ -23,13 +23,9 @@ The plugin assists with a withdrawal workflow. It does not determine eligibility
 Shortcodes:
 
 ```text
-[cwfw_form]
-[retragere_din_contract]
-[contract_withdrawal_form]
-[cwfw_legal_notice full="yes"]
-[contract_withdrawal_legal_notice full="yes"]
-[cwfw_link]
-[contract_withdrawal_link]
+[furmrowi_form]
+[furmrowi_legal_notice full="yes"]
+[furmrowi_link]
 ```
 
 Gutenberg blocks:

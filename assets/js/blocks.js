@@ -2,7 +2,7 @@
 	'use strict';
 	var el = element.createElement;
 	var __ = i18n.__;
-	var t = window.cwfwBlocksI18n || {};
+	var t = window.furmrowiBlocksI18n || {};
 	var definitions = [
 		['furmedia/romanian-withdrawal-law-form', t.formTitle || __('Withdrawal form', 'furmedia-romanian-withdrawal-law-for-woocommerce'), t.formDescription || __('Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce'), 'feedback'],
 		['furmedia/romanian-withdrawal-law-legal', t.legalTitle || __('Withdrawal information', 'furmedia-romanian-withdrawal-law-for-woocommerce'), t.legalDescription || __('Displays the configured withdrawal information.', 'furmedia-romanian-withdrawal-law-for-woocommerce'), 'privacy'],

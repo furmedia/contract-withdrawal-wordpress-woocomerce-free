@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.1\n"
+"Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.2\n"
 "Report-Msgid-Bugs-To: contact@furmedia.ro\n"
 "POT-Creation-Date: 2026-07-13 00:00+0300\n"
 "PO-Revision-Date: 2026-07-13 00:00+0300\n"
@@ -17,15 +17,15 @@ msgstr ""
 msgid "A complete copy of the declaration, including its date and time, was sent to the email address provided."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:95
+#: includes/class-furmrowi-mailer.php:95
 msgid "A new declaration was recorded under reference %s."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:51
+#: includes/class-furmrowi-mailer.php:51
 msgid "Acknowledgement of contract withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:38
+#: includes/class-furmrowi-mailer.php:38
 msgid "Acknowledgement of contract withdrawal — %s"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Activating “Confirm withdrawal” submits this unambiguous declaration. The acknowledgement confirms receipt; it does not automatically approve a return or refund."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:368
+#: includes/class-furmrowi-frontend.php:364
 msgid "Add at least one product for a partial withdrawal."
 msgstr ""
 
@@ -41,31 +41,31 @@ msgstr ""
 msgid "Add product"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:141
+#: includes/class-furmrowi-admin.php:141
 msgid "Additional return information"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:108
 msgid "Administrator email"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:126
+#: includes/class-furmrowi-admin.php:126
 msgid "Availability"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:106
+#: includes/class-furmrowi-admin.php:106
 msgid "Back to declarations"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:132
+#: includes/class-furmrowi-admin.php:132
 msgid "Business address"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:131
+#: includes/class-furmrowi-admin.php:131
 msgid "Business name"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:372
+#: includes/class-furmrowi-frontend.php:368
 msgid "Choose how the contract is identified."
 msgstr ""
 
@@ -77,75 +77,75 @@ msgstr ""
 msgid "Consequences of withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Consumer"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:136
+#: includes/class-furmrowi-admin.php:136
 msgid "Contact phone"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Contract"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:67
+#: includes/class-furmrowi-admin.php:67
 msgid "Contract withdrawals"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:27 includes/class-cwfw-admin.php:28
+#: includes/class-furmrowi-admin.php:27 includes/class-furmrowi-admin.php:28
 msgid "Contract withdrawals (Free)"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Customer"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:96
+#: includes/class-furmrowi-mailer.php:96
 msgid "Customer confirmation status"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:108
 msgid "Customer email"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:46 includes/class-cwfw-mailer.php:65
+#: includes/class-furmrowi-mailer.php:46 includes/class-furmrowi-mailer.php:65
 msgid "Declaration submitted"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:68
+#: includes/class-furmrowi-admin.php:68
 msgid "Declarations are evidence records. This free edition does not approve eligibility, cancel orders, restock products or issue refunds."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:290
+#: includes/class-furmrowi-frontend.php:286
 msgid "Delivery failed — contact the merchant"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Direct return cost"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:142
+#: includes/class-furmrowi-admin.php:142
 msgid "Display timezone"
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:80
+#: includes/class-furmrowi-widgets.php:80
 msgid "Displays a short notice and a link to the withdrawal function."
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:54
+#: includes/class-furmrowi-widgets.php:54
 msgid "Displays a visible link to the online withdrawal function."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:49 includes/class-cwfw-widgets.php:41
+#: includes/class-furmrowi-frontend.php:45 includes/class-furmrowi-widgets.php:41
 msgid "Displays the complete online contract-withdrawal form."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:51
+#: includes/class-furmrowi-frontend.php:47
 msgid "Displays the configured withdrawal information."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:53
+#: includes/class-furmrowi-frontend.php:49
 msgid "Displays the permanent withdrawal link."
 msgstr ""
 
@@ -153,7 +153,7 @@ msgstr ""
 msgid "Do not fill this field"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:110
+#: includes/class-furmrowi-admin.php:110
 msgid "Download evidence"
 msgstr ""
 
@@ -161,11 +161,11 @@ msgstr ""
 msgid "Download submission evidence"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:362
+#: includes/class-furmrowi-frontend.php:358
 msgid "Each product must have a name and a quantity between 1 and 9,999."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-mailer.php:44 includes/class-cwfw-mailer.php:59
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-mailer.php:44 includes/class-furmrowi-mailer.php:59
 msgid "Email"
 msgstr ""
 
@@ -177,11 +177,11 @@ msgstr ""
 msgid "Email address for the acknowledgement *"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:127
+#: includes/class-furmrowi-admin.php:127
 msgid "Enable the public withdrawal function"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:315
+#: includes/class-furmrowi-frontend.php:311
 msgid "Enter a valid email address."
 msgstr ""
 
@@ -189,11 +189,11 @@ msgstr ""
 msgid "Enter an order number / contract identifier manually"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:356
+#: includes/class-furmrowi-frontend.php:352
 msgid "Enter an order number or contract identifier of at most 128 characters."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:518
+#: includes/class-furmrowi-frontend.php:514
 msgid "Evidence not found."
 msgstr ""
 
@@ -205,7 +205,7 @@ msgstr ""
 msgid "First name *"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:309
+#: includes/class-furmrowi-frontend.php:305
 msgid "First name must contain between 1 and 64 characters."
 msgstr ""
 
@@ -213,15 +213,15 @@ msgstr ""
 msgid "For services, the period runs from the date the contract is concluded. For sales contracts, it runs from the day on which you or a third party indicated by you, other than the carrier, acquires physical possession of the goods. For multiple goods delivered separately, the period runs from receipt of the last good; for a good delivered in lots or pieces, from receipt of the last lot or piece; and for regular delivery, from receipt of the first good."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:78
+#: includes/class-furmrowi-admin.php:78
 msgid "Full"
 msgstr ""
 
-#: includes/class-cwfw-plugin.php:62
+#: includes/class-furmrowi-plugin.php:62
 msgid "Furmedia Romanian Withdrawal Law for WooCommerce requires WooCommerce to be installed and active."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:120
+#: includes/class-furmrowi-admin.php:120
 msgid "Furmedia Romanian Withdrawal Law settings"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 msgid "I hereby give notice that I withdraw from the distance contract identified above."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:20
+#: includes/class-furmrowi-mailer.php:20
 msgid "I, %1$s, hereby give notice that I withdraw from the distance contract identified by “%2$s”, for: %3$s. This declaration was submitted at %4$s and recorded under reference %5$s."
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "If you withdraw, we will reimburse the amounts received, including the cost of standard delivery, without undue delay and no later than 14 days after being informed. Reimbursement is made using the same payment method unless you expressly agree otherwise, without fees for the consumer."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:110
+#: includes/class-furmrowi-admin.php:110
 msgid "Immutable declaration"
 msgstr ""
 
@@ -253,7 +253,7 @@ msgstr ""
 msgid "Information on the right of withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:514
+#: includes/class-furmrowi-frontend.php:510
 msgid "Invalid evidence link."
 msgstr ""
 
@@ -265,11 +265,11 @@ msgstr ""
 msgid "Last name *"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:312
+#: includes/class-furmrowi-frontend.php:308
 msgid "Last name must contain between 1 and 64 characters."
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:68
+#: includes/class-furmrowi-widgets.php:68
 msgid "Link label"
 msgstr ""
 
@@ -277,15 +277,15 @@ msgstr ""
 msgid "Load order products"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:130
+#: includes/class-furmrowi-admin.php:130
 msgid "Merchant details"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:43 includes/class-cwfw-mailer.php:58
+#: includes/class-furmrowi-mailer.php:43 includes/class-furmrowi-mailer.php:58
 msgid "Name"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:93
+#: includes/class-furmrowi-mailer.php:93
 msgid "New contract-withdrawal declaration — %s"
 msgstr ""
 
@@ -293,11 +293,11 @@ msgstr ""
 msgid "No orders were found in this account. Identify the contract manually below."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:72
+#: includes/class-furmrowi-admin.php:72
 msgid "No withdrawal declarations have been recorded."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:34
+#: includes/class-furmrowi-mailer.php:34
 msgid "Notes"
 msgstr ""
 
@@ -305,15 +305,15 @@ msgstr ""
 msgid "Notes (optional)"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:321
+#: includes/class-furmrowi-frontend.php:317
 msgid "Notes may contain at most 2,000 characters."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:135
+#: includes/class-furmrowi-admin.php:135
 msgid "Notification email"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:17 templates/form.php:93
+#: includes/class-furmrowi-mailer.php:17 templates/form.php:93
 msgid "Only selected products and quantities"
 msgstr ""
 
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Order number or contract identifier *"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:42 includes/class-cwfw-mailer.php:57
+#: includes/class-furmrowi-mailer.php:42 includes/class-furmrowi-mailer.php:57
 msgid "Order or contract reference"
 msgstr ""
 
@@ -333,19 +333,19 @@ msgstr ""
 msgid "Ordered: %d"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:144
+#: includes/class-furmrowi-admin.php:144
 msgid "Pages and privacy"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:78
+#: includes/class-furmrowi-admin.php:78
 msgid "Partial"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:288
+#: includes/class-furmrowi-frontend.php:284
 msgid "Pending"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:149
+#: includes/class-furmrowi-admin.php:149
 msgid "Placement tools"
 msgstr ""
 
@@ -353,7 +353,7 @@ msgstr ""
 msgid "Privacy policy"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:147
+#: includes/class-furmrowi-admin.php:147
 msgid "Privacy policy page"
 msgstr ""
 
@@ -361,7 +361,7 @@ msgstr ""
 msgid "Product"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:28 templates/form.php:114
+#: includes/class-furmrowi-mailer.php:28 templates/form.php:114
 msgid "Products and quantities"
 msgstr ""
 
@@ -369,7 +369,7 @@ msgstr ""
 msgid "Products included in the selected order"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:134
+#: includes/class-furmrowi-admin.php:134
 msgid "Public contact email"
 msgstr ""
 
@@ -381,7 +381,7 @@ msgstr ""
 msgid "Recent order"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:70
+#: includes/class-furmrowi-admin.php:70
 msgid "Reference"
 msgstr ""
 
@@ -389,7 +389,7 @@ msgstr ""
 msgid "Remove"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:133
+#: includes/class-furmrowi-admin.php:133
 msgid "Return address"
 msgstr ""
 
@@ -397,11 +397,11 @@ msgstr ""
 msgid "Review the highlighted fields and try again."
 msgstr ""
 
-#: includes/class-cwfw-installer.php:28
+#: includes/class-furmrowi-installer.php:28
 msgid "Right of withdrawal"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:350
+#: includes/class-furmrowi-frontend.php:346
 msgid "Select at least one product for a partial withdrawal."
 msgstr ""
 
@@ -413,7 +413,7 @@ msgstr ""
 msgid "Select products and quantities"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:318
+#: includes/class-furmrowi-frontend.php:314
 msgid "Select the scope of the withdrawal."
 msgstr ""
 
@@ -425,19 +425,19 @@ msgstr ""
 msgid "Send or hand over the goods to the return address below without undue delay and no later than 14 days after communicating the withdrawal. The deadline is met if the goods are sent before the period expires."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:289
+#: includes/class-furmrowi-frontend.php:285
 msgid "Sent"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:122
+#: includes/class-furmrowi-admin.php:122
 msgid "Settings saved."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:109 includes/class-cwfw-frontend.php:126
+#: includes/class-furmrowi-frontend.php:105 includes/class-furmrowi-frontend.php:122
 msgid "Several declarations were submitted in a short period. Please wait and try again, or use the email address shown in the withdrawal information."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:128
+#: includes/class-furmrowi-admin.php:128
 msgid "Show a permanent footer link"
 msgstr ""
 
@@ -445,15 +445,15 @@ msgstr ""
 msgid "Sign in to select an order and its products."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:107
+#: includes/class-furmrowi-admin.php:107
 msgid "Submission details"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:70 includes/class-cwfw-admin.php:108
+#: includes/class-furmrowi-admin.php:70 includes/class-furmrowi-admin.php:108
 msgid "Submitted"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:41 includes/class-cwfw-mailer.php:56 templates/success.php:7
+#: includes/class-furmrowi-mailer.php:41 includes/class-furmrowi-mailer.php:56 templates/success.php:7
 msgid "Submitted at"
 msgstr ""
 
@@ -469,7 +469,7 @@ msgstr ""
 msgid "The data is processed to record, acknowledge and handle this withdrawal declaration."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:159
+#: includes/class-furmrowi-frontend.php:155
 msgid "The declaration could not be stored safely. Please try again or contact the merchant."
 msgstr ""
 
@@ -477,23 +477,23 @@ msgstr ""
 msgid "The declaration was saved, but the email could not be delivered immediately. Download the complete evidence now and contact the merchant if necessary."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:17 templates/form.php:92
+#: includes/class-furmrowi-mailer.php:17 templates/form.php:92
 msgid "The entire order / contract"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:88 includes/class-cwfw-frontend.php:101
+#: includes/class-furmrowi-frontend.php:84 includes/class-furmrowi-frontend.php:97
 msgid "The form session expired. Review the details and try again."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:201
+#: includes/class-furmrowi-frontend.php:197
 msgid "The merchant contact details required for this function are not configured."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:81
+#: includes/class-furmrowi-frontend.php:77
 msgid "The online withdrawal function is not available yet. Please contact the merchant using the published contact details."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:105
+#: includes/class-furmrowi-frontend.php:101
 msgid "The request could not be processed. Please try again."
 msgstr ""
 
@@ -501,19 +501,19 @@ msgstr ""
 msgid "The right of withdrawal does not apply in the cases provided by Article 16 of Romanian Emergency Ordinance no. 34/2014. Depending on the case, these include fully performed services begun with prior express agreement and acknowledgement of loss of the right; personalized goods; goods liable to deteriorate or expire rapidly; sealed health or hygiene goods that were unsealed; inseparably mixed goods; unsealed recordings or software; and digital content whose supply began with prior express agreement and acknowledgement of loss of the right."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:149
+#: includes/class-furmrowi-admin.php:149
 msgid "The same form, legal notice and link are available as Gutenberg blocks and classic widgets."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:94
+#: includes/class-furmrowi-frontend.php:90
 msgid "The selected order is no longer available in this account. Select it again or use manual identification."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:329
+#: includes/class-furmrowi-frontend.php:325
 msgid "The selected order is not available in this account."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:342
+#: includes/class-furmrowi-frontend.php:338
 msgid "The selected products or quantities no longer match the order."
 msgstr ""
 
@@ -521,11 +521,11 @@ msgstr ""
 msgid "The trader bears the direct cost of returning the goods."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:198
+#: includes/class-furmrowi-frontend.php:194
 msgid "The withdrawal function is disabled. Configure and enable it under WooCommerce → Withdrawal settings."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:47 includes/class-cwfw-mailer.php:67
+#: includes/class-furmrowi-mailer.php:47 includes/class-furmrowi-mailer.php:67
 msgid "This message acknowledges receipt. It does not automatically approve a return or refund."
 msgstr ""
 
@@ -533,7 +533,7 @@ msgstr ""
 msgid "This software presents merchant-configured information and supports a declaration workflow. It does not determine legal eligibility or replace professional legal review."
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:29
+#: includes/class-furmrowi-widgets.php:29
 msgid "Title"
 msgstr ""
 
@@ -545,7 +545,7 @@ msgstr ""
 msgid "To meet the %d-day deadline, it is sufficient to send the communication concerning exercise of the right of withdrawal before the period expires."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:140
+#: includes/class-furmrowi-admin.php:140
 msgid "Trader"
 msgstr ""
 
@@ -553,7 +553,7 @@ msgstr ""
 msgid "Use this function to exercise your right to withdraw from a distance contract online, without giving a reason, within the applicable legal period. After submission, an acknowledgement containing your declaration and the date and time of submission will be sent to the email address provided without undue delay."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:39 includes/class-cwfw-mailer.php:52
+#: includes/class-furmrowi-mailer.php:39 includes/class-furmrowi-mailer.php:52
 msgid "We acknowledge receipt of your contract-withdrawal declaration. The complete declaration and submission details are reproduced below."
 msgstr ""
 
@@ -561,47 +561,47 @@ msgstr ""
 msgid "We may withhold reimbursement until we receive the goods or until you supply evidence of having sent them back, whichever is earliest."
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:265 includes/class-cwfw-frontend.php:272 includes/class-cwfw-widgets.php:58 templates/legal.php:3 templates/legal.php:28
+#: includes/class-furmrowi-frontend.php:261 includes/class-furmrowi-frontend.php:268 includes/class-furmrowi-widgets.php:58 templates/legal.php:3 templates/legal.php:28
 msgid "Withdraw from the contract here"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:48
+#: includes/class-furmrowi-frontend.php:44
 msgid "Withdrawal form"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:145
+#: includes/class-furmrowi-admin.php:145
 msgid "Withdrawal form page"
 msgstr ""
 
-#: includes/class-cwfw-installer.php:27 templates/form.php:3
+#: includes/class-furmrowi-installer.php:27 templates/form.php:3
 msgid "Withdrawal from contract"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:138 includes/class-cwfw-frontend.php:50 templates/form.php:140
+#: includes/class-furmrowi-admin.php:138 includes/class-furmrowi-frontend.php:46 templates/form.php:140
 msgid "Withdrawal information"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:146
+#: includes/class-furmrowi-admin.php:146
 msgid "Withdrawal information page"
 msgstr ""
 
-#: includes/class-cwfw-frontend.php:52
+#: includes/class-furmrowi-frontend.php:48
 msgid "Withdrawal link"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:139
+#: includes/class-furmrowi-admin.php:139
 msgid "Withdrawal period (days)"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:97 includes/class-cwfw-admin.php:183
+#: includes/class-furmrowi-admin.php:97 includes/class-furmrowi-admin.php:183
 msgid "Withdrawal record not found."
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:40 includes/class-cwfw-mailer.php:55 templates/success.php:6
+#: includes/class-furmrowi-mailer.php:40 includes/class-furmrowi-mailer.php:55 templates/success.php:6
 msgid "Withdrawal reference"
 msgstr ""
 
-#: includes/class-cwfw-mailer.php:45 includes/class-cwfw-mailer.php:60
+#: includes/class-furmrowi-mailer.php:45 includes/class-furmrowi-mailer.php:60
 msgid "Withdrawal scope"
 msgstr ""
 
@@ -609,19 +609,19 @@ msgstr ""
 msgid "Withdrawal scope *"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:35 includes/class-cwfw-admin.php:36
+#: includes/class-furmrowi-admin.php:35 includes/class-furmrowi-admin.php:36
 msgid "Withdrawal settings (Free)"
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:80
+#: includes/class-furmrowi-widgets.php:80
 msgid "Withdrawal: Legal notice"
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:41
+#: includes/class-furmrowi-widgets.php:41
 msgid "Withdrawal: Online form"
 msgstr ""
 
-#: includes/class-cwfw-widgets.php:54
+#: includes/class-furmrowi-widgets.php:54
 msgid "Withdrawal: Permanent link"
 msgstr ""
 
@@ -629,7 +629,7 @@ msgstr ""
 msgid "You are liable only for diminished value resulting from handling beyond what is necessary to establish the nature, characteristics and functioning of the goods."
 msgstr ""
 
-#: includes/class-cwfw-admin.php:227
+#: includes/class-furmrowi-admin.php:227
 msgid "You are not allowed to manage withdrawal records."
 msgstr ""
 
@@ -657,6 +657,6 @@ msgstr ""
 msgid "Your withdrawal declaration was recorded"
 msgstr ""
 
-#: includes/class-cwfw-admin.php:201
+#: includes/class-furmrowi-admin.php:201
 msgid "— Select —"
 msgstr ""

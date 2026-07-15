@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -38,27 +38,27 @@ abstract class Base_Widget extends \WP_Widget {
 
 class Form_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_form_widget', __( 'Withdrawal: Online form', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
+		parent::__construct( 'furmrowi_form_widget', __( 'Withdrawal: Online form', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays the complete online contract-withdrawal form.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {
 		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->render_title( $args, $instance );
-		echo cwfw()->frontend()->shortcode_form(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo furmrowi()->frontend()->shortcode_form(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
 class Link_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_link_widget', __( 'Withdrawal: Permanent link', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a visible link to the online withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
+		parent::__construct( 'furmrowi_link_widget', __( 'Withdrawal: Permanent link', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a visible link to the online withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {
 		$label = isset( $instance['label'] ) && $instance['label'] ? $instance['label'] : __( 'Withdraw from the contract here', 'furmedia-romanian-withdrawal-law-for-woocommerce' );
 		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->render_title( $args, $instance );
-		echo cwfw()->frontend()->shortcode_link( array( 'label' => $label ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo furmrowi()->frontend()->shortcode_link( array( 'label' => $label ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
@@ -77,13 +77,13 @@ class Link_Widget extends Base_Widget {
 
 class Legal_Widget extends Base_Widget {
 	public function __construct() {
-		parent::__construct( 'cwfw_legal_widget', __( 'Withdrawal: Legal notice', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a short notice and a link to the withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
+		parent::__construct( 'furmrowi_legal_widget', __( 'Withdrawal: Legal notice', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), array( 'description' => __( 'Displays a short notice and a link to the withdrawal function.', 'furmedia-romanian-withdrawal-law-for-woocommerce' ) ) );
 	}
 
 	public function widget( $args, $instance ) {
 		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		$this->render_title( $args, $instance );
-		echo cwfw()->frontend()->shortcode_legal( array( 'full' => 'no' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo furmrowi()->frontend()->shortcode_legal( array( 'full' => 'no' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }

@@ -56,13 +56,13 @@ if ( $missing ) {
 	exit( 1 );
 }
 
-function cwfw_po_quote( $value ) {
+function furmrowi_po_quote( $value ) {
 	return '"' . str_replace( array( '\\', '"', "\t", "\r", "\n" ), array( '\\\\', '\\"', '\\t', '\\r', '\\n' ), (string) $value ) . '"';
 }
 
-function cwfw_catalog_header( $language = '' ) {
+function furmrowi_catalog_header( $language = '' ) {
 	$lines = array(
-		'Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.1',
+		'Project-Id-Version: Furmedia Romanian Withdrawal Law for WooCommerce 1.1.2',
 		'Report-Msgid-Bugs-To: contact@furmedia.ro',
 		'POT-Creation-Date: 2026-07-13 00:00+0300',
 		'PO-Revision-Date: 2026-07-13 00:00+0300',
@@ -80,36 +80,36 @@ function cwfw_catalog_header( $language = '' ) {
 	return implode( "\n", $lines ) . "\n";
 }
 
-function cwfw_catalog_text( array $entries, array $translations = array(), $language = '' ) {
+function furmrowi_catalog_text( array $entries, array $translations = array(), $language = '' ) {
 	$output  = '# Copyright (C) 2026 Furmedia' . "\n";
 	$output .= '# This file is distributed under the same license as the plugin.' . "\n";
 	$output .= "msgid \"\"\nmsgstr \"\"\n";
-	foreach ( explode( "\n", cwfw_catalog_header( $language ) ) as $line ) {
+	foreach ( explode( "\n", furmrowi_catalog_header( $language ) ) as $line ) {
 		if ( '' !== $line ) {
-			$output .= cwfw_po_quote( $line . "\n" ) . "\n";
+			$output .= furmrowi_po_quote( $line . "\n" ) . "\n";
 		}
 	}
 	foreach ( $entries as $key => $references ) {
 		$output .= "\n#: " . implode( ' ', array_unique( $references ) ) . "\n";
 		if ( false !== strpos( $key, "\0" ) ) {
 			list( $singular, $plural ) = explode( "\0", $key, 2 );
-			$output .= 'msgid ' . cwfw_po_quote( $singular ) . "\n";
-			$output .= 'msgid_plural ' . cwfw_po_quote( $plural ) . "\n";
+			$output .= 'msgid ' . furmrowi_po_quote( $singular ) . "\n";
+			$output .= 'msgid_plural ' . furmrowi_po_quote( $plural ) . "\n";
 			$values = $language ? explode( "\0", (string) $translations[ $key ] ) : array( '', '' );
 			$forms  = $language ? 3 : 2;
 			for ( $form = 0; $form < $forms; $form++ ) {
-				$output .= 'msgstr[' . $form . '] ' . cwfw_po_quote( isset( $values[ $form ] ) ? $values[ $form ] : '' ) . "\n";
+				$output .= 'msgstr[' . $form . '] ' . furmrowi_po_quote( isset( $values[ $form ] ) ? $values[ $form ] : '' ) . "\n";
 			}
 		} else {
-			$output .= 'msgid ' . cwfw_po_quote( $key ) . "\n";
-			$output .= 'msgstr ' . cwfw_po_quote( $language ? $translations[ $key ] : '' ) . "\n";
+			$output .= 'msgid ' . furmrowi_po_quote( $key ) . "\n";
+			$output .= 'msgstr ' . furmrowi_po_quote( $language ? $translations[ $key ] : '' ) . "\n";
 		}
 	}
 	return $output;
 }
 
-function cwfw_compile_mo( array $entries, array $translations ) {
-	$catalog = array( '' => cwfw_catalog_header( 'ro_RO' ) );
+function furmrowi_compile_mo( array $entries, array $translations ) {
+	$catalog = array( '' => furmrowi_catalog_header( 'ro_RO' ) );
 	foreach ( $entries as $key => $references ) {
 		$catalog[ $key ] = (string) $translations[ $key ];
 	}
@@ -135,9 +135,9 @@ function cwfw_compile_mo( array $entries, array $translations ) {
 	return $header . $original_table . $translation_table . $original_data . $translation_data;
 }
 
-$pot = cwfw_catalog_text( $entries );
-$po  = cwfw_catalog_text( $entries, $romanian, 'ro_RO' );
-$mo  = cwfw_compile_mo( $entries, $romanian );
+$pot = furmrowi_catalog_text( $entries );
+$po  = furmrowi_catalog_text( $entries, $romanian, 'ro_RO' );
+$mo  = furmrowi_compile_mo( $entries, $romanian );
 
 file_put_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce.pot', $pot );
 file_put_contents( $root . '/languages/furmedia-romanian-withdrawal-law-for-woocommerce-ro_RO.po', $po );

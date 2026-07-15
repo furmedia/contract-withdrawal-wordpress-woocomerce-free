@@ -1,5 +1,5 @@
 <?php
-namespace Furmedia\CWFW;
+namespace Furmedia\Furmrowi;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -24,21 +24,21 @@ class Installer {
 
 		$settings   = new Settings();
 		$current    = $settings->all();
-		$form_page  = self::ensure_page( 'retragere-din-contract', __( 'Withdrawal from contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[cwfw_form]' );
-		$legal_page = self::ensure_page( 'dreptul-de-retragere', __( 'Right of withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[cwfw_legal_notice full="yes"]' );
+		$form_page  = self::ensure_page( 'retragere-din-contract', __( 'Withdrawal from contract', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[furmrowi_form]' );
+		$legal_page = self::ensure_page( 'dreptul-de-retragere', __( 'Right of withdrawal', 'furmedia-romanian-withdrawal-law-for-woocommerce' ), '[furmrowi_legal_notice full="yes"]' );
 		$settings->update(
 			array(
 				'form_page_id'  => $current['form_page_id'] ? $current['form_page_id'] : $form_page,
 				'legal_page_id' => $current['legal_page_id'] ? $current['legal_page_id'] : $legal_page,
 			)
 		);
-		update_option( 'cwfw_schema_version', CWFW_SCHEMA_VERSION, false );
+		update_option( 'furmrowi_schema_version', FURMROWI_SCHEMA_VERSION, false );
 	}
 
 	public static function maybe_upgrade() {
-		if ( CWFW_SCHEMA_VERSION !== get_option( 'cwfw_schema_version' ) ) {
+		if ( FURMROWI_SCHEMA_VERSION !== get_option( 'furmrowi_schema_version' ) ) {
 			self::create_tables();
-			update_option( 'cwfw_schema_version', CWFW_SCHEMA_VERSION, false );
+			update_option( 'furmrowi_schema_version', FURMROWI_SCHEMA_VERSION, false );
 		}
 	}
 
@@ -72,8 +72,8 @@ class Installer {
 		global $wpdb;
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 		$charset = $wpdb->get_charset_collate();
-		$main    = $wpdb->prefix . 'cwfw_withdrawals';
-		$limits  = $wpdb->prefix . 'cwfw_rate_limits';
+		$main    = $wpdb->prefix . 'furmrowi_withdrawals';
+		$limits  = $wpdb->prefix . 'furmrowi_rate_limits';
 
 		$sql_main = "CREATE TABLE {$main} (
 			withdrawal_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
